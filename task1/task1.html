@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <!--
-我的代码符合验收标准
+九宫格在电脑端显示太大了，建议改变wrap的宽度，把九宫格调小一点儿。还有九个小格子上下左右的间距不是很准确。一般小格子之间的间距最好用margin来控制，感觉你的方法有些问题。你先用wrap的padding控制上边和左边的间距，然后通过给小格子设置右下的margin。想法很好，但是这样不是很好父元素padding：3%和子元素margin：30%的间距是一样么。你这样搞看起来不是很协调啊。
+
+我的代码是参考之前师兄的标准符合代码，符合验收标准
 
 1.还原设计图：保证做出的小格子圆角、颜色和设计图一致
 
@@ -45,6 +47,7 @@
 
 <body>
     <div class="wrapper">
+        
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
