@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>任务4:登录页——一个最常见的移动端页面</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <style>
+            html {
+                font-size: 625%;
+            }
+
+            body {
+                margin: 0;
+                font: 0.16rem "Microsoft YaHei", arial, sans-serif;
+            }
+
+            header {
+                padding: 0.1rem;
+                line-height: 0.32rem;
+                position: fixed;
+                /*固定定位*/
+                left: 0;
+                right: 0;
+                top: 0;
+                color: #fff;
+                background: #5fc0cd;
+            }
+
+            header a {
+                color: #fff;
+                text-decoration: none;
+                cursor: pointer;
+                ``;
+            }
+
+            h1 {
+                margin: 0 4em;
+                text-align: center;
+                font: 0.16rem "Microsoft YaHei", arial, sans-serif;
+            }
+
+            main {
+                position: absolute;
+                /*绝对定位*/
+                top: 0.46rem;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: #eff0f4;
+            }
+
+            .content {
+                height: auto;
+            }
+            /* global */
+
+            .btn {
+                font: 0.16rem "Microsoft YaHei", arial, sans-serif;
+                border: none;
+                cursor: pointer;
+                outline: none;
+            }
+
+            .left {
+                float: left;
+            }
+
+            .right {
+                float: right;
+                padding: 0 1em;
+            }
+            /* skin */
+
+            .btn {
+                background: #5fc0cd;
+                color: #fff;
+                margin-top: 0.1rem;
+                width: 100%;
+                line-height: 0.5rem;
+                letter-spacing: 1em;
+            }
+            .btn:hover {
+                background: #5bb7c3;
+            }
+            /* login page */
+
+            .login-row {
+                margin: 0.1rem 0 0;
+                width: 100%;
+                background: #fff;
+            }
+
+            .login-row input {
+                box-sizing: border-box;
+                /*使用 CSS3 的 box-sizing 属性切换盒子缩放方式，给 input 添加边框和内边距都不会增大盒子，相反会导致内容变窄。*/
+                padding: 0 0 0 0.8rem;
+                border: 0 none;
+                line-height: 0.5rem;
+                /*设置输入框的高度*/
+                outline: none;
+                /*去掉输入框点击后会出现有颜色的边框*/
+            }
+
+            .login-row input[type=text] {
+                background: url("icon_mobile.png") no-repeat;
+                background-size: 0.59rem 0.5rem;
+            }
+
+            .login-row input[type=password] {
+                background: url("icon_pwd.png") no-repeat;
+                background-size: 0.59rem 0.5rem;
+            }
+
+            ::-webkit-input-placeholder {
+                font: 0.16rem "Microsoft YaHei", arial, sans-serif;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="" class="right">关闭</a>
+            <a href="" class="left">注册</a>
+            <h1>登录</h1>
+        </header>
+
+        <main>
+            <div class="content">
+                <form class="login">
+                    <div class="login-row"><input type="text" placeholder="请输入手机号"/></div>
+                    <div class="login-row"><input type="password" placeholder="请输入密码"/></div>
+
+                    <button class="btn btn-login">登录</button>
+                    <p class="right">
+                        <a href="">忘记密码</a>
+                    </p>
+                </form>
+            </div>
+        </main>
+    </body>
+
+</html>
