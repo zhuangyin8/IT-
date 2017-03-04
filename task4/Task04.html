@@ -31,12 +31,14 @@
                 color: #fff;
                 text-decoration: none;
                 cursor: pointer;
-                ``;
+                text-align: center;
+                line-height: 0.32rem;
             }
 
             h1 {
                 margin: 0 4em;
                 text-align: center;
+                line-height: 0.32rem;
                 font: 0.16rem "Microsoft YaHei", arial, sans-serif;
             }
 
@@ -48,18 +50,8 @@
                 bottom: 0;
                 right: 0;
                 background: #eff0f4;
-            }
-
-            .content {
-                height: auto;
-            }
-            /* global */
-
-            .btn {
-                font: 0.16rem "Microsoft YaHei", arial, sans-serif;
-                border: none;
-                cursor: pointer;
-                outline: none;
+                -webkit-overflow-scrolling: touch;
+                /*恢复弹性滚动*/
             }
 
             .left {
@@ -73,6 +65,10 @@
             /* skin */
 
             .btn {
+                font: 0.16rem "Microsoft YaHei", arial, sans-serif;
+                border: none;
+                cursor: pointer;
+                outline: none;
                 background: #5fc0cd;
                 color: #fff;
                 margin-top: 0.1rem;
@@ -80,21 +76,22 @@
                 line-height: 0.5rem;
                 letter-spacing: 1em;
             }
-            .btn:hover {
+            /*.btn:hover {
                 background: #5bb7c3;
-            }
+            }*/
             /* login page */
 
-            .login-row {
+            .input-row {
                 margin: 0.1rem 0 0;
                 width: 100%;
                 background: #fff;
             }
 
-            .login-row input {
+            .input-row input {
+                /*给输入框旁边添加样式*/
                 box-sizing: border-box;
                 /*使用 CSS3 的 box-sizing 属性切换盒子缩放方式，给 input 添加边框和内边距都不会增大盒子，相反会导致内容变窄。*/
-                padding: 0 0 0 0.8rem;
+                padding: 0 0 0 0.6rem;
                 border: 0 none;
                 line-height: 0.5rem;
                 /*设置输入框的高度*/
@@ -102,17 +99,20 @@
                 /*去掉输入框点击后会出现有颜色的边框*/
             }
 
-            .login-row input[type=text] {
+            .input-row input[type=text] {
+                /*给文本输入框旁边添加小图标*/
                 background: url("icon_mobile.png") no-repeat;
-                background-size: 0.59rem 0.5rem;
+                background-size: 0.6rem 0.5rem;
             }
 
-            .login-row input[type=password] {
+            .input-row input[type=password] {
+                /*给密码输入框旁边添加小图标*/
                 background: url("icon_pwd.png") no-repeat;
-                background-size: 0.59rem 0.5rem;
+                background-size: 0.6rem 0.5rem;
             }
 
             ::-webkit-input-placeholder {
+                /*将输入框的背景提示文字(placeholder)的字体CSS美化*/
                 font: 0.16rem "Microsoft YaHei", arial, sans-serif;
             }
 
@@ -129,10 +129,10 @@
         <main>
             <div class="content">
                 <form class="login">
-                    <div class="login-row"><input type="text" placeholder="请输入手机号"/></div>
-                    <div class="login-row"><input type="password" placeholder="请输入密码"/></div>
+                    <div class="input-row"><input type="text" placeholder="请输入手机号"/></div>
+                    <div class="input-row"><input type="password" placeholder="请输入密码"/></div>
 
-                    <button class="btn btn-login">登录</button>
+                    <button class="btn">登录</button>
                     <p class="right">
                         <a href="">忘记密码</a>
                     </p>
