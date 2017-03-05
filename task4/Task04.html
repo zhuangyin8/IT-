@@ -12,11 +12,13 @@
 
             body {
                 margin: 0;
-                font: .16rem "Microsoft YaHei", arial, sans-serif;
+                font: 0.14rem "Microsoft YaHei", arial, sans-serif;
+                /*只能在body标签里设置字体相关的属性,在html标签里设置会出现异常*/
             }
 
             header {
-                padding: 0.1rem;
+                padding: 0.07rem 0.1rem;
+                height: 0.32rem;
                 line-height: 0.32rem;
                 position: fixed;
                 /*固定定位*/
@@ -31,27 +33,30 @@
                 color: #fff;
                 text-decoration: none;
                 cursor: pointer;
-                text-align: center;
-                line-height: 0.32rem;
             }
 
             h1 {
+                padding: 0;
                 margin: 0 4em;
                 text-align: center;
-                line-height: .32rem;
-                font: .16rem "Microsoft YaHei", arial, sans-serif;
+                font-size: 0.16rem;
+                font-weight: normal;
             }
 
             main {
                 position: absolute;
                 /*绝对定位*/
-                top: .46rem;
+                top: 0.46rem;
                 left: 0;
                 bottom: 0;
                 right: 0;
                 background: #eff0f4;
                 -webkit-overflow-scrolling: touch;
                 /*恢复弹性滚动*/
+            }
+            main .content {
+                height: auto;
+                font-size: 0.12rem;
             }
 
             .left {
@@ -63,26 +68,35 @@
                 padding: 0 1em;
             }
             /* skin */
+            .btn,
+            header {
+                background: #5fc0cd;
+                color: #fff;
+            }
 
             .btn {
-                font: .16rem "Microsoft YaHei", arial, sans-serif;
+                font-size: 0.16rem;
+
                 border: none;
                 cursor: pointer;
                 outline: none;
                 background: #5fc0cd;
+
+                transition: background 0.5s;
                 color: #fff;
-                margin-top: .1rem;
+
+                margin-top: 0.1rem;
                 width: 100%;
-                line-height: .5rem;
+                line-height: 0.5rem;
                 letter-spacing: 1em;
             }
-            /*.btn:hover {
+            .btn:hover {
                 background: #5bb7c3;
-            }*/
+            }
             /* login page */
 
             .input-row {
-                margin: .1rem 0 0;
+                margin: 0.1rem 0 0;
                 width: 100%;
                 background: #fff;
             }
@@ -91,9 +105,10 @@
                 /*给输入框旁边添加样式*/
                 box-sizing: border-box;
                 /*使用 CSS3 的 box-sizing 属性切换盒子缩放方式，给 input 添加边框和内边距都不会增大盒子，相反会导致内容变窄。*/
-                padding: 0 0 0 .6rem;
+                padding: 0 0 0 0.8rem;
+                width: 100%;
                 border: 0 none;
-                line-height: .5rem;
+                line-height: 0.5rem;
                 /*设置输入框的高度*/
                 outline: none;
                 /*去掉输入框点击后会出现有颜色的边框*/
@@ -102,18 +117,22 @@
             .input-row input[type=text] {
                 /*给文本输入框旁边添加小图标*/
                 background: url("icon_mobile.png") no-repeat;
-                background-size: .6rem .5rem;
+                background-size: 0.59rem 0.5rem;
             }
 
             .input-row input[type=password] {
                 /*给密码输入框旁边添加小图标*/
                 background: url("icon_pwd.png") no-repeat;
-                background-size: .6rem .5rem;
+                background-size: 0.59rem 0.5rem;
             }
 
             ::-webkit-input-placeholder {
                 /*将输入框的背景提示文字(placeholder)的字体CSS美化*/
-                font: .16rem "Microsoft YaHei", arial, sans-serif;
+                font: 0.14rem "Microsoft YaHei", arial, sans-serif;
+            }
+
+            a {
+                color: #5fc0cd;
             }
 
         </style>
