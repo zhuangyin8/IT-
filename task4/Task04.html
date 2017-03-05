@@ -12,13 +12,13 @@
 
             body {
                 margin: 0;
-                font: 0.14rem "Microsoft YaHei", arial, sans-serif;
-                /*只能在body标签里设置字体相关的属性,在html标签里设置会出现异常*/
+                font: 0.20rem "Microsoft YaHei", arial, sans-serif;
+                /*只能在body标签里设置字体相关属性,在html标签里设置会出现异常*/
             }
 
             header {
                 padding: 0.07rem 0.1rem;
-                height: 0.32rem;
+                height: 0.48rem;
                 line-height: 0.32rem;
                 position: fixed;
                 /*固定定位*/
@@ -39,7 +39,7 @@
                 padding: 0;
                 margin: 0 4em;
                 text-align: center;
-                font-size: 0.16rem;
+                font-size: 0.20rem;
                 font-weight: normal;
             }
 
@@ -56,7 +56,7 @@
             }
             main .content {
                 height: auto;
-                font-size: 0.12rem;
+                font-size: 0.24rem;
             }
 
             .left {
@@ -75,17 +75,17 @@
             }
 
             .btn {
-                font-size: 0.16rem;
+                font-size: 0.24rem;
 
                 border: none;
                 cursor: pointer;
-                outline: none;
                 background: #5fc0cd;
 
                 transition: background 0.5s;
+                /*CSS3过渡*/
                 color: #fff;
 
-                margin-top: 0.1rem;
+                margin-top: 0.24rem;
                 width: 100%;
                 line-height: 0.5rem;
                 letter-spacing: 1em;
@@ -128,11 +128,13 @@
 
             ::-webkit-input-placeholder {
                 /*将输入框的背景提示文字(placeholder)的字体CSS美化*/
-                font: 0.14rem "Microsoft YaHei", arial, sans-serif;
+                font: 0.18rem "Microsoft YaHei", arial, sans-serif;
             }
 
             a {
                 color: #5fc0cd;
+                text-decoration: none;
+                /*去掉下划线*/
             }
 
         </style>
@@ -153,7 +155,7 @@
 
                     <button class="btn">登录</button>
                     <p class="right">
-                        <a href="">忘记密码</a>
+                        <a href="">忘记密码?</a>
                     </p>
                 </form>
             </div>
