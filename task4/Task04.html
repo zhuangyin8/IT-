@@ -54,9 +54,7 @@
                 overflow-x: hidden;
                 -webkit-overflow-scrolling: touch;
                 background: #eff0f4;
-            }
 
-            main .content {
                 height: auto;
                 font-size: 0.24rem;
             }
@@ -85,7 +83,6 @@
                 background: #5fc0cd;
                 transition: background 0.5s;
             }
-
             .btn:hover {
                 background: #5bb7c3;
             }
@@ -108,7 +105,7 @@
                 outline: none;
             }
             .input-row input[type=text] {
-                                /*给文本输入框旁边添加小图标*/
+                /*给文本输入框旁边添加小图标*/
                 background: url("icon_mobile.png") no-repeat;
                 background-size: 1.18rem 1rem;
             }
@@ -139,7 +136,16 @@
         </style>
     </head>
     <body>
+        <!--
+先把框架层次结构搭建起来
+即 头部的 <header>包含登陆标题<h2>和注册,关闭的超链接<a>
+<main>标签里 是表单标签<form>
+表单里有文本输入框 input type="text"
+密码输入框 input type="password"
+登陆按钮 <button>
+忘记密码的 超链接标签<a>
 
+-->
         <header>
             <a href="" class="pull-right">注册</a>
             <a href="" class="pull-left">关闭</a>
@@ -147,17 +153,15 @@
         </header>
 
         <main>
-            <div class="content">
-                <form class="login">
-                    <div class="input-row"><input type="text" placeholder="请输入手机号"/></div>
-                    <div class="input-row"><input type="password" placeholder="请输入密码"/></div>
+            <form class="login">
+                <div class="input-row"><input type="text" placeholder="请输入手机号"/></div>
+                <div class="input-row"><input type="password" placeholder="请输入密码"/></div>
 
-                    <button class="btn btn-login">登 陆</button>
-                    <p class="pull-right forget-password">
-                        <a href="">忘记密码</a>
-                    </p>
-                </form>
-            </div>
+                <button class="btn btn-login">登 陆</button>
+                <p class="pull-right forget-password">
+                    <a href="">忘记密码</a>
+                </p>
+            </form>
         </main>
 
     </body>
