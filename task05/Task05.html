@@ -14,7 +14,7 @@
 
         body {
             min-width: 320px;
-            /*max-width: 720px;*/
+            max-width: 720px;
         }
 
         body,
@@ -73,9 +73,9 @@
             height: 0.45rem;
         }
 
-        main {
+        container {
             position: absolute;
-            top: 0.46rem;
+            top: 0.44rem;
             bottom: 0.65rem;
             left: 0;
             right: 0;
@@ -85,31 +85,30 @@
             background: #fff;
         }
 
-        main .content {
+        container {
             height: auto;
             font-size: .12rem;
         }
         /* global */
-
-        .btn {
+        /*.btn {
             box-sizing: border-box;
             border: none;
             cursor: pointer;
             outline: none;
-        }
+        }*/
 
         .pull-left {
             float: left;
         }
-
-        .pull-right {
+        /*.pull-right {
             float: right;
-        }
+        }*/
+        /*25 元/小时的文本颜色*/
 
         .text-important {
             color: #e26163;
         }
-        /* skin */
+        /*header 的背景颜色和字体颜色*/
 
         header {
             background: #5fc0cd;
@@ -136,14 +135,17 @@
 
         .user-image {
             position: absolute;
-            left: 0.2rem;
+            left: 0.15rem;
+            /*用户图片 与左边界的距离*/
             top: 50%;
+            /*垂直居中*/
             margin-top: -0.37rem;
             width: 0.74rem;
-            height: 0.74rem;
+            /*height: 0.74rem;*/
             background: #fff;
             border-radius: 50%;
-            overflow: hidden;
+            /*圆*/
+            /*overflow: hidden;*/
         }
 
         .user-image img {
@@ -156,37 +158,45 @@
             margin-left: 1.2rem;
             top: 50%;
             transform: translateY(-50%);
+            /*元素垂直居中*/
         }
 
-        .user-name {
-            font-size: 1.2em;
+        .username {
+            font-size: .18rem;
         }
 
-        .position {
-            margin-top: .05rem;
-            padding: 0 0 0 .2rem;
-            background: url("images/location.png") no-repeat left center;
+        p>span {
+            padding-left: .1rem;
+            font-size: .14rem
+        }
+
+        .location {
+            font-size: .12rem margin-top: .05rem;
+            padding: .15rem 0 0 .2rem;
+            background: url("images/location.png") no-repeat left .15rem;
             background-size: .12rem;
         }
         /*.user-form {}*/
 
-        .user-form-title {
-            padding: 0 .1rem;
+        .title {
+            padding-left: .15rem;
             height: 0.5rem;
             line-height: .5rem;
             border-bottom: 1px solid #ccc;
         }
 
-        .user-form-title span {
-            padding-left: 5px;
-            border-left: 3px solid #5fc0cd;
+        .title span {
+            padding: 0 0.15rem 0;
+            /*左内边距*/
+            border-left: .01rem solid #5fc0cd;
+            /*左边框 宽度为0.01rem,左边框样式为实线（solid），颜色为#5fc0cd*/
         }
 
-        .user-form-list {
-            padding: 0 .1rem;
+        .list {
+            padding-left: .3rem;
         }
 
-        .user-form-list li {
+        .list li {
             position: relative;
             padding: .1rem .1rem;
             min-height: 0.2rem;
@@ -195,23 +205,25 @@
             overflow: auto;
         }
 
-        .user-form-tag {
+        .tag {
             display: inline-block;
             padding: 0 .1rem 0 .15rem;
             background: url("images/star.png") no-repeat left center;
             background-size: .12rem;
+
         }
 
-        .user-form-label {
+        .label {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            /*元素垂直居中*/
             width: 5em;
             border-right: 1px solid #ccc;
             color: #aaa;
         }
 
-        .user-form-item {
+        .item {
             margin-left: 6em;
         }
 
@@ -220,9 +232,11 @@
             padding: .1rem;
         }
         /*子选择符*/
+
         footer>button {
             flex: 1;
-            height: .45rem;/*按钮高度*/
+            height: .45rem;
+            /*按钮高度*/
             width: 50%;
             /*background: #ccc;*/
         }
@@ -274,11 +288,13 @@
             }
         }
         /*图片自适应*/
+
         img {
             /*width: 100%;
             height: auto;
             max-width: 100%;*/
-            display: block;/*display 控制元素是堆叠,并排,还是不出现*/
+            display: block;
+            /*display 控制元素是堆叠,并排,还是不出现*/
         }
     </style>
 </head>
@@ -289,43 +305,41 @@
         <h2>个人主页</h2>
     </header>
 
-    <main>
-        <div class="content">
-            <div class="user-section">
-                <div class="user-image"><img src="images/person.png" alt="" /></div>
-                <div class="user-info">
-                    <p class="user-name">高素雅&nbsp;&nbsp;&nbsp;51岁</p>
-                    <p class="position">北京.通州.果园</p>
-                </div>
-            </div>
-
-            <div class="user-form">
-                <div class="user-form-title"><span>专业技能</span></div>
-                <ul class="user-form-list">
-                    <li>
-                        <div class="user-form-tag">住家</div>
-                        <div class="user-form-tag">不含餐</div>
-                    </li>
-                    <li>
-                        <div class="user-form-label">从业年限</div>
-                        <div class="user-form-item">0~3年</div>
-                    </li>
-                    <li>
-                        <div class="user-form-label">工作时间</div>
-                        <div class="user-form-item">全天</div>
-                    </li>
-                    <li>
-                        <div class="user-form-label">服务价格</div>
-                        <div class="user-form-item text-important">25元/小时</div>
-                    </li>
-                    <li>
-                        <div class="user-form-label">自我介绍</div>
-                        <div class="user-form-item">可以洗衣、做饭、照顾老人。在护工方面有5年的经验，经验丰富。</div>
-                    </li>
-                </ul>
+    <container>
+        <div class="user-section">
+            <div class="user-image"><img src="images/person.png" alt="" /></div>
+            <div class="user-info">
+                <p class="username">高素雅<span class="age">51岁</span></p>
+                <p class="location">北京.通州.果园</p>
             </div>
         </div>
-    </main>
+
+        <div class="user-form">
+            <div class="title"><span>专业技能</span></div>
+            <ul class="list">
+                <li>
+                    <div class="tag">住家</div>
+                    <div class="tag">不含餐</div>
+                </li>
+                <li>
+                    <div class="label">从业年限</div>
+                    <div class="item">0~3年</div>
+                </li>
+                <li>
+                    <div class="label">工作时间</div>
+                    <div class="item">全天</div>
+                </li>
+                <li>
+                    <div class="label">服务价格</div>
+                    <div class="item text-important">25元/小时</div>
+                </li>
+                <li>
+                    <div class="label">自我介绍</div>
+                    <div class="item">可以洗衣、做饭、照顾老人。在护工方面有5年的经验，经验丰富。</div>
+                </li>
+            </ul>
+        </div>
+    </container>
 
     <footer>
         <button class="message">留言</button>
