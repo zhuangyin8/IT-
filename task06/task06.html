@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="task6.css">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
@@ -16,18 +15,19 @@
     <style>
         html {
             font-size: 62.5%;
-            font-family: STHeitiSC;
         }
-
         /*下拉列表的背景颜色*/
+
         .head-background {
             background-color: #FFF;
         }
         /*按钮的背景颜色*/
+
         .button-background {
             background-color: #5FC0CD;
         }
         /*底部栏的背景颜色*/
+
         .foot-background {
             background-color: #FFF;
         }
@@ -59,15 +59,17 @@
             /*justify-content 属性定义了浏览器如何分配顺着父容器主轴的弹性元素之间及其周围的空间。*/
         }
         /*底边框*/
+
         .border-bottom {
             border-bottom: .2rem solid #DEE5E7;
         }
         /*右边框*/
+
         .border-right {
             border-right: .2rem solid #DEE5E7;
         }
 
-        .main {
+        .div {
             padding: 13.5rem 0 8rem;
             /* 内容会被修剪，并且其余内容不可见 */
             overflow: hidden;
@@ -97,6 +99,7 @@
             padding: 1.25rem;
         }
         /*找雇主 和找雇工 按钮间距*/
+
         .right-padding {
             padding-right: 0;
         }
@@ -105,48 +108,59 @@
             padding-left: 0;
         }
         /*找雇工 按钮的背景颜色和字体颜色*/
+
         .button-color-employer {
             background-color: #55A8B3;
             color: #FFF;
         }
         /*找护工 按钮的背景颜色和字体颜色*/
+
         .button-color-employee {
             background-color: #FFF;
             color: #55A8B3;
         }
         /*字体颜色*/
+
         .text-font-color {
             color: #999;
         }
         /*日期字体颜色*/
+
         .date-font-color {
             color: #000;
         }
         /*价格的字体颜色*/
+
         .price-font-color {
             color: #E63B0E;
         }
         /*首页图标下的字体大小*/
+
         .home-font-color {
             color: #5FC0CD;
         }
         /*顶部的按钮字体大小*/
+
         .button-font-size {
             font-size: 3.4rem;
         }
         /*服务日期的字体大小*/
+
         .content-font-size {
             font-size: 2.8rem;
         }
         /*价格的字体大小*/
+
         .price-font-size {
             font-size: 3rem;
         }
         /*地址的字体大小*/
+
         .address-font-size {
             font-size: 2.6rem;
         }
         /*footer 字体大小*/
+
         .foot-font-size {
             font-size: 2rem;
         }
@@ -156,11 +170,13 @@
             max-width: 4.2rem;
         }
         /*日历图标*/
+
         .icon-calendar {
             width: 3.33vw;
             max-width: 2.4rem;
         }
         /*地址图标*/
+
         .icon-address {
             width: 2.64vw;
             max-width: 1.9rem;
@@ -171,16 +187,19 @@
             max-width: 1.9rem;
         }
         /*首页图标*/
+
         .icon-home {
             width: 6.388vw;
             max-width: 4.6rem;
         }
         /*修改图标 */
+
         .icon-pen {
             width: 13.06vw;
             max-width: 9.4rem;
         }
         /*"我的"图标*/
+
         .icon-person {
             width: 5.833vw;
             max-width: 4.2rem;
@@ -191,20 +210,23 @@
         }
 
         @media screen and (max-width: 768px) {
-            li {
-                text-align: left;
+            html {
+                font-size: 50%;
             }
         }
-        @media screen and (max-width: 768px) {
+
+        @media screen and (max-width: 520px) {
             html {
                 font-size: 40%;
             }
         }
+
+    </style>
     </style>
 </head>
 
 <body>
-    <header class="navbar navbar-fixe-top head-background">
+    <div class="navbar navbar-fixed-top head-background">
         <div class="container-fluid">
             <div class="row button-background button-height text-center">
                 <div class="col-xs-2 col-md-4 col-sm-4 col-lg-4"></div>
@@ -222,7 +244,6 @@
                     <img src="images/map.png" class="icon-map">
                 </div>
             </div>
-            <!--下拉列表 -->
             <div class="nav text-center text-font-color">
                 <div class="row border-bottom content-font-size list-padding">
                     <div class="dropdown col-xs-4 col-md-4 col-sm-4 col-lg-4 border-right">
@@ -262,9 +283,8 @@
                 </div>
             </div>
         </div>
-    </header>
-
-    <main class="container-fluid main">
+    </div>
+    <div class="container-fluid main">
         <div class="border-bottom content-padding text-font-color">
             <div class="row">
                 <!-- "日历图标"与"服务日期" -->
@@ -365,9 +385,8 @@
                 <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 address-font-size content address-font-size">北京.通州.果园</div>
             </div>
         </div>
-    </main>
-
-    <footer class="navbar navbar-fixed-bottom foot-background">
+    </div>
+    <div class="navbar navbar-fixed-bottom foot-background">
         <div class="container-fluid">
             <div class="nav row text-center foot-font-size foot">
                 <div class="col-sm-2 col-md-2 col-xs-2 col-lg-2"></div>
@@ -384,7 +403,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>
