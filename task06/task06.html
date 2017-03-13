@@ -39,8 +39,8 @@
             background-color: #FFF;
         }
         /*bootstrap按钮式下拉菜单如何和按钮一样宽度？将ul的width样式设置为100%,即可将下拉列表的内容与按钮的宽度一致*/
-        .dropdown-menu{
-            width: 100%;
+        ul.dropdown-menu{
+            min-width: 100%;
         }
         /*下拉列表按钮栏的高度,为了与header栏保持间距*/
         .button-height {
@@ -48,10 +48,10 @@
             line-height: 7.5rem;
         }
 
-        /*.list-height {
+        .list-height {
             height: 8rem;
             line-height: 8rem;
-        }*/
+        }
 
         .foot {
             display: flex;
@@ -82,7 +82,7 @@
             padding: 13.5rem 0 8rem;
             /*overflow: hidden;*/
         }
-
+        /*出现省略号的样式*/
         .content {
             white-space: nowrap;
             /*连续的空白符会被合并。但文本内的换行无效*/
@@ -109,28 +109,57 @@
         .left-padding {
             padding-right: 0;
             z-index: 1;
-            margin-right: -0.1rem
+            margin-right: -0.2rem
         }
         /*找雇主 和找雇工 按钮部分重叠*/
         /*找护工按钮*/
         .right-padding {
             padding-left: 0;
             z-index: 2;
-            margin-left: -0.1rem
+            margin-left: -0.2rem
+        }
+        /*找雇工 按钮的背景颜色和字体颜色*/
+        /*.button-color-employer { */
+            /*background-color: #55A8B3;*/
+            /*color: #FFF;*/
+            /*border-radius: 5%;*/
+            /*height:7.2rem;*/
+            /*border-color: #55A8B3*/
+        /*}*/
+        /*找护工 按钮的背景颜色和字体颜色*/
+        /*.button-color-employee {*/
+            /*background-color: #FFF;*/
+            /*color: #55A8B3;*/
+            /*border-radius: 5%;*/
+            /*height:7.2rem*/
+        /*}*/
+
+        /*header栏按钮的共同属性*/
+        .button-font-size {
+            font-size: 3.3rem;
+            height: 6rem;
+            border-radius: 5%;
+            margin: 0.8rem 0;
+            width:12rem;
+            line-height: 6rem;
+
         }
         /*找雇工 按钮的背景颜色和字体颜色*/
         .button-color-employer {
-            background-color: #55A8B3;
-            color: #FFF;
-            border-radius: 5%;
+            background:#55A8B3;
+            color:#fff;
+            border:#55A8B3 1px solid;
         }
         /*找护工 按钮的背景颜色和字体颜色*/
-        .button-color-employee {
-            background-color: #FFF;
-            color: #55A8B3;
-            border-radius: 5%;
+
+        .button-color-employee{
+            background:#fff;
+            color:#5fc0cd;
+            border:#fff 1px solid;
+            border-radius:0.4rem
         }
-        /*字体颜色*/
+
+         /*字体颜色*/
         .text-font-color {
             color: #999;
         }
@@ -146,10 +175,7 @@
         .home-font-color {
             color: #5FC0CD;
         }
-        /*header栏按钮字体颜色*/
-        .button-font-size {
-            font-size: 3.4rem;
-        }
+
         /*下拉列表栏的和服务详情里的服务日期字体大小*/
         .content-font-size {
             font-size: 2.8rem;
@@ -211,6 +237,7 @@
                 text-align: left;
             }
         }
+
     </style>
 </head>
 
@@ -222,10 +249,10 @@
                 <div class="col-xs-8 col-md-4 col-sm-4 col-lg-4">
                     <div class="row">
                         <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 text-right left-padding">
-                            <button type="button" class="btn active button-font-size button-color-employer">找雇主</button>
+                            <button type="button" class=" button-font-size button-color-employer">找雇主</button>
                         </div>
                         <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 text-left right-padding">
-                            <button type="button" class="btn active button-font-size button-color-employee ">找护工</button>
+                            <button type="button" class=" button-font-size button-color-employee ">找护工</button>
                         </div>
                     </div>
                 </div>
@@ -242,6 +269,9 @@
                         </section>
                         <ul class="dropdown-menu content-font-size col-xs-10 col-md-10 col-sm-10 col-lg-10">
                             <li><a href="#">地址一</a></li>
+                            <li><a href="#">地址二</a></li>
+                            <li><a href="#">地址三</a></li>
+                            <li><a href="#">地址四</a></li>
                         </ul>
                     </div>
                     <div class="dropdown col-xs-4 col-md-4 col-sm-4 col-lg-4 border-right">
@@ -261,6 +291,8 @@
                         </section>
                         <ul class="dropdown-menu content-font-size col-xs-10 col-md-10 col-sm-10 col-lg-10">
                             <li><a href="#">情况一</a></li>
+                            <li><a href="#">情况二</a></li>
+                            <li><a href="#">情况三</a></li>
                         </ul>
                     </div>
                 </div>
@@ -276,7 +308,7 @@
             <div class="row">
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
-                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">25元/小时</div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 price-font-color text-right price-font-size left-padding">25元/小时</div>
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
             </div>
             <div class="row">
@@ -292,7 +324,7 @@
             <div class="row">
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
-                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">35元/小时</div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 price-font-color text-right price-font-size left-padding">35元/小时</div>
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
             </div>
             <div class="row">
@@ -308,7 +340,7 @@
             <div class="row">
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
-                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
             </div>
             <div class="row">
@@ -324,7 +356,7 @@
             <div class="row">
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
-                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
             </div>
             <div class="row">
@@ -340,7 +372,7 @@
             <div class="row">
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
-                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
             </div>
             <div class="row">
@@ -356,7 +388,7 @@
             <div class="row">
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
-                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
                 <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
             </div>
             <div class="row">
