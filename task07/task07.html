@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>任务7:桌游精灵——一个完整的webApp，以bootstrap为基础满足更多不同的需求</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+    <style>
+        html {
+            margin: 0 auto;
+            max-width: 1080px;
+            min-width: 320px;
+            font-size: 125%;
+            font-family: "Microsoft YaHei", serif;
+        }
+
+        @media screen and (max-width:479px) {
+            html {
+                font-size: 13px!important;
+            }
+        }
+
+        @media screen and (min-width:480px) and (max-width:639px) {
+            html {
+                font-size: 16px!important;
+            }
+        }
+
+        @media screen and (min-width:640px) {
+            html {
+                font-size: 20px!important;
+            }
+        }
+        /*将body 的外边距设置为0*/
+        body {
+            margin: 0;
+        }
+        /*header 栏的宽度,内边距,背景颜色*/
+        header {
+            width: 94%;
+            padding: 3.5% 3%;
+            background: rgb(41, 189, 224);
+        }
+
+        header img {
+            width: 5.5%;
+        }
+
+        .warp {
+            background: rgb(240, 240, 240);
+            padding: 4.6% 0;
+        }
+
+        .p1 {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+            border: solid 1px rgb(201, 201, 201);
+            text-align: center;
+            font-size: 1.75rem;
+            line-height: 6rem;
+            color: rgb(154, 154, 154);
+            background: white;
+        }
+
+        .p2 {
+            width: 100%;
+            /*使文本垂直居中*/
+            margin: 0 -6% 0 0;
+        }
+
+        .container {
+            text-align: center;
+            border: solid 1px rgb(201, 201, 201);
+            width: 90%;
+            margin: 4.2% auto;
+            background: white;
+        }
+
+        .p3 {
+            margin: 0;
+            font-size: 1.9rem;
+            line-height: 4.5rem;
+            color:  #fbb435;
+            border-bottom: solid 1px rgb(253, 215, 147);
+            background: white;
+        }
+
+        .p4 {
+            width: 80%;
+            margin: 5% auto;
+            font-size: 1.6rem;
+            line-height: 6.75rem;
+            color: white;
+            background:  #69d1e9;
+        }
+
+        .p5 {
+            width: 80%;
+            margin: auto;
+            font-size: 1.2rem;
+            color: rgb(120, 120, 120);
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+        }
+
+        .block {
+            margin: 5% auto 5% 10%;
+            display: inline-block;
+        }
+
+        .next {
+            display: inline-block;
+            /*该元素生成一个块状盒，该块状盒随着周围内容流动，如同它是一个单独的行内盒子（表现更像是一个被替换的元素）*/
+            /*display CSS属性指定用于元素的呈现框的类型。在 HTML 中，默认的 display 属性取决于 HTML 规范所描述的行为或浏览器/用户的默认样式表。在 XML中，其默认值为 inline。
+         除了多种不同的生成的元素的盒类型，值 none 可以关闭一个元素的显示；当你使用 none 所有的后代元素他们的显示也会被关闭。文档渲染的过程中就好像在文档树中这个元素不存在一样。*/
+            border-left: 24px solid  #fbb435;
+            border-top: 24px solid transparent;
+            border-bottom: 24px solid transparent;
+            margin-right: 1.5%;
+        }
+        /*版本选择页面 下方的四个小点 的行内内容居中。 */
+        .circle {
+            text-align: center;
+            /*text-align CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。 text-align 并不控制块元素自己的对齐，只控制它的行内内容的对齐。*/
+        }
+
+        /*结构化伪类根据标记的结构应用样式
+        div.circle span:first-child 表示类名为circle的div的子类元素span的第一个元素 */
+        div.circle span:first-child{
+            background:  #69d1e9;
+            margin-top: .8rem;
+        }
+        /*span:nth-child(n+1) 表示类名为circle的div的子类元素span 除第一个的所有子元素
+        HTML <span> 元素是短语内容的通用行内容器，并没有任何特殊语义。可以使用它来编组元素以达到某种样式意图（通过使用类或者Id属性），或者这些元素有着共同的属性，比如lang。应该在没有其他合适的语义元素时才使用它。<span> 与 <div> 元素很相似，但 <div> 是一个 块元素 而 <span> 则是 行内元素 .*/
+        span:nth-child(n+1) {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: rgb(240, 240, 240);
+        }
+        /*span:nth-child(n) 表示类名为circle的div的所有子类元素span*/
+        span:nth-child(n) {
+            margin-bottom: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/icon6.png">
+    </header>
+
+    <div class="warp">
+        <div class="p1">
+            <p class="p2">上次游戏：捉鬼猜词版</p>
+            <img src="images/icon7.png" class="icon7">
+        </div>
+
+        <div class="container">
+            <p class="p3">捉鬼游戏</p>
+            <p class="p4">简化版</p>
+            <!-- <a href="#" class="center-block row con2">
+                <p class="p4">简化版</p>
+            </a> -->
+            <p class="p5">有1133个用户正在玩此款游戏</p>
+
+            <div class="center">
+                <p class="p4 block">猜词版</p>
+                <!-- <a href="#" class="center-block row con2">
+                    <p class="p4 block">猜词版</p>
+                </a> -->
+                
+                <a href="#" class="next "></a>
+            </div>
+
+            <p class="p5">有1133个用户正在玩此款游戏</p>
+            <p class="p4">白痴版</p>
+            <!-- <a href="#" class="center-block row con2">
+                <p class="p4">白痴版</p>
+            </a> -->
+            <p class="p5">有1133个用户正在玩此款游戏</p>
+
+            <div class="circle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
