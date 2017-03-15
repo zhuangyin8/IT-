@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <title>投票-任务7:桌游精灵——一个完整的webApp，以bootstrap为基础满足更多不同的需求</title>
+    <style>
+        html {
+            font-size: 62.5%;
+            min-width: 320px;
+        }
+
+        body {
+            background-color: rgb(41, 189, 224);
+            overflow-x: hidden;
+        }
+        /* 头部样式 */
+        header {
+            display: table;
+            padding: .5rem 1.5rem;
+            width: 100%;
+        }
+
+        .header-text {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 3.4rem;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .icon-close {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
+            cursor: pointer;
+        }
+        /* 主体标题样式 */
+        .main-title {
+            display: table;
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            background-color: rgb(185, 233, 245);
+        }
+
+        .title-text {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 2.6rem;
+        }
+
+        .music-play {
+            border: none;
+            background: transparent;
+            float: right;
+        }
+
+        .music-play-size {
+            width: 8vw;
+            max-width: 5.2rem;
+        }
+
+        .triangle {
+            position: relative;
+            left: 8%;
+            bottom: 1rem;
+            z-index: -1;
+        }
+
+        .triangle-size {
+            height: 2.5rem;
+        }
+        /* 主体副标题样式 */
+
+        .subtitle-text {
+            color: rgb(255, 255, 255);
+            font-size: 2.4rem;
+            position: relative;
+            left: 8%;
+            bottom: 1rem;
+            z-index: -1;
+        }
+        /* 主体内容样式 */
+
+        .main-content {
+            padding: 0 3% 11rem;
+        }
+
+        .main-content-box {
+            width: 33.33%;
+        }
+
+        .main-content-text-box {
+            border: 3px solid rgb(255, 255, 255);
+        }
+
+        .main-content-text {
+            padding: 25% 0;
+            background: rgb(245, 201, 123);
+            font-size: 3rem;
+        }
+
+        .main-content-number {
+            background: rgb(131, 176, 154);
+            color: rgb(255, 255, 255);
+            font-size: 2.276rem;
+        }
+
+        .main-content-icon {
+            margin: .5rem auto;
+            padding: 0;
+            opacity: 0;
+        }
+
+        .main-content-box:hover .main-content-icon {
+            opacity: 1;
+        }
+
+        .main-content-icon-knife {
+            background: url("images/icon.png") no-repeat;
+            background-position: 0 0;
+        }
+
+        .main-content-icon-magnifier {
+            background: url("images/icon.png") no-repeat;
+            background-position: 33.3333% 0;
+        }
+
+        .main-content-icon-aim {
+            background: url("images/icon.png") no-repeat;
+            background-position: 66.6667% 0;
+        }
+
+        .main-content-icon-cross {
+            background: url("images/icon.png") no-repeat;
+            background-position: 100% 0;
+        }
+
+        .icon-size {
+            display: inline-block;
+            width: 6vw;
+            height: 6vw;
+            background-size: 25vw;
+            /*背景尺寸控制背景图片的尺寸*/
+            cursor: pointer;
+        }
+        /* 底部样式 */
+
+        .footer {
+            padding: 1rem 6rem 3rem;
+            background-color: rgb(41, 189, 224);
+            z-index: 1;
+        }
+
+        .footer-button {
+            padding: 1.5rem;
+            background-color: rgb(251, 180, 53);
+            color: rgb(255, 255, 255);
+            border-radius: 0;
+            border-style: none;
+            font-size: 4rem;
+        }
+        /* 弹窗遮罩 */
+
+        .mask {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: .5rem;
+            padding: 14.0625% 7.1875%;
+            background: rgb(255, 255, 255);
+            font-size: 3.4rem;
+        }
+
+        .mask-button-left {
+            padding: 4.375% 8.4375vw;
+            background: rgb(246, 111, 111);
+            color: rgb(255, 255, 255);
+            border-radius: .5rem;
+            border-color: rgb(246, 111, 111);
+            font-size: 3.4rem;
+        }
+
+        .mask-button-right {
+            padding: 4.375% 8.4375vw;
+            background: rgb(198, 198, 198);
+            color: rgb(255, 255, 255);
+            border-radius: .5rem;
+            border-color: rgb(198, 198, 198);
+            font-size: 3.4rem;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .mask-cover {
+            display: none;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        #check:checked+.mask-cover {
+            display: flex;
+        }
+
+        /* */
+        @media screen and (max-width: 425px) {
+            html {
+                font-size: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <span><img src="images/menu.png" ></span>
+        <span class="header-text">投票</span>
+        <label class="icon-close" for="check"><img src="images/close.png"></label>
+    </header>
+
+    <div class="main-title-wrapper">
+        <div class="main-title">
+            <span class="title-text">发言讨论结束，大家请投票</span>
+            <audio src="http://119.10.57.69:880/jnshu3976/css/Task07/music/%E6%B1%AA%E5%B0%8F%E6%95%8F%20-%20%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA.mp3" controls="controls" preload id="music" hidden></audio>
+            <button class="music-play" onclick="music();">
+                <!--onclick 鼠标点击事件  -->
+      <img src="images/play-circle.png" class="music-play-size">
+     </button>
+        </div>
+        <div>
+            <div class="triangle">
+                <img src="images/triangle.png" class="triangle-size">
+            </div>
+            <span class="subtitle-text">点击得票数最多人的头像</span>
+        </div>
+    </div>
+    <div class="main-content container-fluid">
+        <div class="row text-center">
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">水民</div>
+                    <div class="main-content-number">1号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+            </div>
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">水民</div>
+                    <div class="main-content-number">2号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">警察</div>
+                    <div class="main-content-number">3号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">法官</div>
+                    <div class="main-content-number">4号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">狙击手</div>
+                    <div class="main-content-number">5号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">医生</div>
+                    <div class="main-content-number">6号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">杀手</div>
+                    <div class="main-content-number">7号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">水民</div>
+                    <div class="main-content-number">8号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">水民</div>
+                    <div class="main-content-number">9号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">水民</div>
+                    <div class="main-content-number">10号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">水民</div>
+                    <div class="main-content-number">11号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+            <div class="col-4 main-content-box">
+                <div class="main-content-text-box text-center">
+                    <div class="main-content-text">杀手</div>
+                    <div class="main-content-number">12号</div>
+                </div>
+                <div class="main-content-icon text-center">
+                    <div class="main-content-icon-knife icon-size"></div>
+                    <div class="main-content-icon-magnifier icon-size"></div>
+                    <div class="main-content-icon-aim icon-size"></div>
+                    <div class="main-content-icon-cross icon-size"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer fixed-bottom">
+        <!--bootstrap 4固定底栏fixed-bottom,之前使用nav-fixed-bootem -->
+        <button class="btn btn-primary btn-block footer-button" onclick="location.href='Task07-3.html'">投死</button>
+    </div>
+    <input id="check" type="checkbox">
+
+    <div class="mask-cover">
+        <div class="mask">
+            <div class="text-center">确定要结束本轮游戏吗？</div>
+            <div>
+                <button type="button" class="btn mask-button-left" onclick="location.href='Task07-1.html'">确定</button>
+                <button type="button" class="btn mask-button-right" onclick="location.href='Task07-2.html'">取消</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function music() {
+            var audio = document.getElementById('music');
+            if (audio.paused) {
+                audio.play(); //audio.play();// 播放
+            } else {
+                audio.pause(); // 暂停
+            }
+        }
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.bootcss.com/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>
