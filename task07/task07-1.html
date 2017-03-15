@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>版本选择-任务7:桌游精灵——一个完整的webApp，以bootstrap为基础满足更多不同的需求</title>
+    <style>
+        /*根元素*/
+
+        html {
+            font-size: 62.5%;
+            font-family: STHeitiSC Light, serif;
+            margin: 0;
+            padding: 0;
+            min-width: 320px
+        }
+
+        body {
+            background-color: rgb(240, 240, 240);
+        }
+        /* 导航栏样式 */
+
+        .navbar {
+            background-color: rgb(41, 189, 224);
+            padding: 2%;
+        }
+        /* 主体样式 */
+
+        .container {
+            padding: 1.8rem 3rem;
+            width: 100%
+        }
+        /* “上次游戏”样式 */
+
+        .main-top-wrapper {
+            background-color: rgb(255, 255, 255);
+            padding: 2.5rem 1.5rem;
+            border: 1px solid rgb(201, 201, 201);
+            font-size: 3.4rem;
+        }
+
+        .main-top-text {
+            text-align: center;
+            color: rgb(154, 154, 154)
+        }
+        /*继续上次游戏的图标*/
+
+        .main-top-icon {
+            position: relative;
+            margin: -5.8rem 0.1rem 0 0;
+            float: right;
+            /*color: rgb(231, 231, 231);*/
+            mawidth: 6%;
+        }
+        /* “选择游戏”样式 */
+
+        .main-content-wrapper {
+            background-color: rgb(255, 255, 255);
+            margin: 1.8rem 0;
+            border: 1px solid rgb(201, 201, 201);
+        }
+
+        .main-title {
+            padding: 1.2rem;
+            border-bottom: 1px solid rgb(253, 225, 174);
+            font-size: 3.7rem;
+            color: rgb(251, 180, 53);
+        }
+
+        .main-content {
+            margin-top: 2rem;
+            padding-left: 11%;
+        }
+
+        .content-button {
+            padding: 2.5rem;
+            background-color: rgb(105, 209, 233);
+            color: rgb(255, 255, 255);
+            border-radius: 0;
+            border-style: none;
+            font-size: 3.2rem;
+        }
+        /*"有1133个用户正在玩此游戏"*/
+
+        .content-text {
+            padding: 2rem;
+            color: rgb(120, 120, 120);
+            font-size: 2.4rem;
+        }
+
+        .right-icon {
+            float: right;
+            cursor: pointer;
+            width: 4.378vw;
+            max-width: 2.8rem;
+            margin: 2rem 1.25vw 0 0;
+        }
+        /*div.circle span:first-child 表示类名为circle的div的子类元素span的第一个元素 */
+
+        div span:first-child {
+            background: #69d1e9;
+            margin-top: 0.5rem;
+        }
+        /*span:nth-child(n+1) 表示类名为circle的div的除第一个的所有span 子元素.*/
+
+        span:nth-child(n+1) {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: rgb(240, 240, 240);
+        }
+        /*span:nth-child(n) 表示类名为circle的div的所有子类元素span*/
+
+        span:nth-child(n) {
+            margin-bottom: 0.5rem;
+        }
+        /*媒体查询*/
+
+        @media screen and (max-width: 768px) {
+            html {
+                font-size: 50%;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            html {
+                font-size: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand" href="#">
+            <img src="images/nav.png" alt="nav">
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="main-top-wrapper ">
+            <p class="main-top-text">上次游戏：捉鬼猜词版</p>
+            <a href="#"><img class="main-top-icon" src="images/continue.png"> </a>
+        </div>
+        <div class="main-content-wrapper">
+            <div class="main-title text-center">捉鬼游戏</div>
+            <div class="main-content container-fluid">
+
+                <div class="row">
+                    <div class="text-center col-11 ">
+                        <a href="Task07-2.html">
+                            <div class="btn-block content-button">简化版</div>
+                        </a>
+                    </div>
+
+                    <div class="text-center col-11 content-text">有1133个用户正在玩此游戏</div>
+
+                    <div class="text-center col-11 ">
+                        <a href="Task07-2.html">
+                            <div class="btn-block content-button">猜词版</div>
+                        </a>
+                    </div>
+
+                    <a href="#"><img src="images/next.png" class="right-icon"></a>
+
+                    <div class="text-center col-11 content-text">有1133个用户正在玩此游戏</div>
+
+                    <div class="text-center col-11 ">
+                        <a href="Task07-2.html">
+                            <div class="btn-block content-button">白痴版</div>
+                        </a>
+                    </div>
+
+                    <div class="text-center col-11 content-text">有1133个用户正在玩此游戏</div>
+                </div>
+
+                <div class="row">
+                    <div class="text-center col-11">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
+</html>
