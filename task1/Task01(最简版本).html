@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .square {
+            float: left;
+            /*九宫格的小方块向左浮动 为什么不需清除浮动?因为父级元素的剩余宽度不足以放下下一个小方块时,这个小方块会自动重新*/
+            padding: 30% 0 0 0;
+            /*小方块的上内边距为body宽度的30%*/
+            margin: 1.6%;
+            /*小方块的上,右,下,左的外边距都是body宽度的1.6%*/
+            width: 30%;
+            /*小方块的宽度为body宽度的30%**/
+            background: orange;
+            /*小方块的背景颜色为橙色*/
+            border-radius: 15px;
+            /*圆角矩形*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+</body>
+
+</html>
