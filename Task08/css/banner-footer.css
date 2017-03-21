@@ -1,0 +1,261 @@
+@media only screen and (min-width: 320px)and (max-width: 371px) {
+    .footer-ul {
+        width: 258px;
+    }
+}
+
+@media only screen and (min-width: 372px)and (max-width: 485px) {
+    .footer-ul {
+        width: 372px;
+    }
+}
+
+@media only screen and (min-width: 486px)and (max-width: 599px) {
+    .footer-ul {
+        width: 486px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 713px) {
+    .footer-ul {
+        width: 600px;
+    }
+}
+
+@media only screen and (min-width: 714px) and (max-width: 786px) {
+    .footer-ul {
+        width: 714px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .xs-p1 {
+        width: 62% !important;
+        padding-right: 0 !important;
+    }
+    .xs-icon {
+        width: 38%!important;
+        padding-left: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .col-my-3 {
+        width: 100%;
+        text-align: center;
+    }
+    .col-my-3 p {
+        padding-top: 5px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-brand {
+        height: 50px !important;
+        padding: 8px 15px !important;
+    }
+    .navbar-brand img {
+        width: 176px;
+        height: auto;
+    }
+    .header2-1 {
+        height: auto !important;
+        margin: 0 !important;
+    }
+    .header2-1 span {
+        display: block !important;
+        padding: 10px 15px;
+        width: auto !important;
+        height: auto !important;
+        line-height: 20px !important;
+        font-size: 14px !important;
+        text-align: center;
+        /*text‐align CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。text‐align 并不控制块元素自己的
+        对齐，只控制它的行内内容的对齐。
+        center
+        行内内容居中。
+        */
+    }
+    .header2-1 span:hover {
+        border-bottom: 1px solid white;
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+}
+
+*p {
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    font-family: "Microsoft YaHei", serif;
+}
+
+.tel-word {
+    font-size: 14px;
+    line-height: 40px;
+    color: rgb(41, 176, 120);
+}
+
+.icon1 {
+    float: right;
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    margin: 8px 5% 8px 3.4%;
+    background-image: url(../images/CssGaga1.png);
+    background-position: -120px -32px;
+}
+
+.icon2 {
+    float: right;
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    margin: 8px 0 8px 3.4%;
+    background-image: url(../images/CssGaga1.png);
+    background-position: -120px -58px;
+}
+
+.icon3 {
+    float: right;
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    margin: 8px 0 8px 3.4%;
+    background-image: url(../images/CssGaga1.png);
+    background-position: -120px -84px;
+}
+
+
+/*-- Nav strat --*/
+
+.nav {
+    background: #1db176;
+}
+
+.navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.navbar {
+    margin: 0;
+    border: none;
+}
+
+.navbar-brand {
+    height: 100px;
+    padding: 23px 15px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: rgb(42, 186, 128);
+}
+
+.header2-1 {
+    height: 100px;
+    margin: 0 auto;
+}
+
+.header2-1 a {
+    text-decoration: none !important;
+    color: white !important;
+    padding: 0 !important;
+}
+
+.header2-1 span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.header2-1 span:hover {
+    box-sizing: border-box;
+    border-bottom: solid 1px white;
+}
+
+
+/*-- Nav end --*/
+
+.footer2 {
+    width: 100%;
+    background-color: rgb(38, 162, 111);
+    padding: 35px 0;
+}
+
+.footer2-p1 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+/**footer部分超链接的样式*/
+p>a:link {
+    color: white;
+    /*链接等待点击时颜色*/
+}
+p>a:visited {
+    color: white;
+    /*链接点击过的颜色*/
+}
+
+p>a:hover {
+    color: white;
+    /*鼠标悬停链接时颜色*/
+}
+
+p>a:active {
+    color: white;
+    /*链接正在被鼠标点击时颜色*/
+}
+
+
+
+.footer2-p2 {
+    padding-top: 75px;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+.footer2-p3 {
+    padding-top: 27px;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+.footer2-p4 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.footer2-p4 img {
+    margin-top: 7px;
+}
+
+.footer3 {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    line-height: 32px;
+    border-top: solid 1px rgb(50, 192, 134);
+    background-color: rgb(38, 162, 111);
+}
