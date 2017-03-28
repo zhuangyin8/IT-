@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <title>庄引の葡萄藤</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!-- cdn引入 bootstrap/4.0.0-alpha.6的css-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!--  给网页标签和收藏夹添加小图标-->
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
     <style>
         html {
             font-size: 100%;
         }
 
         header {
-            background: url(https://pic3.zhimg.com/80/v2-868c4a614ed0b39aa786dfc19609fcee_r.jpg) center #fff no-repeat;
+            background: url("//pic3.zhimg.com/80/v2-868c4a614ed0b39aa786dfc19609fcee_r.jpg") center #fff no-repeat;
             /*简写背景属性为什么*/
             height: 500px;
             width: 100%;
@@ -21,118 +25,159 @@
 </head>
 
 <body>
-    <header>
+<header></header>
 
-    </header>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1> 实践是检验真理的唯一标准 </h1>
+        </div>
+    </div>
 
-    <div class="container">
-        <!-- <div class="row">
-                <div class="col-lg-12">
-                    <h1> 实践是检验真理的唯一标准 </h1>
-                </div>
-            </div> -->
-
-
-    <div class="container">
         <div class="row">
-            <table class="table table-bordered table-hover">
+            <!-- Use .table-striped to add zebra-striping to any table row within the <tbody>. -->
+            <!--  Add .table-bordered for borders on all sides of the table and cells.-->
+            <!--  Add .table-hover to enable a hover state on table rows within a <tbody>. -->
+            <table class="table .table-responsive table-bordered table-hover">
+                <!-- use .thead-inverse or .thread-default to make <thead>s appear light or dark gray. -->
+                <thead class="thead-inverse">
                 <tr>
                     <th>任务</th>
                     <th>Demo</th>
                     <th>知识点</th>
                 </tr>
-                <tr>
+                </thead>
+                <tr class="bg-success">
                     <td>Task01</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976//css/Task01/Task01-2.html" target="_blank">任务1:九宫格——用html+css制作一个网页</a></td>
-                    <td>1.网页是由什么组成的；2.如何生成一个网页；3.如何访问一个网页；4.html和css如何搭配工作；5.页面基础的布局方式；6.如何用一行代码兼容不同浏览设备；7.页面和想象的不一样时如何进行调试</td>
+                    <td>
+                        <a href="cssTask/Task01/Task01-2.html" target="_blank">任务1:九宫格——用html+css制作一个网页</a>
+                    </td>
+                    <td>1.网页是由什么组成的；2.如何生成一个网页；3.如何访问一个网页；4. HTML 和 CSS
+                        如何搭配工作；5.页面基础的布局方式；6.如何用一行代码兼容不同浏览设备；7.页面和想象的不一样时如何进行调试
+                    </td>
                 </tr>
-                <tr>
+                <tr class="bg-info">
                     <td>Task02</td>
-                    <td><a href="https://www.github.com/zhuangyin8" target="_blank">任务2:认识开发必备工具</a></td>
+                    <td>
+                        <a href="https://www.github.com/zhuangyin8" target="_blank">任务2:认识开发必备工具</a>
+                    </td>
                     <td>1.学习版本管理工具; 2.学习使用服务器; 3.学习如何将自己的代码放到网上去</td>
                 </tr>
-                <tr>
+                <tr class="table-info">
                     <td>Task03</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task03/Task03.html">任务3:魔镜介绍页——一个最简单的移动端页面</a></td>
+                    <td>
+                        <a href="cssTask/Task03/Task03.html">任务3:魔镜介绍页——一个最简单的移动端页面</a>
+                    </td>
                     <td>1.如何运用布局知识进行更复杂的布局；2.如何让布局更好地适应移动端；3.如何合理使用rem作长度单位；4.如何使用photoshop切图；5.如何处理不同dpi下的图片</td>
                 </tr>
                 <tr>
                     <td>Task04</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task04/Task04.html">任务4:登录页——一个最常见的移动端页面</a></td>
+                    <td>
+                        <a href="cssTask/Task04/Task04.html">任务4:登录页——一个最常见的移动端页面</a>
+                    </td>
                     <td>1.处理常见的移动端页面； 2.学会改变表单元素样式</td>
                 </tr>
                 <tr>
                     <td>Task05</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task05/Task05.html">任务5：护工个人主页——一个最常见的移动端页面</a></td>
-                    <td>1.处理更复杂的移动端页面； 2.同样是左中右的布局，可以用很多不同的方法来完成； 3.用css3的方法更好地拉伸背景图</td>
+                    <td>
+                        <a href="cssTask/Task05/Task05.html">任务5：护工个人主页——一个最常见的移动端页面</a>
+                    </td>
+                    <td>1.处理更复杂的移动端页面； 2.同样是左中右的布局，可以用很多不同的方法来完成； 3.用cssTask3的方法更好地拉伸背景图</td>
                 </tr>
                 <tr>
                     <td>Task06</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task06/Task06.html">任务6：护工列表页——一个最常见的移动端页面，需要使用bootstrap </a>
-                    </td>
+                    <td>
+                        <a href="cssTask/Task06/Task06.html">任务6：护工列表页——一个最常见的移动端页面，需要使用bootstrap</a></td>
 
                     <td>1.解决垂直居中； 2.模拟下拉选框； 3.做出复杂的列表页</td>
-
+                </tr>
+                <tr>
                     <td>Task07</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task07/Task07-1.html">任务7：桌游精灵——一个完整的webApp，以bootstrap为基础满足更多不同的需求 </a>
-                    </td>
+                    <td>
+                        <a href="cssTask/Task07/Task07-1.html">任务7：桌游精灵——一个完整的webApp，以bootstrap为基础满足更多不同的需求</a></td>
 
                     <td>1.HTML5的audio定义音频流； 2.处理半透明； 3.CSS3动画</td>
-
+                </tr>
+                <tr>
                     <td>Task08</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task08/Task08-1.html">任务8：修真院——一个PC端的企业网站，以bootstrap为基础满足更多不同的需求</a>
-                    </td>
+                    <td>
+                        <a href="cssTask/Task08/Task08-1.html">任务8：修真院——一个PC端的企业网站，以bootstrap为基础满足更多不同的需求</a></td>
 
                     <td>完成一个比较完成的PC端项目</td>
-
+                </tr>
+                <tr>
                     <td>Task09</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task09/Task09.html">任务9：修真院——一个响应式的企业网站</a></td>
+                    <td>
+                        <a href="cssTask/Task09/Task09.html">任务9：修真院——一个响应式的企业网站</a></td>
 
-                    <td> 增加网站布局开发的熟练度； 获得一个响应式的网站</td>
+                    <td>
+                        增加网站布局开发的熟练度； 获得一个响应式的网站
+                    </td>
                 </tr>
                 <tr>
                     <td>Task10</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task10/Task10.html">任务10：51包装——一个常见的表单页面</a></td>
-                        <td>CSS制作流程图； CSS模拟表单元素； 熟练响应式布局</td>
+                    <td>
+                        <a href="cssTask/Task10/Task10.html">任务10：51包装——一个常见的表单页面</a></td>
+
+                    <td>CSS制作流程图； CSS模拟表单元素； 熟练响应式布局</td>
                 </tr>
                 <tr>
                     <td>Task11</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task11/Task1.html">任务11：基于css的更高级语言——使用less/sass重写任务4（登录页），并编译</a></td>
-                        <td>使用SASS或LESS</td>
+                    <td>
+                        <a href="cssTask/Task11/Task11.html">任务11：基于css的更高级语言——使用less/sass重写任务4（登录页），并编译</a></td>
+
+                    <td>使用SASS或LESS</td>
                 </tr>
                 <tr>
                     <td>Task12</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task12/Task12.html">任务12：标准化——阅读html和css规范，不使用bs重写任务5和6（护工）</a></td>
-                        <td>使用SASS或LESS重构页面</td>
+                    <td>
+                        <a href="cssTask/Task12/Task12-1.html">任务12：标准化——阅读html和css规范，不使用bs重写任务5和6（护工）</a></td>
+
+                    <td>使用SASS或LESS重构页面</td>
                 </tr>
                 <tr>
                     <td>Task13</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task13/Task13.html">任务13：组织样式表——按照任务12的标准，不使用bs重写任务7样式，并且阅读样式表组织规范，拆分样式表</a></td>
-                        <td>CSS架构</td>
+                    <td>
+                        <a href="cssTask/Task13/Task13.html">任务13：组织样式表——按照任务12的标准，不使用bs重写任务7样式，并且阅读样式表组织规范，拆分样式表</a>
+                    </td>
+
+                    <td>CSS架构</td>
                 </tr>
                 <tr>
                     <td>Task14</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task14/Task14.html">任务14：自己的组件库——将修真院拆出属于自己的组件库</a></td>
-                        <td>提取PC端的组件库</td>
+                    <td>
+                        <a href="cssTask/Task14/Task14.html">任务14：自己的组件库——将修真院拆出属于自己的组件库</a></td>
+
+                    <td>提取PC端的组件库</td>
                 </tr>
                 <tr>
                     <td>Task15</td>
-                    <td><a href="http://119.10.57.69:880/jnshu3976/css/Task15/Task15.html">任务15：综合性的总结——按照任务12，13学到的规范，重写一遍任务9，不用其他框架，使用less/sass并编译</a></td>
-                        <td>综合能力</td>
+                    <td>
+                        <a href="cssTask/Task15/Task15.html">任务15：综合性的总结——按照任务12，13学到的规范，重写一遍任务9，不用其他框架，使用less/sass并编译 </a>
+                    </td>
+
+                    <td>综合能力</td>
                 </tr>
             </table>
         </div>
     </div>
     <footer>
         <div class="container">
-            Created by <a href=" https://github.com/zhuangyin8">庄引<a>
+            Created by
+            <a href=" https://github.com/zhuangyin8">庄引</a>
         </div>
     </footer>
-
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="//code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
 </body>
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 
 </html>
