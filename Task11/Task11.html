@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>任务11:基于css的更高级语言——使用less/sass重写任务4（登录页），并编译</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="Task11.css">
+    </head>
+    <!--
+    先把框架层次结构搭建起来  -- 即 头部的 <header>包含登陆标题<h2>和注册,关闭的超链接<a -- <main>标签里 是表单标签<form>--
+    表单里有文本输入框 input type="text" -- 密码输入框 input type="password" -- 登陆按钮 <button> -- 忘记密码的 超链接标签<a>
+    -->
+
+    <body>
+        <header>
+            <a href="" class="pull-right">注册</a>
+            <a href="" class="pull-left">关闭</a>
+            <h2>登陆</h2>
+        </header>
+
+        <main>
+            <div class="content">
+                <form class="login">
+                    <div class="input-row"><input type="text" placeholder="请输入手机号"/></div>
+                    <div class="input-row"><input type="password" placeholder="请输入密码"/></div>
+
+                    <button class="btn btn-login">登 陆</button>
+                    <p class="pull-right forget-password">
+                        <a href="">忘记密码?</a>
+                    </p>
+                </form>
+            </div>
+        </main>
+
+    </body>
+
+</html>
