@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/Task13-2.css" rel="stylesheet">
+    <title>13.2投票:任务13:组织样式表——按照任务12的标准，不使用bs重写任务7样式，并且阅读样式表组织规范，拆分样式表</title>
+</head>
+<body>
+<div class="all">
+    <div class="top">
+        <img class="menu" src="images/menu.png">
+        <span>投票</span>
+        <img class="close" src="images/close.png">
+    </div>
+    <div class="vote">
+        <p>发言讨论结束，请大家投票</p>
+        <span class="play" onlick="play()">
+                <audio controls="controls" class="music"
+                       source src="1.mp3">
+                </audio>
+            </span>
+        <span class="three"></span>
+    </div>
+    <div class="click">
+        <span></span>
+        <p>点击得票数最多人的头像</p>
+    </div>
+    <div class="many">
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="allin">
+                <div class="one-top">水民</div>
+                <div class="one-bottom">1号</div>
+                <div class="sprite">
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                    <span class="icon3"></span>
+                    <span class="icon4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        <a href="Task13-3.html">
+            <button>投死</button></a>
+        <div class="clear"></div>
+    </footer>
+</div>
+<script>
+    // 检查是否正在播放
+    var isPlaying = false;
+
+    function play() {
+        var player = document.querySelector(".music");
+        if (isPlaying) {
+            // 如果正在播放, 停止播放并停止读取此音乐文件
+            player.pause();
+            player.src = "";
+        } else {
+            player.src = "1.mp3";
+            player.play();
+        }
+    }
+</script>
+</body>
+</html>

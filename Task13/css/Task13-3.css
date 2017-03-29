@@ -1,0 +1,136 @@
+body {
+    width: 100%;
+    max-width: 35rem;
+    min-width: 17.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3.2rem;
+}
+
+.top {
+    background: #29b0ed;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.top p {
+    width: 70%;
+    display: inline-block;
+}
+
+.content {
+    background: #29b0ed;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.win {
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 20rem;
+    background-image: url(../images/win.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.inin {
+    padding: 7rem 0 23px;
+    width: 100%;
+    font-size: 3rem;
+    color: white;
+}
+
+.great {
+    margin: 0 auto;
+    width:78%;
+    font-size: 2rem;
+    color: #ffc865;
+}
+
+.des{
+    text-align: left;
+    font-size:1.5rem;
+    margin-left:4rem;
+    color:white;
+    padding-top:3rem;
+    line-height: 1.5;
+    padding-bottom:2rem;
+}
+.result {
+    background: white;
+    padding-bottom: 10rem;
+    text-align: left;
+}
+
+.first {
+    /*padding-top: 1rem;*/
+    padding-left: 4rem;
+    border-bottom: 1px solid gray;
+}
+.first-title,
+.first p {
+    font-size: 1.5rem;
+}
+.yarg {
+    color: gray;
+    font-size: 1rem;
+    margin-left: 16rem;
+}
+
+.first p {
+    color: gray;
+}
+
+
+/*页脚开始*/
+
+.footer {
+    width:100%;
+    max-width: 35rem;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9rem;
+    background: rgba(153, 223, 240, 0.5);
+}
+
+.button-left,
+.button-right {
+    border: 0;
+    border-radius: 5px;
+    height: 6rem;
+    color: white;
+    font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    width: 14rem;
+    outline: medium;
+ 
+}
+
+.button-left {
+    background: #f66f6f;
+}
+
+.button-right {
+    background: #fbb435;
+}
+@media screen and (max-width:587px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:530px) {
+    html {
+        font-size: 12px;
+    }
+}
