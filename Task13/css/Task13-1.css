@@ -1,9 +1,9 @@
 body {
-    width: 100%;
-    max-width: 35rem;
-    min-width: 17.5rem;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    /*min-width: 17.5rem;
+    max-width: 35rem;*/
+    width: 100%;
 }
 
 a {
@@ -11,9 +11,9 @@ a {
 }
 
 .head {
-    width: 35rem;
+    padding: 1rem 0;
+    /*width: 35rem;*/
     background: #29bde0;
-    padding: 1rem 0;
 }
 
 .head img {
@@ -22,17 +22,17 @@ a {
 
 .content {
     padding: 2rem 0 4rem 0;
-    text-align: center;
-    width: 100%;
+    width: 100%;
     background: #f0f0f0;
+    text-align: center;
     font-size: 2rem;
 }
 
 .last {
     margin: 0 auto;
-    width: 90%;
-    background: white;
+    width: 90%;
     border: 1px solid lightgray;
+    background: white;
 }
 
 .last span {
@@ -40,9 +40,9 @@ a {
 }
 
 .last p {
-    color: #9a9a9a;
     margin: 0;
-    padding: 2rem 0;
+    padding: 2rem 0;
+    color: #9a9a9a;
 }
 
 .last img {
@@ -53,31 +53,31 @@ a {
 
 .next {
     margin: 0 auto;
-    width: 90%;
+    width: 90%;
     background: white;
-    text-align: center;
     vertical-align: center;
+    text-align: center;
 }
 
 .next-title {
-    color: #fbb435;
     padding: 1.5rem 0;
-    border-bottom: 2px solid #fbb435;
+    border-bottom: 2px solid #fbb435;
+    color: #fbb435;
 }
 
 .next-a {
+    display: block;
     margin: 0 auto;
-    color: white;
-    width: 22%;
-    display: block;
-    background: #29bde0;
-    padding: 2rem 8rem;
     margin-top: 2rem;
+    padding: 2rem 8rem;
+    width: 22%;
+    background: #29bde0;
+    color: white;
 }
 
 .next-p {
+    color: gray;
     font-size: 1.5rem;
-    color: gray;
 }
 
 .nba {
@@ -86,24 +86,24 @@ a {
     margin-right: 0.5rem;
     width: 0;
     height: 0;
-    border-style: solid;
     border-width: 2rem 0 2rem 2rem;
+    border-style: solid;
     border-color: transparent transparent transparent #fbb435;
 }
 .four{
+    bottom:0;
     margin: 0 auto;
     width:100%;
-    bottom:0;
     width:7rem;
-   
+
 }
 
 .four span {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: #f0f0f0;
     border-radius: 7.5px;
+    background: #f0f0f0;
 }
 .four span:hover{
     background:#29bde0;
@@ -117,9 +117,9 @@ a {
     }
 }
 @media screen and (max-width:540px){
-    body{
-
-    }
+   /* body{
+        font-size:1.5rem;
+    }*/
     html{
         font-size: 12px;
     }
