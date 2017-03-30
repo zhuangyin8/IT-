@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style>
         /* reset */
-
         html {
             font-size: 1250%;
         }
@@ -32,32 +31,23 @@
             list-style: none;
         }
         /* layout */
-
         header,
         footer {
             position: fixed;
             /*固定定位*/
-            padding: 0.07rem 0.1rem;
-            line-height: 0.36rem;
-            /*font-size: 0.18rem;*/
+            padding:  0.1rem;
         }
 
         header {
             left: 0;
             right: 0;
             top: 0;
-            /*height: 0.32rem;*/
+            height: 0.32rem;
         }
-        /*header a {
-            color: #fff;
-            text-decoration: none;
-            font-size: .14rem;
-            cursor: pointer;
-        }*/
 
         header h2 {
             /*padding: 0;*/
-            margin: 0 auto;
+            margin: auto;
             /*垂直居中*/
             text-align: center;
             /*水平居中*/
@@ -73,7 +63,8 @@
             height: 0.45rem;
         }
 
-        container {
+
+        main {
             position: absolute;
             top: 0.44rem;
             bottom: 0.65rem;
@@ -85,26 +76,16 @@
             background: #fff;
         }
 
-        container {
+        main {
             height: auto;
             font-size: .12rem;
         }
         /* global */
-        /*.btn {
-            box-sizing: border-box;
-            border: none;
-            cursor: pointer;
-            outline: none;
-        }*/
-
         .pull-left {
             float: left;
         }
-        /*.pull-right {
-            float: right;
-        }*/
-        /*25 元/小时的文本颜色*/
 
+        /*25 元/小时的文本颜色*/
         .text-important {
             color: #e26163;
         }
@@ -212,7 +193,6 @@
             padding: 0 .1rem 0 .15rem;
             background: url("images/star.png") no-repeat left center;
             background-size: .12rem;
-
         }
 
         .label {
@@ -234,7 +214,6 @@
             padding: .1rem;
         }
         /*子选择符*/
-
         footer>button {
             flex: 1;
             height: .45rem;
@@ -267,36 +246,11 @@
             /*盒阴影属性值:水平偏移量 ,垂直偏移量,模糊量,扩展量,颜色,阴影位于边框内部*/
         }
         /*媒体查询*/
-        /*@media screen and (max-width:700px) {
-            html {
-                font-size: 80%;
-            }
-        }
-        @media screen and (max-width:560px) {
-            html {
-                font-size: 1000%;
-            }
-        }
-
-        @media screen and (max-width:480px) {
-            html {
-                font-size: 875%;
-            }
-        }*/
 
         @media screen and (max-width:500px) {
             html {
-                font-size: 750%;
+                font-size: 1000%;
             }
-        }
-        /*图片自适应*/
-
-        img {
-            /*width: 100%;
-            height: auto;
-            max-width: 100%;*/
-            display: block;
-            /*display 控制元素是堆叠,并排,还是不出现*/
         }
     </style>
 </head>
@@ -307,7 +261,7 @@
         <h2>个人主页</h2>
     </header>
 
-    <container>
+    <main>
         <div class="user-section">
             <div class="user-image"><img src="images/person.png" alt="" /></div>
             <div class="user-info">
@@ -341,7 +295,7 @@
                 </li>
             </ul>
         </div>
-    </container>
+    </main>
 
     <footer>
         <button class="message">留言</button>
