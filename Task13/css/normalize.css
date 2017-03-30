@@ -13,6 +13,7 @@
 html {
   font-family: sans-serif; /* 1 */
   line-height: 1.15; /* 2 */
+
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
 }
@@ -49,8 +50,8 @@ section {
  */
 
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 2em;
 }
 
 /* Grouping content
@@ -81,9 +82,9 @@ figure {
  */
 
 hr {
+  overflow: visible; /* 2 */
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
-  overflow: visible; /* 2 */
 }
 
 /**
@@ -92,8 +93,8 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  font-family: monospace, monospace; /* 1 */
 }
 
 /* Text-level semantics
@@ -105,8 +106,9 @@ pre {
  */
 
 a {
-  text-decoration: none;
   background-color: transparent; /* 1 */
+  text-decoration: none;
+
   -webkit-text-decoration-skip: objects; /* 2 */
 }
 
@@ -157,8 +159,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  font-family: monospace, monospace; /* 1 */
 }
 
 /**
@@ -193,10 +195,10 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
   position: relative;
   vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
 }
 
 sub {
@@ -257,10 +259,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  font-size: 100%; /* 1 */
+  font-family: sans-serif; /* 1 */
+  line-height: 1.15; /* 1 */
 }
 
 /**
@@ -304,8 +306,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 
 /**
@@ -324,9 +326,9 @@ button:-moz-focusring,
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
 }
 
 /**
@@ -337,11 +339,11 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
   display: table; /* 1 */
-  max-width: 100%; /* 1 */
+  box-sizing: border-box; /* 1 */
   padding: 0; /* 3 */
+  max-width: 100%; /* 1 */
+  color: inherit; /* 2 */
   white-space: normal; /* 1 */
 }
 
@@ -389,8 +391,9 @@ textarea {
  */
 
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
+
+  -webkit-appearance: textfield; /* 1 */
 }
 
 /**
@@ -408,8 +411,9 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
+
+  -webkit-appearance: button; /* 1 */
 }
 
 /* Interactive

@@ -1,238 +1,301 @@
-* {
-    margin: 0;
-    padding: 0;
+html {
+    width: 100%;
+    font-size: 62.5%;
 }
+
+@media (max-width: 600px) {
+    html {
+        font-size: 45%
+    }
+}
+
+@media (max-width: 600px) {
+    .icon {
+        float: left;
+        margin: 2.5%;
+        padding: calc((8vw - 30px) / 2) calc((40% - 30px) / 2);
+        width: 40%;
+        height: 8vw;
+        background: white;
+        transform: scale(0.5);
+        /*CSS中transform 属性允许你修改CSS可视化模型的坐标空间。通过transform，可以让元素进行移动（translate）、旋转（rotate）、缩放（scale）、倾斜（skew）*/
+    }
+    .main-4-1-3 {
+        margin-left: -.3em
+    }
+}
+
 body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    min-width: 320px;
-    margin:0;
-    padding:0;
+    background: #28C2D6
+    font-family: "微软雅黑", sans-serif;
 }
 
-.all {
-    /*max-width: 40rem;*/
-    width: 100%;
-    margin: 0 auto;
-    background: #29bde0;
-    font-size: 2rem;
-    color: white;
-}
-
-.top {
-    line-height: 3rem;
-}
-
-.top span {
-    display: inline-block;
-    text-align: center;
+.head {
+    position: fixed;
     top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 18rem;
+}
+
+.head-1 {
+    width: 100%;
+    height: 6rem;
+    background: #28C2D6;
+}
+
+.head-1-1 {
+    float: left;
+    padding: 2rem;
+    width: 30%;
+    height: 6rem;
+}
+
+.head-1-1 img {
+    width: 3rem;
+    height: 3rem;
+    background: #28C2D6;
+}
+
+.icon-bar {
+    display: block;
+    margin: 6px;
+    width: 20px;
+    height: 4px;
+    border-radius: 1px;
+    text-align: center;
+}
+
+h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 6rem;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 6rem;
+}
+
+h2 {
+    float: right;
+    margin: 0;
+    padding: 0 1rem 0 0;
+    width: 30%;
+    height: 6rem;
+    color: white;
+    text-align: right;
+    font-size: 5.5rem;
+    line-height: 6rem;
+}
+
+main {
+    display: block;
+    width: 100%;
+    height: 7rem;
+    background: #B9EEF5;
+}
+
+.main-1 {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 3rem;
+    width: calc(80%);
+    height: 7rem;
+    text-align: left;
+    font-size: 2.3rem;
+    line-height: 7rem;
+
+    Letter-spacing: .15rem;
+}
+
+main>button {
+    width: 20%;
+    height: 7rem;
+    outline: medium;
+    border: none;
+    background: url("images/play-circle.png") no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+input:focus,
+input:hover {
+    border: none;
+}
+
+.caret {
+    float: left;
+    border-top: .8rem solid #B9EEF5;
+    border-right: .8rem solid transparent;
+    border-left: .8rem solid transparent;
+}
+
+.main-2 {
+    float: left;
+    padding: 0 0 0 4rem;
+    width: 100%;
+    height: 1rem;
+    background: #67C5D2;
+}
+
+.main-3 {
+    float: left;
+    padding: 0 0 4rem 4rem;
+    width: 100%;
+    height: 2rem;
+    background: #67C5D2;
+    color:white;
+    font-size: 1.9rem;
+    line-height: 2rem;
+}
+
+.main-4 {
+    overflow: auto
+    margin-top: 16rem;
+    width: 100%;
+    height: 75rem;
+    background: #67C5D2;
+}
+
+#main-4-1 {
+    float: left;
+    margin: 6% 5.55%;
+    width: 22.22%;
+    height: 22.22vw;
+    border: 2px solid white;
+    background: white;
+}
+
+.main-4-1-1 {
+    display: table;
+    width: 100%;
+    height: 75%;
+    background: #F2C27E;
+}
+
+h3 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h4 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.main-4-1-2 {
+    display: table;
+    width: 100%;
+    height: 25%;
+    background: #80AA97;
+}
+
+#main-4-1:hover .main-4-1-3 {
+    opacity: 1;
+}
+
+.main-4-1-3 {
+    display: inline;
+    float: left;
+    margin-top: 12%;
+    margin-bottom: 12%;
+    width: 100%;
+    height: 8vw;
+    opacity: 0;
+}
+
+img {
+    float: left;
+    margin: 0 2.5%;
+    width: 20%;
+    background: white
+}
+
+.footer {
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
-    position: absolute;
-    margin-top: 0.5rem;
+    width: 100%;
+    height: 16rem;
+    background: #67C5D2;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 8rem;
+    ;
 }
 
-.menu,
-.close {
-    margin-top: 1rem;
-}
-
-.menu {
-    margin-left: 1rem;
-}
-
-.close {
-    float: right;
-    margin-right: 1rem;
-}
-
-.vote {
-    background: #b9e9f5;
-    color: black;
-    font-size: 1.5rem;
-    padding: 2rem 0;
-}
-
-.vote p {
-    padding-left: 4rem;
-    letter-spacing: 3px;
-    width: 60%;
-}
-
-.vote span {
-    width: 4rem;
-}
-
-.play {
-    float: right;
-    margin-top: -2.8rem;
-    margin-right: 1rem;
-    overflow: hidden;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
+.footer1 {
+    margin: 4rem 10%;
+    width: 80%;
+    height: 8rem;
     background: orange;
-    cursor: pointer;
-}
-
-.play:hover {
-    cursor: pointer;
-}
-
-.music {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.three {
-    float: right;
-    width: 0;
-    height: 0;
-    border-top: 12px solid transparent;
-    border-left: 25px solid white;
-    border-bottom: 12px solid transparent;
-    margin-top: -1.6rem;
-    margin-right: -7rem;
-    float: right;
-}
-
-
-/*å¼€å§‹ä¸‰è§’å½¢*/
-
-.click {
-    font-size: 1.5rem;
-}
-
-.click span {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 8.7px 5px 0 5px;
-    border-color: #b9e9f5 transparent transparent transparent;
-    margin-left: 5rem;
-    /*margin-top: rem;*/
-    position: absolute;
-}
-
-.click p {
-    padding-top: 2rem;
-    padding-left: 5rem;
-}
-
-.many {
-    padding-top: 3rem;
-}
-
-.one {
-    width: 33.33%;
+    color: white;
     text-align: center;
-    position: relative;
-    float: left;
+    font-size: 3.6rem;
+    line-height: 8rem;
 }
 
-.allin {
-    width:55%;
-    border: 5px solid white;
-    margin: 3rem auto;
-}
-
-.one-top {
-    padding: 20% 0;
-    display: block;
-    background: #f5c97b;
-    color: black;
-}
-
-.one-bottom {
-    background: #83b09a;
-    width: 100%;
-    display: block;
-    font-size: 1.5rem;
-}
-
-.clear {
-    clear: both;
-}
-
-
-.allin:hover .sprite {
-    display: block;
-}
-
-.sprite {
-    display: none;
-    position: absolute;
-    bottom: 2rem;
-    left: 2.6rem;
-    width: 8rem;
-    height: 3rem;
-    margin-top: 1rem;
-}
-
-.sprite .icon1 {
-    background-position: 0 0;
-}
-
-.sprite span {
-    width: 18.39%;
-    height: 100%;
-    display: inline-block;
-    background-image: url(../images/sprite.png);
-    background-repeat: no-repeat;
-    background-size: 400%;
-}
-
-.icon2 {
-    background-position: 33.33% 0;
-}
-
-.icon3 {
-    background-position: 66.67% 0;
-}
-
-.icon4 {
-    background-position: 100% 0;
-}
-
-
-/*é¡µè„šå¼€å§‹*/
-
-footer {
-    /*max-width: 40rem;*/
-    min-width: 15rem;
-    width: 100%;
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    padding: 2rem 0 3rem 0;
-    background: #29bde0;
-}
-
-footer a {
+a {
+    color: white;
     text-decoration: none;
 }
 
-footer button {
-    padding: 2rem 10rem;
-    background: #fbb435;
-    border: none;
-    color: white;
-    cursor: pointer;
-    letter-spacing: 0.5rem;
-    font-size: 3rem;
+a:hover {
+    color: white;
+    text-decoration: none;
 }
 
-@media screen and (max-width:587px) {
-    html {
-        font-size: 15px;
-    }
+.icon-1,
+.icon-2,
+.icon-3,
+.icon-4 {
+    width: 30px;
+    height: 30px;
+    background: url("images/choise.png") no-repeat;
+    background-size: 30px 30px;
 }
 
-@media screen and (max-width:530px) {
-    html {
-        font-size: 12px;
-    }
+.icon-1 {
+    background-position: -0 -0px;
+}
+
+.icon-2 {
+    background-position: -30px -0px;
+}
+
+.icon-3 {
+    background-position: -60px -0px;
+}
+
+.icon-4 {
+    background-position: -90px -0px;
+}
+
+.main-4-1-3 a {
+    float: left;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.icon {
+    float: left;
+    margin: 2.5%;
+    padding: calc((4vw - 30px) / 2) calc((20% - 30px) / 2);
+    width: 20%;
+    height: 4vw;
+    background: white;
 }
