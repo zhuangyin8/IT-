@@ -8,7 +8,7 @@
     <title>任务3:魔镜介绍页——一个最简单的移动端页面</title>
     <style>
         body {
-            background-color: #68cdd6;
+            background: #68cdd6;
         }
 
         header {
@@ -17,48 +17,44 @@
             background: url(images/back.png) left no-repeat;
         }
 
-        main {
-            /*max-width: 80rem;*/
-            margin: 0 auto;
-        }
-
         .logo {
             height: 5rem;
             margin: 5rem auto;
             background: url(images/logo.png) center no-repeat;
         }
 
-        .outer {
+        .content {
             width: 80%;
             height: 18rem;
             margin: 0 auto;
             /*margin: 0 auto 设置块元素（或与之类似的元素）的居中。*/
-            border: 0;
+            border: none;
             font: 1.3rem "Microsoft YaHei", sans-serif;
             letter-spacing: normal;
+            /*letter-spacing:字符间距*/
             text-align: justify;
+            /*文字向两侧对齐。*/
         }
 
-        div p {
+        p {
             /*上下文选择器:只有div后代的p元素才会应用的样式*/
-            color: #ffffff;
+            color: #fff;
         }
 
         .contact {
             height: 5rem;
             background: url(images/qq.png) left no-repeat, url(images/location.png) right no-repeat;
             font: 1.3rem "Microsoft YaHei", sans-serif;
-            margin: 1rem 10%;
-            color: #fff;
+            margin: 1rem;
         }
 
         .qq {
-            margin: 1rem 10%;
+            margin: 1rem;
             float: left;
         }
 
         .location {
-            margin: 1rem 10%;
+            margin: 1rem;
             float: right;
         }
     </style>
@@ -70,7 +66,7 @@
 </header>
 <main>
     <div class="logo"></div>
-    <div class="outer">
+    <div class="content">
         <p>葡萄藤轻游戏专注于桌游领域，提供在线杀人游戏、捉鬼、炸狼堡等多种聚会游戏，以线下聚会桌游道具为主。</p>
     </div>
     <div class="contact"></div>
