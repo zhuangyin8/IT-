@@ -1,26 +1,25 @@
 body {
     width: 100%;
-    max-width: 35rem;
-    min-width: 17.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    min-width: 320px;
+    margin:0;
+    padding:0;
 }
 
 a {
     text-decoration: none;
 }
 
-.head {
-    width: 35rem;
+header {
+    width: 100%;
     background: #29bde0;
     padding: 1rem 0;
 }
 
-.head img {
+header img {
     padding-left: 1rem;
 }
 
-.content {
+main {
     padding: 2rem 0 4rem 0;
     text-align: center;
     width: 100%;
@@ -59,7 +58,7 @@ a {
     vertical-align: center;
 }
 
-.next-title {
+.game {
     color: #fbb435;
     padding: 1.5rem 0;
     border-bottom: 2px solid #fbb435;
@@ -109,19 +108,17 @@ a {
     background:#29bde0;
 }
 @media screen and (max-width:610px){
-    body{
-        width:35rem;
-    }
+
     html{
         font-size: 12px;
     }
 }
-@media screen and (max-width:540px){
+@media screen and (max-width:425px){
     /* body{
          font-size:1.5rem;
      }*/
     html{
-        font-size: 12px;
+        font-size: 10px;
     }
     img{
         max-width: 1.3rem;

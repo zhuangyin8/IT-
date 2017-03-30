@@ -2,9 +2,15 @@
     margin: 0;
     padding: 0;
 }
+body {
+    width: 100%;
+    min-width: 320px;
+    margin:0;
+    padding:0;
+}
 
 .all {
-    max-width: 40rem;
+    /*max-width: 40rem;*/
     width: 100%;
     margin: 0 auto;
     background: #29bde0;
@@ -31,13 +37,7 @@
 .close {
     margin-top: 1rem;
 }
-body {
-    margin-right: auto;
-    margin-left: auto;
-    min-width: 320px;
 
-    width: 100%;
-}
 .menu {
     margin-left: 1rem;
 }
@@ -113,6 +113,7 @@ body {
     border-width: 8.7px 5px 0 5px;
     border-color: #b9e9f5 transparent transparent transparent;
     margin-left: 5rem;
+    /*margin-top: rem;*/
     position: absolute;
 }
 
@@ -202,7 +203,7 @@ body {
 /*é¡µè„šå¼€å§‹*/
 
 footer {
-    max-width: 40rem;
+    /*max-width: 40rem;*/
     min-width: 15rem;
     width: 100%;
     position: fixed;
