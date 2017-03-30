@@ -158,8 +158,6 @@ body {
 }
 
 
-/*spriteå¼€å§‹*/
-
 .allin:hover .sprite {
     display: block;
 }
@@ -167,7 +165,7 @@ body {
 .sprite {
     display: none;
     position: absolute;
-    /*bottom: 2rem;*/
+    bottom: 2rem;
     left: 2.6rem;
     width: 8rem;
     height: 3rem;
