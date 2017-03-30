@@ -6,14 +6,18 @@ html {
     margin: 0;
     padding: 0;
 }
+
 body {
     margin: 0 auto;
-    min-width: 320px;
-    max-width:720px;
+    min-width: 320px;
+    /*max-width: 720px;*/
+
 }
+
 ul, li {
     list-style-type: none;
 }
+
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
@@ -44,7 +48,7 @@ ul, li {
 
 @media only screen and (min-width: 992px) {
     html {
-        font-size: 62.5%;
+        font-size: 100%;
     }
 }
 
@@ -52,15 +56,14 @@ ul, li {
 
 @media only screen and (min-width: 1200px) {
     html {
-        font-size: 62.5%;
+        font-size: 112.5%;
     }
 }
-
+/*头部样式*/
 header {
     position: fixed;
     top: 0;
-    overflow: hidden;
-    max-width:720px;
+    overflow: hidden;/* 内容会被修剪，并且其余内容不可见 */
     width: 100%;
     background: #5fc0cd;
     text-align: center;
@@ -78,7 +81,8 @@ header a {
 
 header .find-employer {
     background: #55a8b3;
-    color: #fff;
+    color: #fff;
+
 }
 
 header .find-carer {
@@ -88,10 +92,11 @@ header .find-carer {
 }
 
 header img {
-    position:absolute;
+    position: absolute;
     float: right;
     margin: 1rem 15rem;
-    max-width:6%;width: 6%;
+    max-width: 6%;
+    width: 6%;
 }
 
 /*主体部分*/
@@ -99,7 +104,8 @@ header img {
 .main {
     padding-top: 8.3rem;
     padding-bottom: 10rem;
-    max-width:720px;
+    /*max-width: 720px;*/
+
 }
 
 .main-nav {
@@ -108,8 +114,8 @@ header img {
 
 .main-nav select {
     padding: 3.3% 5%;
-    width: 33.3%;
-    background: url(images/down.png) 85% 50%  no-repeat;
+    width: 33.3%;
+    background: url(images/down.png) 85% 50% no-repeat;
     font-size: 2.8rem;
 
     appearance: none;
@@ -172,68 +178,67 @@ header img {
     color: #e63b0e;
     vertical-align: middle;
 }
+
 /*底部样式*/
-footer{
-	position: fixed;
-	bottom: 0;
-	max-width: 720px;
-	width: 100%;
-	background-color: #f8fafb;
-	text-align: center;
-	font-size: 2rem;
-	/*padding: .4rem 0;*/
+footer {
+    position: fixed;
+    bottom: 0;
+    /*max-width: 720px;*/
+    width: 100%;
+    background-color: #f8fafb;
+    text-align: center;
+    font-size: 2rem;
 }
-.footer-content{
-	display: inline-block;
-	overflow: hidden;
-	width: 60%;
+
+.footer-content {
+    display: inline-block;
+    overflow: hidden;
+    width: 60%;
 }
-.footer-left{
-	display: inline-block;
-	float: left;
-	padding-top: 5%;
-	vertical-align: middle;
+
+.footer-left {
+    display: inline-block;
+    float: left;
+    padding-top: 5%;
+    vertical-align: middle;
 }
-.footer-left img{
-	display: block;
-	width: 90%;
+
+.footer-left img {
+    display: block;
+    /*width: 90%;*/
 }
-.footer-left span{
-	/*padding-left:2%;*/
-	color: #5fc0cd;
-	line-height:3rem;
+
+.footer-left span {
+    /*padding-left:2%;*/
+    color: #5fc0cd;
+    line-height: 3rem;
 }
-.footer-left span a{
-	color: #5fc0cd;
-	text-decoration: none;
+
+.footer-left span a {
+    color: #5fc0cd;
+    text-decoration: none;
 }
-.footer-center{
-	display: inline-block;
-	/*padding-left: 10%;*/
-	width:30%;
-	height:100%;
-	vertical-align: middle;
+
+.footer-center {
+    display: inline-block;
+    padding-top: 25%;
+    width: 25%;
+    border-radius: 50%;
+    background: url(images/modify.png) center #5fc0cd no-repeat;    /*span元素里不能简写background属性,div元素则可以*/
+    vertical-align: middle;
 }
-.footer-center span{
-	display: inline-block;
-	padding-top: 75%;
-	width: 75%;
-	border-radius: 50%;
-	background-color: #5fc0cd;
-	background-image: url(images/modify.png);
-	background-position: center;
-	background-size: 40%;
-	background-repeat: no-repeat;
+
+.footer-right {
+    display: inline-block;
+    float: right;
+    padding-top: 5%;
+    vertical-align: middle;
 }
-.footer-right{
-	display: inline-block;
-	float: right;
-	padding-top: 5%;
-	vertical-align: middle;
+
+.footer-right img {
+    display: block;
 }
-.footer-right img{
-	width: 90%;
-}
-.footer-right span{
-	color: #aaa;
+
+.footer-right span {
+    color: #aaa;
 }

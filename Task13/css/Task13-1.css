@@ -38,7 +38,7 @@ main {
     width: 100%;
 }
 
-.last p {
+.continue {
     color: #9a9a9a;
     margin: 0;
     padding: 2rem 0;
@@ -74,7 +74,7 @@ main {
     margin-top: 2rem;
 }
 
-.next-p {
+p {
     font-size: 1.5rem;
     color: gray;
 }
@@ -121,6 +121,6 @@ main {
         font-size: 10px;
     }
     img{
-        max-width: 1.3rem;
+        max-width: 2rem;
     }
 }
