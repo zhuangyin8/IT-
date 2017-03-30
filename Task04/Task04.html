@@ -25,6 +25,7 @@
             top: 0;
             /*color: #fff;*/
         }
+
         /*头部的 <header>注册,关闭的超链接<a>的样式*/
 
         header a {
@@ -33,6 +34,7 @@
             font-size: 0.32rem;
             /*字体尺寸*/
         }
+
         /*忘记密码的 超链接标签<a>的样式*/
 
         a {
@@ -41,6 +43,7 @@
             text-decoration: none;
             /*去掉下划线*/
         }
+
         /*头部的 登陆标题<h2>的样式*/
 
         header h2 {
@@ -57,13 +60,10 @@
             bottom: 0;
             left: 0;
             right: 0;
-            /*overflow-y: auto;
-                overflow-x: hidden;*/
+            /*overflow-y: auto;*/
+            /*overflow-x: hidden;*/
             -webkit-overflow-scrolling: touch;
             background: #eff0f4;
-        }
-
-        .content {
             height: auto;
             font-size: 0.24rem;
         }
@@ -100,6 +100,7 @@
             width: 100%;
             background: #fff;
         }
+
         /*给输入框旁边添加样式*/
 
         .input-row input {
@@ -115,13 +116,13 @@
 
         .input-row input[type=text] {
             /*给文本输入框旁边添加小图标*/
-            background: url("icon_mobile.png") no-repeat;
+            background: url("images/icon_mobile.png") no-repeat;
             background-size: 1.18rem 1rem;
         }
 
         .input-row input[type=password] {
             /*给密码输入框旁边添加小图标*/
-            background: url("icon_pwd.png") no-repeat;
+            background: url("images/icon_pwd.png") no-repeat;
             background-size: 1.18rem 1rem;
         }
 
@@ -138,30 +139,33 @@
     </style>
 </head>
 <!--
-    先把框架层次结构搭建起来  -- 即 头部的 <header>包含登陆标题<h2>和注册,关闭的超链接<a -- <main>标签里 是表单标签<form>--
-    表单里有文本输入框 input type="text" -- 密码输入框 input type="password" -- 登陆按钮 <button> -- 忘记密码的 超链接标签<a>
+    先把框架层次结构搭建起来
+    即 头部的 <header>包含登陆标题<h2>和注册,关闭的超链接<a>
+     <main>标签里 是表单标签<form>--
+    表单里有文本输入框 input type="text"
+    密码输入框 input type="password"
+    登陆按钮 <button>
+    忘记密码的 超链接标签<a>
     -->
 
 <body>
-    <header>
-        <a href="" class="pull-right">注册</a>
-        <a href="" class="pull-left">关闭</a>
-        <h2>登陆</h2>
-    </header>
+<header>
+    <a href="" class="pull-right">注册</a>
+    <a href="" class="pull-left">关闭</a>
+    <h2>登陆</h2>
+</header>
 
-    <main>
-        <div class="content">
-            <form class="login">
-                <div class="input-row"><input type="text" placeholder="请输入手机号" /></div>
-                <div class="input-row"><input type="password" placeholder="请输入密码" /></div>
+<main>
+    <form class="login">
+        <div class="input-row"><input type="text" placeholder="请输入手机号"/></div>
+        <div class="input-row"><input type="password" placeholder="请输入密码"/></div>
 
-                <button class="btn btn-login">登 陆</button>
-                <p class="pull-right forget-password">
-                    <a href="">忘记密码?</a>
-                </p>
-            </form>
-        </div>
-    </main>
+        <button class="btn btn-login">登 陆</button>
+        <p class="pull-right forget-password">
+            <a href="">忘记密码?</a>
+        </p>
+    </form>
+</main>
 
 </body>
 
