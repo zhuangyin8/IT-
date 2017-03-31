@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -11,7 +11,6 @@ html {
     html {
         font-size: 40%;
     }
-
 }
 
 img {
@@ -29,7 +28,7 @@ li {
 .wrap {
     margin: 0 auto;
     min-width: 320px;
-    max-width: 640px;
+    max-width: 640px;
     width: 100%;
 }
 
@@ -112,7 +111,7 @@ li {
 }
 
 .main {
-    padding-bottom: 30%;
+    padding-bottom: 30%;
     font-size: 0;
 }
 
@@ -124,21 +123,21 @@ li {
 }
 
 .box {
-    margin-bottom: 10%;
+    margin-bottom: 10%;
     border: 5px solid #ffffff;
     text-align: center;
 }
 
 .professional {
     background-color: #f5c97b;
-    color: #565656;
+    color: #565656;
     font-size: 3rem;
     line-height: 3.3;
 }
 
 .order {
     background-color: #83b09a;
-    color: #e4ede8;
+    color: #e4ede8;
     font-size: 2.2rem;
     line-height: 1.2;
 }
@@ -150,13 +149,14 @@ li {
 .sprite li {
     visibility: hidden;
     margin: 0 .5%;
-    padding: 12% 0;
+    padding: 12% 0;
     width: 24%;
     height: 0;
-    background-color: #fff;
-    background-image: url(images/icon.png);
-    background-size: 400%;
-    background-repeat: no-repeat;
+    /*background-color: #fff;*/
+    /*background-image: url(images/icon.png);*/
+    /*background-size: 400%;*/
+    /*background-repeat: no-repeat;*/
+    background: url(images/icon.png) #fff no-repeat;
 }
 
 .main-cell:hover li {
@@ -187,7 +187,7 @@ li {
 }
 
 button {
-    margin: 6.25% 12.5%;
+    margin: 6.25% 12.5%;
     width: 75%;
     background-color: #fbb435;
     color: #fff;

@@ -14,10 +14,10 @@
     <div class="header">
         <div class="menu"><img src="images/menu.png"></div>
         <span>投票</span>
-        <div class="close"><img src="images/close.png"> </div>
+        <div class="close"><img src="images/close.png"></div>
     </div>
     <div class="column">
-        <audio id="music2" src="1.mp3" loop="loop">你的浏览器不支持audio标签。</audio>
+        <audio id="music2" src="汪小敏 - 海阔天空.mp3" loop="loop">你的浏览器不支持audio标签。</audio>
 
         <div class="column-top">
             <span>发言讨论结束，大家请投票</span>
@@ -173,18 +173,20 @@
         </div>
     </div>
     <div class="footer">
-        <a href="Task13-3.html"><button>投死</button></a>
+        <a href="Task13-3.html">
+            <button>投死</button>
+        </a>
     </div>
 </div>
 <script>
     function playPause() {
         var music = document.getElementById('music2');
         var music_btn = document.getElementById('music_btn2');
-        if (music.paused){
+        if (music.paused) {
             music.play();
             // music_btn.src = 'play.gif';
         }
-        else{
+        else {
             music.pause();
             // music_btn.src = 'pause.gif';
         }
