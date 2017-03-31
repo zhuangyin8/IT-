@@ -125,6 +125,7 @@ header span {
 .box {
     margin-bottom: 10%;
     border: 5px solid #ffffff;
+
     text-align: center;
 }
 
@@ -132,14 +133,14 @@ header span {
     background-color: #f5c97b;
     color: #565656;
     font-size: 3rem;
-    line-height: 3.3;
+    line-height: 4;
 }
 
 .order {
     background-color: #83b09a;
     color: #e4ede8;
     font-size: 2.2rem;
-    line-height:2;
+    line-height: 2;
 }
 
 .sprite {
