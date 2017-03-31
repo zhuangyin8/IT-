@@ -25,21 +25,21 @@ li {
     display: inline-block;
 }
 
-.wrap {
+body {
     margin: 0 auto;
     min-width: 320px;
-    max-width: 640px;
+    /*max-width: 640px;*/
     width: 100%;
 }
 
-.header {
+header {
     box-sizing: border-box;
     width: 100%;
     background-color: #29bde0;
     font-size: 0;
 }
 
-.wrap {
+body {
     background-color: #29bde0;
 }
 
@@ -59,7 +59,7 @@ li {
     text-align: right;
 }
 
-.header span {
+header span {
     display: inline-block;
     width: 40%;
     color: #fff;
@@ -139,7 +139,7 @@ li {
     background-color: #83b09a;
     color: #e4ede8;
     font-size: 2.2rem;
-    line-height: 1.2;
+    line-height:2;
 }
 
 .sprite {
@@ -164,23 +164,22 @@ li {
 }
 
 .sprite-2 {
-    background-position: 33%;
+    background-position: 33.3%;
 }
 
 .sprite-3 {
-    background-position: 67%;
+    background-position: 66.3%;
 }
 
 .sprite-4 {
     background-position: 100%;
 }
 
-.footer {
+footer {
     position: fixed;
     bottom: 0;
     box-sizing: border-box;
     min-width: 320px;
-    max-width: 640px;
     width: 100%;
     border-top: 1px solid #ffffff;
     background-color: #29bde0;
@@ -188,7 +187,7 @@ li {
 
 button {
     margin: 6.25% 12.5%;
-    width: 75%;
+    width: 80%;
     background-color: #fbb435;
     color: #fff;
     text-align: center;
