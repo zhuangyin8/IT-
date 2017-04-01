@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <title>庄引の葡萄藤</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!--轮播图CSS-->
+    <!-- 轮播图 CSS-->
     <link href="media/carousel.css" rel="stylesheet">
-    <!---->
+    <!-- 页面 CSS -->
     <link href="media/main.css" rel="stylesheet">
+    <!--CSS页面刷新九宫格预加载动画-->
+    <link href="media/9-cube-grid.css" rel="stylesheet">
     <!--Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -18,10 +20,15 @@
     <!-- Google Web Fonts 使用-->
     <link rel="stylesheet" type="text/css" media="all"
           href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,300italic,400italic|Roboto+Mono&subset=latin,greek,vietnamese,greek-ext,latin-ext,cyrillic,cyrillic-ext">
-
+    <style>
+        html, body {
+            font-family: "Open Sans";
+        }
+    </style>
 </head>
 
 <body>
+<!--导航栏-->
 <div class="bd-example" data-example-id="">
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -50,7 +57,7 @@
         </div>
     </nav>
 </div>
-
+<!--轮播图-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -104,7 +111,7 @@
     </a>
 </div>
 
-
+<!--表格-->
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -224,7 +231,7 @@
             <tr>
                 <td>Task14</td>
                 <td>
-                    <a href="Task14/Task14-1.html">任务14：自己的组件库——将修真院拆出属于自己的组件库</a>
+                    <a href="Task15/Task15-1.html">任务14：自己的组件库——将修真院拆出属于自己的组件库</a>
                 </td>
                 <td>提取PC端的组件库</td>
             </tr>
@@ -238,14 +245,29 @@
         </table>
     </div>
 </div>
+<!--页脚-->
 <footer>
-    <div class="col-12">
+    <div class="col-12 text-info">
         Created by
         <a href=" https://github.com/zhuangyin8">庄引</a>
     </div>
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110
             src="//music.163.com/outchain/player?type=0&id=572349368&auto=1&height=110"></iframe>
 
+    <!--      页面刷新九宫格预加载动画   -->
+    <div id="loading" class="loading">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
 </footer>
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
