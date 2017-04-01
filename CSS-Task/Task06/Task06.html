@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>任务6:护工列表页——一个最常见的移动端页面，需要使用bootstrap</title>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        @media screen and (max-width: 768px) {
+            html {
+                font-size: 50%;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            html {
+                font-size: 37.5%;
+            }
+        }
+        /*下拉列表按钮的背景颜色*/
+
+        .head-background {
+            background-color: #fff;
+        }
+        /*header栏的背景颜色*/
+
+        .button-background {
+            background-color: #5FC0CD;
+        }
+        /*footer底部栏的背景颜色*/
+
+        .foot-background {
+            background-color: #FFF;
+        }
+        /*bootstrap按钮式下拉菜单如何和按钮一样宽度？将ul的width样式设置为100%,即可将下拉列表的内容与按钮的宽度一致*/
+
+        ul.dropdown-menu {
+            min-width: 100%;
+        }
+        /*下拉列表按钮栏的高度,为了与header栏保持间距*/
+
+        .button-height {
+            height: 7.5rem;
+            line-height: 7.5rem;
+        }
+
+        .list-height {
+            height: 8rem;
+            line-height: 8rem;
+        }
+
+        .foot {
+            display: flex;
+            /*display CSS属性指定用于元素的呈现框的类型。*/
+            align-items: center
+            /* 在侧轴上居中 */
+            /*align-items 属性以与justify-content相同的方式在侧轴方向上将当前行上的弹性元素对齐。*/
+        }
+
+        .foot-align {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            /* 居中排列 */
+            /*justify-content 属性定义了浏览器如何分配顺着父容器主轴的弹性元素之间及其周围的空间。*/
+        }
+        /*每个服务详情的底边框属性*/
+
+        .border-bottom {
+            border-bottom: .2rem solid #DEE5E7;
+        }
+        /*下拉列表按钮栏的边框属性*/
+
+        .border-right {
+            border-right: .2rem solid #DEE5E7;
+        }
+        /*为了实现与服务详情与下拉列表按钮栏无间距*/
+
+        .main {
+            padding: 13.5rem 0 8rem;
+            /*overflow: hidden;*/
+        }
+        /*出现省略号的样式*/
+
+        .content {
+            white-space: nowrap;
+            /*连续的空白符会被合并。但文本内的换行无效*/
+            /*white-space 属性是用来设置如何处理元素中的空白。*/
+            overflow: hidden;
+            /*overflow 属性作用于block型元素上。它规定了当内容元素溢出元素框时发生如何处理：裁剪内容，使用滚动条来显示 或 直接显示超出部分 。*/
+            text-overflow: ellipsis
+            /*text-overflow 属性用于决定溢出的内容以何种形式提醒用户。它可以直接剪切（clipped），也可以显示一个省略号（ellipsis），或者显示一个自定义的字符串(string)。 */
+        }
+
+        .button {
+            white-space: nowrap;
+            /*white-space CSS 属性是用来设置如何处理元素中的空白。*/
+        }
+        /*.list-padding样式与.button样式一起保障下拉列表栏的高度*/
+
+        .list-padding {
+            padding: 1.3rem 0;
+        }
+        /*服务详情的高度*/
+
+        .content-padding {
+            padding: 1.25rem;
+        }
+        /*找雇主按钮*/
+
+        .left-padding {
+            padding-right: 0;
+            z-index: 1;
+            margin-right: -0.2rem
+        }
+        /*找雇主 和找雇工 按钮部分重叠*/
+        /*找护工按钮*/
+
+        .right-padding {
+            padding-left: 0;
+            z-index: 2;
+            margin-left: -0.2rem
+        }
+        /*找雇工 按钮的背景颜色和字体颜色*/
+        /*.button-color-employer { */
+        /*background-color: #55A8B3;*/
+        /*color: #FFF;*/
+        /*border-radius: 5%;*/
+        /*height:7.2rem;*/
+        /*border-color: #55A8B3*/
+        /*}*/
+        /*找护工 按钮的背景颜色和字体颜色*/
+        /*.button-color-employee {*/
+        /*background-color: #FFF;*/
+        /*color: #55A8B3;*/
+        /*border-radius: 5%;*/
+        /*height:7.2rem*/
+        /*}*/
+        /*header栏按钮的共同属性*/
+
+        .button-font-size {
+            font-size: 3rem;
+            height: 6rem;
+            border-radius: 5%;
+            margin: 0.8rem 0;
+            width: 12rem;
+            line-height: 6rem;
+        }
+        /*找雇工 按钮的背景颜色和字体颜色*/
+
+        .button-color-employer {
+            background: #55A8B3;
+            color: #fff;
+            border: #55A8B3 1px solid;
+        }
+        /*找护工 按钮的背景颜色和字体颜色*/
+
+        .button-color-employee {
+            background: #fff;
+            color: #5fc0cd;
+            border: #fff 1px solid;
+            border-radius: 0.4rem
+        }
+        /*字体颜色*/
+
+        .text-font-color {
+            color: #999;
+        }
+        /*服务日期"2015-7-5至2015-7-12"字体颜色*/
+
+        .date-font-color {
+            color: #000;
+        }
+        /*价格的字体颜色*/
+
+        .price-font-color {
+            color: #E63B0E;
+        }
+        /*footer 栏首页字体颜色*/
+
+        .home-font-color {
+            color: #5FC0CD;
+        }
+        /*下拉列表栏的和服务详情里的服务日期字体大小*/
+
+        .content-font-size {
+            font-size: 2.8rem;
+        }
+        /*价格的字体大小*/
+
+        .price-font-size {
+            font-size: 3rem;
+        }
+        /*地址的字体大小*/
+
+        .address-font-size {
+            font-size: 2.6rem;
+        }
+        /*footer 栏首页字体大小*/
+
+        .foot-font-size {
+            font-size: 2rem;
+        }
+
+        .icon-map {
+            width: 5.833vw;
+            max-width: 4.2rem;
+        }
+        /*日历图标*/
+
+        .icon-calendar {
+            width: 3.33vw;
+            max-width: 2.4rem;
+        }
+        /*地址图标*/
+
+        .icon-address {
+            width: 2.64vw;
+            max-width: 1.9rem;
+        }
+
+        .icon-right {
+            width: 2.64vw;
+            max-width: 1.9rem;
+        }
+        /*首页图标*/
+
+        .icon-home {
+            width: 6.388vw;
+            max-width: 4.6rem;
+        }
+        /*修改图标 */
+
+        .icon-pen {
+            width: 13.06vw;
+            max-width: 9.4rem;
+        }
+        /*"我的"图标*/
+
+        .icon-person {
+            width: 5.833vw;
+            max-width: 4.2rem;
+        }
+
+        li {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            li {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top head-background">
+        <div class="container-fluid">
+            <div class="row button-background button-height text-center">
+                <div class="col-xs-2 col-md-4 col-sm-4 col-lg-4"></div>
+                <div class="col-xs-8 col-md-4 col-sm-4 col-lg-4">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 text-right left-padding">
+                            <button type="button" class=" button-font-size button-color-employer">找雇主</button>
+                        </div>
+                        <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 text-left right-padding">
+                            <button type="button" class=" button-font-size button-color-employee ">找护工</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-md-4 col-sm-4 col-lg-4 text-right">
+                    <img src="images/map.png" class="icon-map">
+                </div>
+            </div>
+            <div class="nav text-center text-font-color">
+                <div class="row border-bottom content-font-size list-padding">
+                    <div class="dropdown col-xs-4 col-md-4 col-sm-4 col-lg-4 border-right">
+                        <section class="dropdown-toggle row" data-toggle="dropdown">
+                            <div class="col-xs-10 col-md-10 col-sm-10 col-lg-10 button">所在地</div>
+                            <div class="caret"></div>
+                        </section>
+                        <ul class="dropdown-menu content-font-size col-xs-10 col-md-10 col-sm-10 col-lg-10">
+                            <li><a href="#">地址一</a></li>
+                            <li><a href="#">地址二</a></li>
+                            <li><a href="#">地址三</a></li>
+                            <li><a href="#">地址四</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-xs-4 col-md-4 col-sm-4 col-lg-4 border-right">
+                        <section class="dropdown-toggle row" data-toggle="dropdown">
+                            <div class="col-xs-10 col-md-10 col-sm-10 col-lg-10 button">食宿</div>
+                            <div class="caret"></div>
+                        </section>
+                        <ul class="dropdown-menu content-font-size content-font-size col-xs-10 col-md-10 col-sm-10 col-lg-10">
+                            <li><a href="#">包食宿</a></li>
+                            <li><a href="#">不包食宿</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-xs-4 col-md-4 col-sm-4 col-lg-4 ">
+                        <section class="dropdown-toggle row" data-toggle="dropdown">
+                            <div class="col-xs-10 col-md-10 col-sm-10 col-lg-10 button">病人情况</div>
+                            <div class="caret"></div>
+                        </section>
+                        <ul class="dropdown-menu content-font-size col-xs-10 col-md-10 col-sm-10 col-lg-10">
+                            <li><a href="#">情况一</a></li>
+                            <li><a href="#">情况二</a></li>
+                            <li><a href="#">情况三</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid main">
+        <div class="border-bottom content-padding text-font-color">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/calendar.png" class="icon-calendar"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 content-font-size content">服务日期</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
+                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">25元/小时</div>
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/address.png" class="icon-address"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 address-font-size content address-font-size">北京.通州.果园</div>
+            </div>
+        </div>
+        <div class="border-bottom content-padding text-font-color">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/calendar.png" class="icon-calendar"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 content-font-size content">服务日期</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
+                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">35元/小时</div>
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/address.png" class="icon-address"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 address-font-size content address-font-size">北京.通州.果园</div>
+            </div>
+        </div>
+        <div class="border-bottom content-padding text-font-color">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/calendar.png" class="icon-calendar"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 content-font-size content">服务日期</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
+                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/address.png" class="icon-address"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 address-font-size content address-font-size">北京.通州.果园</div>
+            </div>
+        </div>
+        <div class="border-bottom content-padding text-font-color">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/calendar.png" class="icon-calendar"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 content-font-size content">服务日期</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
+                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/address.png" class="icon-address"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 address-font-size content address-font-size">北京.通州.果园</div>
+            </div>
+        </div>
+        <div class="border-bottom content-padding text-font-color">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/calendar.png" class="icon-calendar"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 content-font-size content">服务日期</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
+                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/address.png" class="icon-address"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 address-font-size content address-font-size">北京.通州.果园</div>
+            </div>
+        </div>
+        <div class="border-bottom content-padding text-font-color">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/calendar.png" class="icon-calendar"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 content-font-size content">服务日期</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center content-font-size">&nbsp;</div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 date-font-color content-font-size content">2015-7-5 至 2015-7-12</div>
+                <div class="col-sm-6 col-md-6 col-xs-5 col-lg-6 price-font-color text-right price-font-size left-padding">45元/小时</div>
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1"><img src="images/right.png" class="icon-right"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xs-1 col-lg-1 text-center"><img src="images/address.png" class="icon-address"></div>
+                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 address-font-size content address-font-size">北京.通州.果园</div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-fixed-bottom foot-background">
+        <div class="container-fluid">
+            <div class="nav row text-center foot-font-size foot">
+                <div class="col-sm-2 col-md-2 col-xs-2 col-lg-2"></div>
+                <div class="col-sm-2 col-md-2 col-xs-2 col-lg-2 ">
+                    <img src="images/home.png" class="icon-home ">
+                    <div class="home-font-color button">首页</div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 foot-align ">
+                    <img src="images/pen.png" class="icon-pen">
+                </div>
+                <div class="col-sm-2 col-md-2 col-xs-2 col-lg-2">
+                    <img src="images/person.png" class="icon-person">
+                    <div class="text-font-color button">我的</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</html>
