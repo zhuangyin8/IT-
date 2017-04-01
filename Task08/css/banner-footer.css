@@ -108,8 +108,6 @@ body {
     width: 25px;
     height: 24px;
     margin: 8px 5% 8px 3.4%;
-    /*background-image: url(../images/CssGaga1.png);*/
-    /*background-position: -120px -32px;*/
     background: url(../images/CssGaga1.png) -120px -32px;
 }
 
@@ -119,8 +117,6 @@ body {
     width: 25px;
     height: 24px;
     margin: 8px 0 8px 3.4%;
-    /*background-image: url(../images/CssGaga1.png);*/
-    /*background-position: -120px -58px;*/
     background: url(../images/CssGaga1.png) -120px -58px;
 }
 
@@ -130,8 +126,6 @@ body {
     width: 25px;
     height: 24px;
     margin: 8px 0 8px 3.4%;
-    /*background-image: url(../images/CssGaga1.png);*/
-    /*background-position: -120px -84px;*/
     background: url(../images/CssGaga1.png) -120px -84px;
 }
 
