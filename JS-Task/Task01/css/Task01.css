@@ -28,6 +28,8 @@ body {
     border-radius: 5%;
     /*小方块的上,右,下,左的外边距都是body宽度的1.6%*/
     background: #ffff00;
+    /*设置背景颜色*/
+    border-radius: 5%;
     /*使小方块出现圆角矩形*/
 
 }
