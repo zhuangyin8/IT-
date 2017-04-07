@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>任务1:九宫格——随机的三种颜色值分别添加到九宫格的3个随机小格子的样式上</title>
+    <link rel="stylesheet" href="css/Task01.css" media="screen" type="text/css" />
+
+</head>
+<!--
+思路:
+1. 为页面添加两个按钮(开始闪和结束闪,)，
+2. 分别加上一个click事件(当点击"开始闪"按钮:
+3. 随机获取九宫格中的三个小格子,
+4. 随机获取三种颜色,
+5. 并将这三种颜色分别添加到三个小格子的样式中,
+6. 并设置定时或延迟函数控制随机的间隔.
+7. 在另一个按钮"结束闪"的点击事件里添加一个方法，用于取消定时或延迟执行的函数)
+-->
+
+<body>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+
+    <button id="start" class="btn">开始闪</button>
+    <button id="reset" class="btn btn-secondary">停止闪</button>
+
+</body>
+<script src="js/Task01.js"></script>
+
+</html>

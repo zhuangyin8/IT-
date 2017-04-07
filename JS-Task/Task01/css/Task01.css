@@ -1,0 +1,163 @@
+/**
+ * $Var
+ **/
+/**
+ * $Mixin
+ **/
+/* http://www.sitepoint.com/sass-mixins-kickstart-project/ */
+/**
+ * $Base
+ **/
+body {
+    margin: auto;
+    /*CSS 中对元素进行水平居中:
+    如果它是一个行内元素,就对它的父元素应用text-align: center;
+    如果它是一个块级元素,就对它自身应用margin: auto;*/
+    max-width: 50rem;
+    /*background-color: #cff09e;*/
+    text-align: center;
+}
+
+.square {
+    float: left;
+    /*小方块的上,右,下,左内边距为body宽度的15% 使用 padding来实现高度与宽度成比例的效果。*/
+    margin: 1.6%;
+    /*九宫格的小方块向左浮动 为什么不需清除浮动?因为父级元素的剩余宽度不足以放下下一个小方块时,这个小方块会自动重新换行*/
+    padding: 15%;
+    /*小方块的背景颜色为橙色*/
+    border-radius: 5%;
+    /*小方块的上,右,下,左的外边距都是body宽度的1.6%*/
+    background: #ffff00;
+    /*使小方块出现圆角矩形*/
+
+}
+
+/**
+ * $Bottom
+ **/
+.btn {
+    /*display: inline-block;*/
+    margin: 1rem;
+    padding: .6em 1.1em;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    /*background-color: #fe4365;*/
+    background: #fe4365;/*简写背景属性*/
+    /*background-clip: padding-box;*/
+    /*background-clip。控制背景绘制区域的范围，比如可以让背景颜色和背景图片只
+      出现在内容区，而不出现在内边距区域。默认情况下，背景绘制区域是扩展到边
+      框外边界的。*/
+    box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #fe4365;
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    font-size: 1.625rem;
+    transition: box-shadow .3s;
+}
+.btn:hover, .btn:focus {
+    box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #ff0364;
+    transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+    animation: gelatine 0.5s 1;
+}
+
+.btn-secondary {
+    background: #c8c8a9;
+    box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #c8c8a9;
+}
+.btn-secondary:hover {
+    box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #bebe99;
+}
+
+.btn:active,
+.btn-secondary:active {
+    background: #4ecdc4;
+    box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #3ac7bd;
+    transition-duration: 0;
+}
+
+/**
+ * $keyframes \ gelatine
+ **/
+@keyframes gelatine {
+    from, to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+
+    from, to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+}
+@-webkit-keyframes gelatine {
+    from, to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+
+    from, to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+}
