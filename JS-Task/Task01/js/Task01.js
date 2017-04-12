@@ -22,13 +22,13 @@ function randomBox() {
     });
 }
 
-//机的颜色值使其不能等于ffff00，需要优化
-function randomColor() {
-    color = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ","
-        + Math.floor(Math.random() * 256) + ")";
-    //    Math.random() 函数返回 [0-1) 的浮点值伪随机数（大于等于0，小于1）。
-    //    Math.floor(x) 函数返回小于或等于数 "x" 的最大整数。
-}
+//随机的颜色值
+// function randomColor() {
+//     color = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ","
+//         + Math.floor(Math.random() * 256) + ")";
+//     //    Math.random() 函数返回 [0-1) 的浮点值伪随机数（大于等于0，小于1）。
+//     //    Math.floor(x) 函数返回小于或等于数 "x" 的最大整数。
+// }
 
 //box配色
 function changeBox() {
@@ -38,7 +38,8 @@ function changeBox() {
     // boxItems[original[5]].style = "background: #" + color[1]
     // boxItems[original[8]].style = "background: #" + color[2]
     for (var i = 3; i < 6; i++) {
-        randomColor();
+        // randomColor();
+        color =  "#"+(~~(Math.random()*(1<<24))).toString(16);//产生随机十六进制颜色值
         // boxItems[original[i]].style = "background: " + color;
         boxItems[original[i]].style.background = color;
     }
@@ -68,9 +69,5 @@ document.getElementById("reset").onclick = function () {
     //     boxItems[color].style = "background:#ffff00";
     // }
 
-    
-
     clearInterval(n);
 }
-
-
