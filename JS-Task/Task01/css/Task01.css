@@ -75,7 +75,8 @@ body {
 .btn-secondary:active {
     background: #4ecdc4;
     box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #3ac7bd;
-    transition-duration: 0;
+    transition-duration: 0s;
+    /*transition-duration 属性以秒或毫秒为单位指定过渡动画所需的时间。默认值为 0s ，表示不出现过渡动画。*/
 }
 
 /**
