@@ -1,0 +1,109 @@
+.page {
+    background-color: #29bde0;
+}
+
+/*页面主要内容样式*/
+.main-top {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-top-word {
+    padding: 1rem 1rem 1rem 8%;
+    color: #464646;
+    background-color: #b9e9f5;
+    font-size: 1.2em;
+}
+
+.main-top-word button {
+    position: absolute;
+    top: 5rem;
+    right: 0.8rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.main-top-word img {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+.main-top-triangle {
+    width: 0;
+    height: 0;
+    margin-left: 10%;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: #b9e9f5 transparent transparent transparent;
+}
+
+.main-top p {
+    margin: 0 10%;
+    color: #ffffff;
+}
+
+#main-content {
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 60%;
+}
+
+.main-content-part {
+    float: left;
+    overflow: hidden;
+    width: 25%;
+    margin: 5% 0 0 6%;
+    text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+    .main-content-part {
+        width: 25%;
+        margin: 16% 0 0 6%;
+        text-align: center;
+    }
+}
+
+.main-content-part-role {
+    box-sizing: border-box;
+}
+
+.main-content-part-role-name {
+    padding: 25% 0;
+    cursor: pointer;
+    border: 3px solid white;
+    border-bottom: none;
+    background-color: #f5c97b;
+    font-size: 1.3rem;
+}
+
+.main-content-part-role-num {
+    margin: 0;
+    padding: 2.5%;
+    color: white;
+    border: 3px solid white;
+    border-top: none;
+    background-color: #83b09a;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    text-align: center;
+    border-top: 1px solid white;
+    background-color: #29bde0;
+}
+
+.footer button {
+    margin: 5% auto;
+    padding: 4% 35%;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-color: #fbb435;
+    font-size: 1.8em;
+}

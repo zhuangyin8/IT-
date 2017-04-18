@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>桌游精灵-首页(选择游戏版本)</title>
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <!--桌游精灵的开始后的操作逻辑:
+
+1. 首页选择游戏版本之后;
+
+2. 页面跳转到玩家配比页面,选择游戏玩家人数,分配玩家身份 点击发牌按钮,跳转到查看玩家身份页面;
+
+3. 在查看身份页面依次点击查看玩家身份按钮,查看所每位玩家的身份之后;点击隐藏并传递给下一号玩家(点击一次查看身份再点击隐藏身份，再点击查看下一个人身份，如此循环)(身份的传递方式自行选择，一是跳转页面通过url等方式传递身份，二是本页面操作不跳转页面，只根据情况显示隐藏文本内容和按钮)在查看所有玩家身份之后,点击"查看法官台本"按钮进入法官日志页面;
+
+4. 进入将身份结果传递到新页面-法官查看身份页面，展示所有身份,点击开始游戏按钮;
+
+5. 进入法官日志页面,点击"天黑请闭眼"按钮,进入杀手杀人页面,点击选择除杀手身份以外的玩家,点击"杀死"按钮;
+
+6. 进入黑夜解密页面,点击"去投票"按钮;
+
+7. 进入投票页面,点击选择得票最多的玩家,点击"投死"按钮;
+
+8. 第二天(法官页面,重复第一天流程,直至一方胜利)
+
+9. 直到出现一方胜利的局面,"点击查看结果"按钮;
+
+10.跳转到游戏结果页面.显示结果,再来一局按钮和上传并分享按钮
+-->
+    <body>
+        <header>
+            <a href="#">
+                <div class="header-left">
+                    <img src="img/menu.png">
+                </div>
+            </a>
+        </header>
+        <div class="content">
+            <div class="content-top">
+                <h1>上次游戏：捉鬼猜词版</h1>
+                <a href="#">
+                    <img src="img/continue.png">
+                </a>
+            </div>
+            <div class="content-main">
+                <div class="content-main-game">
+                    <h1>捉鬼游戏</h1>
+                </div>
+                <div class="content-main-version">
+                    <a href="setting.html">
+                        <div class="content-main-version-btn">简化版
+                    </div>
+                    </a>
+                    <span>有1133个用户正在玩此款游戏</span>
+                </div>
+                <div class="content-main-version">
+                    <div class="content-main-version-btn">猜词版
+                </div>
+                    <span>有1133个用户正在玩此款游戏</span>
+                </div>
+                <div class="content-main-version">
+                    <div class="content-main-version-btn">白痴版
+                </div>
+                    <span>有1133个用户正在玩此款游戏</span>
+                </div>
+                <a href="#">
+                    <div class="triangle"></div>
+                </a>
+                <div class="content-footer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

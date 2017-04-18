@@ -1,0 +1,118 @@
+/*页面主要内容部分样式*/
+.content {
+    margin: 0 auto;
+    padding: 5%;
+    background-color: #f0f0f0;
+}
+
+.content-top {
+    position: relative;
+    /* div内的img相对于父元素金绝对定位*/
+    padding: 1% 0;
+    /*内边距*/
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    /*div内文字居中*/
+    background-color: white;
+}
+
+.content-top h1 {
+    color: #9a9a9a;
+    font-weight: normal;
+}
+
+.content-top img {
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    width: 1em;
+    height: 1.8em;
+}
+
+.content-main {
+    position: relative;
+    width: 100%;
+    margin: 4% auto;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    background-color: white;
+}
+
+.content-main-game {
+    width: 100%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    text-align: center;
+    border-bottom: 1px solid #fdd793;
+}
+
+.content-main-game h1 {
+    color: #fbb435;
+    font-weight: 100;
+}
+
+.content-main-version {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.content-main-version a {
+    text-decoration: none;
+}
+
+.content-main-version-btn {
+    width: 80%;
+    /*     padding: 8% 1%; */
+    height: 8rem;
+    margin: 5% auto 4% auto;
+    color: white;
+    background-color: #69d1e9;
+    font-size: 1.8em;
+    line-height: 8rem;
+}
+
+.content-main-version span {
+    color: #9a9a9a;
+    font-size: 1.5em;
+}
+
+.triangle {
+    position: absolute;
+    top: 49%;
+    right: 2%;
+    width: 0;
+    height: 0;
+    border-width: 1.5rem 0 1.5rem 1.5rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fbb435;
+}
+
+.content-footer {
+    margin: auto;
+    /*水平居中*/
+}
+
+/*div.circle span:first-child 表示类名为circle的div的子类元素span的第一个元素 */
+.content-footer span:first-child {
+    margin-top: .5rem;
+    background: #69d1e9;
+}
+
+/*span:nth-child(n+1) 表示类名为circle的div的除第一个的所有span 子元素.*/
+.content-footer span:nth-child(n+1) {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: rgb(240, 240, 240);
+}
+
+/*span:nth-child(n) 表示类名为circle的div的所有子类元素span*/
+.content-footer span:nth-child(n) {
+    margin-bottom: .5rem;
+}
+
+.content-footer span:nth-child(n):hover {
+    background-color: #69d1e9;
+}

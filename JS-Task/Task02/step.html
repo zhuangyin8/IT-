@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>桌游精灵-游戏流程</title>
+        <link rel="stylesheet" href="css/step.css">
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <header>
+            <!--页面顶部-->
+            <div class="header-left">
+                <img src="img/setting-back.png">
+            </div>
+            <div class="header-center">法官台本</div>
+            <div class="header-right">
+                <img src="img/show-close.png">
+            </div>
+        </header>
+        <main>
+            <!--包裹主要页面-->
+            <div class="content">
+                <!--主要页面内容-->
+                <div class="content-day">
+                    <!--显示天数行-->
+                    第一天
+                    <img src="img/step-dayright.png">
+                </div>
+                <div class="content-step">
+                    <!--游戏流程部分-->
+                    <img src="img/step-night.png" class="night">
+                    <img src="img/step-sun.png" class="sun">
+                    <div class="content-step-part">
+                        <i class="triangle"></i>
+                        杀手协商 
+                    </div>
+                    <div class="content-step-part">
+                        <i class="triangle"></i>
+                        杀手杀人 
+                    </div>
+                    <div class="content-step-part">
+                        <i class="triangle"></i>
+                        亡灵发表遗言
+                    </div>
+                    <div class="content-step-part">
+                        <i class="triangle"></i>
+                        玩家依次发言
+                    </div>
+                    <div class="content-step-part">
+                        <i class="triangle"></i>
+                        投票
+                    </div>
+                    <button id="start">天黑请闭眼</button>
+                </div>
+            </div>
+        </main>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
+        <script src="js/step.js"></script>
+    </body>
+</html>

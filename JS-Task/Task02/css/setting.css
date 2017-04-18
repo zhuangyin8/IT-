@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+/*页面主要内容：玩家配比显示、词组、玩家人数设置*/
+.main {
+    padding: 1rem;
+    background-color: #f0f0f0;
+}
+
+/*玩家配比显示部分*/
+.main-top {
+    width: 100%;
+    height: 27rem;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.main-top-left {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    padding: 8rem 8%;
+    vertical-align: top;
+    border-right: 1px solid #d9d9d9;
+    font-size: 2rem;
+}
+
+.main-top-right {
+    display: inline-block;
+    width: 78%;
+    height: 100%;
+    vertical-align: top;
+}
+
+#identifyShow {
+    overflow: auto;
+    width: 100%;
+    height: 85%;
+    margin: 0;
+    /*滚动条*/
+    list-style-type: none;
+    background-color: #fbfbfb;
+}
+
+#identifyShow li {
+    display: inline-block;
+    width: 50%;
+    padding: .8rem 0;
+    color: #999;
+    font-size: 1.5rem;
+}
+
+#identifyShow li span {
+    display: inline-block;
+    margin: 1rem;
+    padding: .5rem;
+    vertical-align: middle;
+    background-color: #fab344;
+}
+
+#identifyShow li i {
+    display: inline-block;
+    margin: 1rem;
+    padding: .2rem;
+    vertical-align: middle;
+    background-color: #29bde0;
+}
+
+#identifyGet {
+    /*点击设置*/
+    width: 100%;
+    height: 15%;
+    cursor: pointer;
+    color: #29bde0;
+    border: none;
+    border-top: 1px solid #d9d9d9;
+    background-color: #fbfbfb;
+    font-size: 1.8rem;
+}
+
+.main-top-right i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/setting-pencil.png");
+}
+
+/*词组设置部分*/
+.main-middle {
+    padding: 1% 5% 3%;
+    background-color: #fff;
+}
+
+.main-middle-part {
+    margin-top: 2%;
+    padding: 2% ;
+    color: #d7d7d7;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 1.5rem;
+}
+
+/*玩家人数设置*/
+.main-bottom {
+    width: 100%;
+    margin-top: 10px;
+    padding: 3%;
+    background-color: #fff;
+    font-size: 1.5rem;
+}
+
+.main-bottom input {
+    width: 3.5rem;
+    margin: 0 0.8rem;
+    text-align: center;
+    color: #fab344;
+    border: none;
+    background-color: #f4f5f5;
+    font-size: 2rem;
+}
+
+.main-bottom-range {
+    width: 100%;
+    margin: 6% auto;
+    text-align: center;
+}
+
+.main-bottom-range button {
+    cursor: pointer;
+    border: none;
+}
+
+.main-bottom-range input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input[type=range] {
+    width: 73%;
+    height: 0.28rem;
+    vertical-align: middle;
+    background-color: #fcc671;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 62px;
+    height: 38px;
+    cursor: pointer;
+    vertical-align: middle;
+    background-image: url("../img/setting-range.png");
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.main-bottom-range input {
+    width: 73%;
+    margin: 0 1.42rem;
+    text-align: center;
+    color: #fab344;
+    border: none;
+    outline: none;
+    background-color: #fab344;
+    font-size: 28px;
+}
+
+.btnSub {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background-image: url("../img/setting-subtract.png");
+}
+
+.btnAdd {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background-image: url("../img/setting-add.png");
+}
+
+/*底部发牌按钮*/
+footer {
+    width: 100%;
+    padding: 0 1rem 1.5rem 1rem;
+    background-color: #f0f0f0;
+}
+
+footer button {
+    width: 100%;
+    height: 5rem;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    color: white;
+    border: none;
+    background-color: #fab344;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 540px) {
+    .main-top-left {
+        padding: 8rem 5%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .main-bottom-range input {
+        width: 60%;
+    }
+
+    .main-bottom p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .main-bottom-range input {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #identifyShow li {
+        font-size: 1.2rem;
+    }
+
+    #identifyShow li span {
+        margin: 0.5rem;
+        padding: .45rem;
+    }
+
+    #identifyShow li i {
+        margin: 0.5rem;
+        padding: .1rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #identifyShow li {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    #identifyShow li span {
+        margin: 1rem;
+        padding: .45rem;
+    }
+
+    #identifyShow li i {
+        margin: 1rem;
+        padding: .3rem;
+    }
+}
