@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>桌游精灵-设置页面(设置玩家人数并分配玩家身份)</title>
     <link rel="stylesheet" href="css/setting.css">
     <link rel="stylesheet" href="css/global.css">
@@ -31,7 +33,7 @@
         </div>
     </div>
     <div class="main-middle">
-        <!--词组部分-->
+        <!--设置词组部分-->
         <div class="main-middle-part">水民词组</div>
         <!--要设置一个点击事件：提示简单版游戏不能设置词组-->
         <div class="main-middle-part">幽灵词组</div>
@@ -41,14 +43,13 @@
         玩家人数
 
         <label for="text">
-            <input type="text" id="number" maxlength="2" value="4">人
-
+            <input type="text" id="number" maxlength="2" value="8">人
         </label>
         <div class="main-bottom-range">
             <!--人数设置拖动条 subtraction 减法-->
             <button class="btnSub" id="btnSub"></button>
             <label for="range">
-                <input type="range" name="range" id="range" min="4" max="18" step="1" value="4">
+                <input type="range" name="range" id="range" min="4" max="18" step="1" value="8">
             </label>
             <div class="btnAdd" id="btnAdd"></div>
         </div>
