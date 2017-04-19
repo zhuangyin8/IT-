@@ -24,8 +24,8 @@ header {
 }
 
 .header-left img {
-    width: 2.4rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 .header-center {
@@ -37,14 +37,11 @@ header {
 .header-right {
     position: absolute;
     top: .5rem;
-    right: 0;
-    /*  overflow: hidden; */
-    /* 内容会被修剪，并且其余内容不可见 */
-    /*     width: 5rem; */
+    right: 1rem;
     cursor: pointer;
 }
 
 .header-right img {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }

@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 /*页面主要内容：玩家配比显示、词组、玩家人数设置*/
 main {
     padding: 1rem;
@@ -164,6 +165,7 @@ input[type=range]::-webkit-slider-thumb {
     background-color: #fab344;
     font-size: 1.75rem;
 }
+
 /* 减少玩家人数 */
 .btnSub {
     display: inline-block;
@@ -172,6 +174,7 @@ input[type=range]::-webkit-slider-thumb {
     vertical-align: middle;
     background: url("../img/setting-subtract.png");
 }
+
 /*增加玩家人数  */
 .btnAdd {
     display: inline-block;
@@ -185,8 +188,7 @@ input[type=range]::-webkit-slider-thumb {
 footer {
     width: 100%;
     padding: 0 1rem 1.5rem 1rem;
-    background-color: #f0f0f0;    
-
+    background-color: #f0f0f0;
 }
 
 footer>button {
