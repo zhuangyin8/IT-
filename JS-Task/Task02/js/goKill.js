@@ -1,5 +1,8 @@
 /**
- * edited by zhuangyin on 2017/4/17.
+ * Created by wanwn on 2017/2/26.
+ */
+/**
+ * Created by wanwn on 2017/2/24.
  */
 $('#sing').click(
     // 播放音频

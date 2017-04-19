@@ -1,5 +1,5 @@
 /**
- * edited by zhuangyin on 2017/4/17.
+ * Created by wanwn on 2017/2/18.
  */
 var allPlayer = sessionStorage.all;
 var all = JSON.parse(allPlayer);
@@ -32,7 +32,7 @@ $("#btnShow").click(function() {
         if (playNum < all.length + 1) {
             $('#btnShow').text('隐藏并传递给' + playNum + '号');
         } else {
-            $('#btnShow').text("法官查看");
+            $('#btnShow').text('查看法官台本');
         }
     }
     clickNum++;

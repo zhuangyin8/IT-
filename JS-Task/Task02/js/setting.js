@@ -4,7 +4,7 @@
 
 // 通过input框、拉动按钮、+ -符号控制人数，且互相关联， 若超出范围则弹出提示框
 // 为了让代码更加健壮，对用户输入的数字进行检验判断，当输入框内不是一个4-18之间的数字时，弹出弹框提示
-var textNum = document.getElementById("number");
+var textNum = document.getElementById("text");
 //获取输入框中用户输入的值  获取text的值
 var rangeNum = document.getElementById("range");
 //获取人数设置拖动条的值   获取range的值
@@ -22,15 +22,11 @@ rangeNum.onchange = function rangeChange() {
 }
 ;
 /*
- *
- * 对玩家人数进行判断
- *
- * onblur 事件 当元素失去焦点
- * 对输入框的数字失去焦点,判断是否符合要求
- * 如果不符合要求(玩家人数<4),提示用户并将玩家人数自动设置为4
- * 如果不符合要求(玩家人数>18),提示用户并将玩家人数自动设置为4
- * 如果符合要求(4<玩家人数<18),将将人数设置拖动条的值赋值给输入框
- */
+* onblur 事件 当元素失去焦点
+* 对输入框的数字判断是否符合要求
+* 如果不符合要求,提示用户
+* 如果符合要求,将将人数设置拖动条的值赋值给输入框
+*/
 textNum.onblur = function textChange() {
     if (textNum.value < 4) {
         alert("人数少于4人不能开始游戏哦");
@@ -40,6 +36,7 @@ textNum.onblur = function textChange() {
         textNum.value = 18;
     } else {
         rangeNum.value = textNum.value;
+        //将text的值给range
     }
 }
 ;
@@ -68,8 +65,8 @@ btnAdd.onclick = function btnAdd() {
 ;
 
 /*
- 将杀手和平民身份打乱，准备分配给1-N号玩家身份
- */
+分配玩家身份
+*/
 var identifyShow = document.getElementById("identifyShow");
 //获取显示玩家身份区域的值
 var identifyGet = document.getElementById("identifyGet");
@@ -120,7 +117,7 @@ identifyGet.onclick = function identifyGet() {
     console.log(all);
     for (var m = 0; m < all.length; m++) {
         //输出打乱的数组，即分配玩家身份，且在页面中显示
-        if (all[m] == "杀手") {
+        if (all[m] == '杀手') {
             player += "<li><span></span>" + (m + 1) + "号" + "&nbsp;&nbsp;" + all[m] + "</li>";
         } else {
             player += "<li><i></i>" + (m + 1) + "号" + "&nbsp;&nbsp;" + all[m] + "</li>";
