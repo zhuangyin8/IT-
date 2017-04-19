@@ -3,7 +3,7 @@
 }
 
 /*页面主要内容：玩家配比显示、词组、玩家人数设置*/
-.main {
+main {
     padding: 1rem;
     background-color: #f0f0f0;
 }
@@ -81,8 +81,8 @@
 
 .main-top-right i {
     display: inline-block;
-    width: 14px;
-    height: 14px;
+    width: .8rem;
+    height: .8rem;
     background-image: url("../img/setting-pencil.png");
 }
 
@@ -103,7 +103,7 @@
 /*玩家人数设置*/
 .main-bottom {
     width: 100%;
-    margin-top: 10px;
+    margin-top: .5rem;
     padding: 3%;
     background-color: #fff;
     font-size: 1.5rem;
@@ -149,20 +149,20 @@ input[type=range]::-webkit-slider-thumb {
     height: 38px;
     cursor: pointer;
     vertical-align: middle;
-    background-image: url("../img/setting-range.png");
+    background: url("../img/setting-range.png");
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
 .main-bottom-range input {
-    width: 73%;
-    margin: 0 1.42rem;
+    width: 70%;
+    margin: 0 1rem;
     text-align: center;
     color: #fab344;
     border: none;
     outline: none;
     background-color: #fab344;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 .btnSub {
@@ -170,7 +170,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 30px;
     height: 30px;
     vertical-align: middle;
-    background-image: url("../img/setting-subtract.png");
+    background: url("../img/setting-subtract.png");
 }
 
 .btnAdd {
@@ -178,7 +178,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 30px;
     height: 30px;
     vertical-align: middle;
-    background-image: url("../img/setting-add.png");
+    background: url("../img/setting-add.png");
 }
 
 /*底部发牌按钮*/
@@ -199,57 +199,26 @@ footer button {
     font-size: 2rem;
 }
 
-@media screen and (max-width: 540px) {
-    .main-top-left {
-        padding: 8rem 5%;
+@media screen and (max-width: 640px) {
+    html {
+        font-size:80%;
     }
 }
 
-@media screen and (max-width: 560px) {
-    .main-bottom-range input {
-        width: 60%;
-    }
-
-    .main-bottom p {
-        font-size: 1.5rem;
+@media screen and (max-width: 580px) {
+    html {
+        font-size:70%;
     }
 }
 
-@media screen and (max-width: 405px) {
-    .main-bottom-range input {
-        width: 50%;
+@media screen and (max-width: 520px) {
+    html {
+        font-size:60%;
     }
 }
 
-@media screen and (max-width: 540px) {
-    #identifyShow li {
-        font-size: 1.2rem;
-    }
-
-    #identifyShow li span {
-        margin: 0.5rem;
-        padding: .45rem;
-    }
-
-    #identifyShow li i {
-        margin: 0.5rem;
-        padding: .1rem;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    #identifyShow li {
-        width: 100%;
-        font-size: 1.5rem;
-    }
-
-    #identifyShow li span {
-        margin: 1rem;
-        padding: .45rem;
-    }
-
-    #identifyShow li i {
-        margin: 1rem;
-        padding: .3rem;
+@media screen and (max-width: 450px) {
+    html {
+        font-size:50%;
     }
 }

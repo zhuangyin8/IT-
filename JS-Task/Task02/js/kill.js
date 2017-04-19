@@ -65,7 +65,7 @@ for (x = 0; x < allName.length; x++) {
 $('#kill').click(
     function () {
         if (killPeople === undefined) {
-            alert("请选择一个玩家");
+            alert("请选择一个平民");
         } else {
             window.location.href = "daytime.html";
         }
