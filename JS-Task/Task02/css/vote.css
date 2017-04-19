@@ -1,30 +1,28 @@
-.page {
-    background-color: #29bde0;
-}
-
 /*页面主要内容样式*/
 .main-top {
     width: 100%;
     margin: 0 auto;
+    background-color: #29bde0;
+    font-size: 1.5em;
 }
 
 .main-top-word {
-    padding: 1rem 1rem 1rem 8%;
+    padding: 1rem;
     color: #464646;
     background-color: #b9e9f5;
-    font-size: 1.2em;
+    position: relative;
 }
 
 .main-top-word button {
     position: absolute;
-    top: 5rem;
-    right: 0.8rem;
+    right: 1rem;
     cursor: pointer;
     border: none;
     background: transparent;
 }
 
 .main-top-word img {
+    right: 10rem;
     width: 2.8em;
     height: 2.8em;
 }
@@ -47,6 +45,7 @@
     overflow: hidden;
     margin: 0 auto;
     padding-bottom: 60%;
+    background-color: #29bde0;
 }
 
 .main-content-part {
@@ -55,14 +54,6 @@
     width: 25%;
     margin: 5% 0 0 6%;
     text-align: center;
-}
-
-@media screen and (max-width: 450px) {
-    .main-content-part {
-        width: 25%;
-        margin: 16% 0 0 6%;
-        text-align: center;
-    }
 }
 
 .main-content-part-role {
@@ -87,7 +78,7 @@
     background-color: #83b09a;
 }
 
-.footer {
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -98,12 +89,21 @@
     background-color: #29bde0;
 }
 
-.footer button {
+footer button {
     margin: 5% auto;
     padding: 4% 35%;
     cursor: pointer;
     color: white;
     border: none;
     background-color: #fbb435;
-    font-size: 1.8em;
+    font-size: 2rem;
 }
+
+/* 
+@media screen and (max-width: 450px) {
+    .main-content-part {
+        width: 25%;
+        margin: 16% 0 0 6%;
+        text-align: center;
+    }
+} */

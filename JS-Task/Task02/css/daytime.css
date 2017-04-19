@@ -38,12 +38,12 @@ main {
     text-align: center;
     color: white;
     font-size: 1.5rem;
-    overflow-y: scroll;
+    /*     overflow-y: scroll; */
 }
 
 /*页面下部内容：游戏进程、投票按钮*/
 .bottom {
-    padding: 10% 0;
+    padding: 4% 0;
     width: 100%;
     text-align: center;
     border-top: 1px solid #74d4eb;
@@ -56,7 +56,7 @@ main {
     width: 70%;
     height: 4rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     letter-spacing: 2px;
     background-color: #24a7c6;
     border: none;
@@ -66,35 +66,11 @@ main {
     display: block;
     margin: 0 auto;
     width: 70%;
-    height: 4.5rem;
+    height: 4rem;
     color: white;
     font-size: 2rem;
     letter-spacing: 3px;
     background-color: #fbb435;
     border: none;
     cursor: pointer;
-}
-
-@media screen and (max-width: 480px) {
-    #main-content {
-        font-size: 1.25rem;
-    }
-
-    .bottom-step {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .main-top-photo {
-        margin: 25% auto 0 auto;
-        width: 50%;
-    }
-
-    .main-top-music {
-        top: 1.5rem;
-        right: 2rem;
-        width: 3rem;
-        height: 3rem;
-    }
 }

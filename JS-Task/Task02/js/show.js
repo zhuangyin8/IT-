@@ -1,5 +1,5 @@
 /**
- * Created by wanwn on 2017/2/18.
+ * edited by zhuangyin on 2017/4/17.
  */
 var allPlayer = sessionStorage.all;
 var all = JSON.parse(allPlayer);

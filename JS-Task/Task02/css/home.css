@@ -63,13 +63,13 @@
 
 .content-main-version-btn {
     width: 80%;
-    /*     padding: 8% 1%; */
     height: 8rem;
-    margin: 5% auto 4% auto;
+    margin: 4% 10%;
     color: white;
     background-color: #69d1e9;
     font-size: 1.8em;
     line-height: 8rem;
+    border:none;
 }
 
 .content-main-version span {

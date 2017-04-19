@@ -1,14 +1,8 @@
 /*桌游精灵公共样式，顶部导航栏*/
 body {
-    /*     margin: 0; */
     padding: 0;
-    /* }
-
-.page { */
-    /*     position: relative; */
-    /*     overflow: hidden; */
     margin: auto;
-    width: 640px;
+    width: 40rem;
 }
 
 header {

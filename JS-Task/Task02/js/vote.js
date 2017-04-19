@@ -1,9 +1,9 @@
 /**
- * Created by wanwn on 2017/2/24.
+ * edited by zhuangyin on 2017/4/17.
  */
-$('#sing').click(// 播放音频
+$("#play").click(// 播放音频
 function() {
-    var audio = document.getElementById('music');
+    var audio = document.getElementById("music");
     if (audio.paused) {
         audio.play();
     } else {
@@ -14,7 +14,7 @@ function() {
 var statusAll = sessionStorage.oStatus;
 var oStatus = JSON.parse(statusAll);
 console.log(oStatus);
-var play = '';
+var play = "";
 //存放玩家身份牌信息
 for (var i = 0; i < oStatus.length; i++) {
     play += '<div class="main-content-part"><div class="main-content-part-role-name">' + oStatus[i].identity + '</div><div class="main-content-part-role-num">' + oStatus[i].num + '号' + '</div>' + '</div> ';

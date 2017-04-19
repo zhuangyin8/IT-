@@ -42,10 +42,10 @@
 }
 
 #main-content {
-    overflow: hidden;
+/*     overflow-y: scroll; */
     margin: 0 auto;
-    padding-bottom: 50%;
     background-color: #29bde0;
+    height: 45rem;
 }
 
 .main-content-part {
@@ -79,18 +79,16 @@
     border-top: none;
 }
 
-.footer {
+footer {
     position: fixed;
     bottom: 0;
-    min-width: 320px;
-    max-width: 640px;
-    width: 100%;
+    width: 40rem;
     text-align: center;
     background-color: #29bde0;
     border-top: 1px solid white;
 }
 
-.footer button {
+footer button {
     margin: 6% auto;
     padding: 4% 35%;
     color: white;
@@ -100,10 +98,20 @@
     cursor: pointer;
 }
 
-/* @media screen and (max-width: 450px) {
-    .main-content-part {
-        margin: 16% 0 0 6%;
-        width: 25%;
-        text-align: center;
+/* @media screen and (max-width: 600px) {
+    html {
+        font-size:90%;
     }
-} */
+}
+@media screen and (max-width: 480px) {
+    html {
+        font-size:70%;
+    }
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size:50%;
+    }
+}
+ */
+

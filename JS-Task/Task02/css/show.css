@@ -89,10 +89,14 @@ main {
 }
 
 /*点击按钮*/
+footer {
+    background-color: #29bde0;
+    text-align: center;
+}
 
 #btnShow {
     margin: 5rem auto 3rem;
-    width:100%;
+    width:75%;
     height: 4rem;
     color: white;
     font-size: 2rem;
@@ -100,7 +104,6 @@ main {
     border: none;
     cursor: pointer;
 }
-
 
 @media screen and (max-width: 425px) {
     html {

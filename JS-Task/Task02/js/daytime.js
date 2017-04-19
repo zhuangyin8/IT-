@@ -3,11 +3,11 @@
  */
 var statusAll = sessionStorage.oStatus;
 var oStatus = JSON.parse(statusAll);
-console.log(oStatus);
+// console.log(oStatus);
 // 读取所有玩家的信息
 var killer = 0;
 //存放活着的杀手人数
-var person = 0;
+var civy = 0;
 //存放活着的平民人数
 var diePeople = 0;
 //存放死亡玩家人数
@@ -42,7 +42,7 @@ for (var m = 0; m < oStatus.length; m++) {
 }
 
 // 当杀手人数大于等于平民人数时游戏结束，或者当杀手人数为0时结束游戏
-console.log(person, killer);
+// console.log(person, killer);
 if (person <= killer) {
     $('#gotoVote').text('杀手获胜，查看结果').click(function() {
         window.location.href = 'result.html';
