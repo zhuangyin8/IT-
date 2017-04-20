@@ -4,7 +4,7 @@
 
 // 通过input框、拉动按钮、+ -符号控制人数，且互相关联， 若超出范围则弹出提示框
 // 为了让代码更加健壮，对用户输入的数字进行检验判断，当输入框内不是一个4-18之间的数字时，弹出弹框提示
-var textNum = document.getElementById("number");
+var textNum = document.getElementById("text");
 //获取输入框中用户输入的值  获取text的值
 var rangeNum = document.getElementById("range");
 //获取人数设置拖动条的值   获取range的值
@@ -18,7 +18,7 @@ var btnAdd = document.getElementById("btnAdd");
  */
 rangeNum.onchange = function rangeChange() {
     textNum.value = rangeNum.value;
-    //将range的值给text
+    //将range的值给number
 }
 ;
 /*
@@ -40,6 +40,7 @@ textNum.onblur = function textChange() {
         textNum.value = 18;
     } else {
         rangeNum.value = textNum.value;
+        //         将number的值给range
     }
 }
 ;
@@ -81,7 +82,7 @@ identifyGet.onclick = function identifyGet() {
     //清空显示区域的元素
     var killer = [];
     //杀手数组的声明
-    var person = [];
+    var civy = [];
     //平民数组的声明
     if (textNum.value >= 4 && textNum.value <= 8) {
         //不同人数范围设置不同的杀手数量
@@ -97,19 +98,16 @@ identifyGet.onclick = function identifyGet() {
         //之前已经判断人数后，几乎不可能出现，但是为了保险起见
     }
     for (var i = 0; i < killer.length; i++) {
-        //生成杀手数组并在控制台打印
+        //生成杀手数组
         killer[i] = "杀手";
-        console.log(killer[i]);
     }
-    console.log(killer);
     for (var j = 0; j < textNum.value - killer.length; j++) {
-        //生成平民数组并在控制台打印
-        person[j] = "平民";
-        console.log(person[j]);
+        //生成平民数组 
+        civy[j] = "平民";
     }
 
     //将杀手和平民的数组合并并将数组的顺序打乱后输出
-    var all = killer.concat(person);
+    var all = killer.concat(civy);
 
     function randomSort(a, b) {
         return Math.random() > .5 ? -1 : 1;
@@ -125,7 +123,7 @@ identifyGet.onclick = function identifyGet() {
         } else {
             player += "<li><i></i>" + (m + 1) + "号" + "&nbsp;&nbsp;" + all[m] + "</li>";
         }
-        console.log(player);
+        //         console.log(player);
         identifyShow.innerHTML = player;
         //设置显示区域的html
     }
@@ -136,9 +134,9 @@ identifyGet.onclick = function identifyGet() {
 }
 ;
 
-//点击去分牌按钮时先检查是否配置人员身份
-var gotoNext = document.getElementById('gotoNext');
-gotoNext.onclick = function gotoNext() {
+//点击"去分牌"按钮时先检查是否设置玩家身份
+
+document.getElementById("allot").onclick = function allot() {
     if (allPlayer != null) {
         window.location.href = "show.html";
         //已配置身份转到下一个页面
@@ -147,3 +145,13 @@ gotoNext.onclick = function gotoNext() {
     }
 }
 ;
+
+// $("allot").click(function () {
+//     if (allPlayer != null) {
+//         window.location.href = "show.html";
+//         //已配置身份转到下一个页面
+//     } else {
+//         alert("请先点击设置玩家身份哦");
+//     }
+// });
+// jQuery没有实现?

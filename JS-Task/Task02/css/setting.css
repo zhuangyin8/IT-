@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 /*页面主要内容：玩家配比显示、词组、玩家人数设置*/
 main {
     padding: 1rem;
@@ -29,9 +28,9 @@ main {
 
 .main-top-right {
     display: inline-block;
-    width: 78%;
+    width: 79%;
     height: 100%;
-    vertical-align: top;
+    vertical-align: center;
 }
 
 #identifyShow {
@@ -63,7 +62,7 @@ main {
 #identifyShow li i {
     display: inline-block;
     margin: 1rem;
-    padding: .2rem;
+    padding: .5rem;
     vertical-align: middle;
     background-color: #29bde0;
 }
@@ -136,34 +135,36 @@ main {
     vertical-align: middle;
 }
 
+/*  滑竿样式*/
 input[type=range] {
-    width: 73%;
-    height: 0.28rem;
-    vertical-align: middle;
-    background-color: #fcc671;
+    width: 70%;
+    /*   滑竿宽度   */
+    margin: 0 1rem;
+    /*     width: 73%; */
+    height: 0.2rem;
+    /* 滑杆高度     */
+    /*         vertical-align: middle; */
+    /*         background-color: #fcc671; */
     -webkit-appearance: none;
     -moz-appearance: none;
+    /*  滑杠也要移除默认样式    */
+    background: linear-gradient(#fcc671, #fcc671) no-repeat;
+/*         background-size: 0% 100%; */
+    outline: none;
+    /*   去除轮廓   */
 }
 
+/* 滑块样式 */
 input[type=range]::-webkit-slider-thumb {
     width: 62px;
     height: 38px;
     cursor: pointer;
-    vertical-align: middle;
+    /*     vertical-align: middle; */
     background: url("../img/setting-range.png");
+    /*  滑块图片    */
     -webkit-appearance: none;
     -moz-appearance: none;
-}
-
-.main-bottom-range input {
-    width: 70%;
-    margin: 0 1rem;
-    text-align: center;
-    color: #fab344;
-    border: none;
-    outline: none;
-    background-color: #fab344;
-    font-size: 1.75rem;
+    /*  滑块也要移除默认样式    */
 }
 
 /* 减少玩家人数 */

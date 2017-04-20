@@ -1,64 +1,60 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>桌游精灵-设置页面(设置玩家人数并分配玩家身份)</title>
-    <link rel="stylesheet" href="css/setting.css">
-    <link rel="stylesheet" href="css/global.css">
-</head>
-<body>
-<header>
-    <div class="header-left">
-        <img src="img/back.png">
-    </div>
-    <div class="header-center">参数设置</div>
-    <div class="header-right">
-        <img src="img/help.png">
-    </div>
-</header>
-<main>
-    <!--页面主要内容：玩家配比显示、词组、玩家人数设置-->
-    <div class="main-top">
-        <!--玩家配比显示部分-->
-        <div class="main-top-left">玩家配比</div>
-        <div class="main-top-right">
-            <ul id="identifyShow"></ul>
-            <button id="identifyGet">
-                <span>点击设置</span>
-                <i></i>
-            </button>
-        </div>
-    </div>
-    <div class="main-middle">
-        <!--设置词组部分-->
-        <div class="main-middle-part">水民词组</div>
-        <!--要设置一个点击事件：提示简单版游戏不能设置词组-->
-        <div class="main-middle-part">幽灵词组</div>
-    </div>
-    <div class="main-bottom">
-        <!--玩家人数设置部分-->
-        玩家人数
-
-        <label for="text">
-            <input type="text" id="number" maxlength="2" value="8">人
-        </label>
-        <div class="main-bottom-range">
-            <!--人数设置拖动条 subtraction 减法-->
-            <button class="btnSub" id="btnSub"></button>
-            <label for="range">
-                <input type="range" name="range" id="range" min="4" max="18" step="1" value="8">
-            </label>
-            <div class="btnAdd" id="btnAdd"></div>
-        </div>
-    </div>
-</main>
-<footer>
-    <!--底部发牌按钮-->
-    <button id="gotoNext">去发牌</button>
-</footer>
-<script src="js/setting.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>桌游精灵-设置页面(设置玩家人数并分配玩家身份)</title>
+        <link rel="stylesheet" href="css/setting.css">
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-left">
+                <img src="img/back.png">
+            </div>
+            <div class="header-center">参数设置</div>
+            <div class="header-right">
+                <img src="img/help.png">
+            </div>
+        </header>
+        <main>
+            <!--页面主要内容：玩家配比显示、词组、玩家人数设置-->
+            <div class="main-top">
+                <!--玩家配比显示部分-->
+                <div class="main-top-left">玩家配比</div>
+                <div class="main-top-right">
+                    <ul id="identifyShow"></ul>
+                    <button id="identifyGet">
+                        <span>点击设置</span>
+                        <i></i>
+                    </button>
+                </div>
+            </div>
+            <div class="main-middle">
+                <!--设置词组部分-->
+                <div class="main-middle-part">水民词组</div>
+                <!--要设置一个点击事件：提示简单版游戏不能设置词组-->
+                <div class="main-middle-part">幽灵词组</div>
+            </div>
+            <div class="main-bottom">
+                <!--玩家人数设置部分-->
+                玩家人数
+                <input type="text" id="text" maxlength="2" value="8">
+                人                                               
+                
+                <!--人数设置拖动条 subtraction 减法-->
+                <div class="main-bottom-range">
+                    <button class="btnSub" id="btnSub"></button>
+                    <input type="range" name="range" id="range" min="4" max="18" step="1" value="8" autofocus="">
+                    <div class="btnAdd" id="btnAdd"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <button id="allot">去发牌</button>
+        </footer>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/setting.js"></script>
+    </body>
 </html>
