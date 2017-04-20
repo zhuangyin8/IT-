@@ -6,7 +6,6 @@
 main {
     border: 1px solid #74d4eb;
     background: #29bde0;
-    /*     height: 80rem; */
     position: absolute;
     width: 40rem;
     bottom: 10rem;
@@ -89,7 +88,7 @@ footer {
     background: #29bde0;
     width: 40rem;
     position: absolute;
-     bottom: 0;
+    bottom: 0;
     text-align: center;
 }
 

@@ -3,10 +3,6 @@
     margin: auto;
 }
 
-/* .header-left img {
-    width: 1.5em !important;
-}
- */
 body {
     position: relative;
     /*重要！保证footer是相对于body位置绝对*/
@@ -105,8 +101,24 @@ footer {
     cursor: pointer;
 }
 
-@media screen and (max-width: 425px) {
+/* @media screen and (max-width: 425px) {
     html {
         font-size:80%;
+    }
+} */
+@media screen and (max-width: 639px) {
+    html {
+        font-size:90%;
+    }
+}
+@media screen and (max-width: 425px) {
+    html {
+        font-size:70%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size:50%;
     }
 }
