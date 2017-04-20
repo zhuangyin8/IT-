@@ -109,7 +109,7 @@ identifyGet.onclick = function identifyGet() {
     //将杀手和平民的数组合并并将数组的顺序打乱后输出
     var all = killer.concat(civy);
 
-    function randomSort(a, b) {
+    function randomSort() {
         return Math.random() > .5 ? -1 : 1;
     }
 
