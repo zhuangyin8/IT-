@@ -104,22 +104,19 @@ button {
     color: white;
 }
 
+@media screen and (max-width: 639px) {
+    html {
+        font-size:90%;
+    }
+}
 @media screen and (max-width: 425px) {
     html {
-        font-size:80%;
-    }
-
-    #startGame {
-        width: 80%;
+        font-size:70%;
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 320px) {
     html {
-        font-size:60%;
-    }
-
-    #startGame {
-        width: 80%;
+        font-size:50%;
     }
 }
