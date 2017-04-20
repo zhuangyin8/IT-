@@ -1,16 +1,22 @@
 /*页面主要内容样式*/
+main {
+    top: 5rem;
+    bottom: 5rem;
+    background: #29bde0;
+}
+
 .main-top {
     margin: 0 auto;
     width: 100%;
     position: relative;
     font-size: 1.5em;
-    background-color: #29bde0;
+    background: #29bde0;
 }
 
 .main-top-word {
     padding: 1rem .5rem ;
     color: #464646;
-    background-color: #b9e9f5;
+    background: #b9e9f5;
 }
 
 .main-top-word button {
@@ -23,8 +29,9 @@
 }
 
 .main-top-word img {
-    width: 2.8em;
-    height: 2.8em;
+    width: 2.5rem;
+    height: 2.5rem;
+    /*     vertical-align:center; */
 }
 
 .main-top-triangle {
@@ -42,7 +49,7 @@
 }
 
 #main-content {
-/*     overflow-y: scroll; */
+    /*     overflow-y: scroll; */
     margin: 0 auto;
     background-color: #29bde0;
     height: 45rem;
@@ -64,7 +71,7 @@
 .main-content-part-role-name {
     padding: 25% 0;
     font-size: 1.3rem;
-    background-color: #f5c97b;
+    background: #f5c97b;
     border: 3px solid white;
     border-bottom: none;
     cursor: pointer;
@@ -74,44 +81,53 @@
     margin: 0;
     padding: 2.5%;
     color: white;
-    background-color: #83b09a;
+    background: #83b09a;
     border: 3px solid white;
     border-top: none;
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 40rem;
     text-align: center;
-    background-color: #29bde0;
+    background: #29bde0;
     border-top: 1px solid white;
 }
 
 footer button {
-    margin: 6% auto;
-    padding: 4% 35%;
+    margin: 3rem auto;
+    height: 4rem;
+    width: 60%;
     color: white;
-    font-size: 1.8em;
+    font-size: 2rem;
     border: none;
-    background-color: #fbb435;
+    background: #fbb435;
     cursor: pointer;
 }
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 425px) {
     html {
         font-size:90%;
     }
 }
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size:80%;
+    }
+}
+
+@media screen and (max-width: 320px) {
     html {
         font-size:70%;
     }
 }
-@media screen and (max-width: 320px) {
+
+/* @media screen and (max-width: 425px) {
     html {
-        font-size:50%;
+        font-size:80%;
     }
 }
- */
 
+ */

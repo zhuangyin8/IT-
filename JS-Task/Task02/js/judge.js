@@ -11,7 +11,7 @@ for (i = 0; i < all.length; i++) {
         '<div class="main-box-open">' + all[i] + '</div>' +
         '<div class="main-box-number">' + (i + 1) + '号</div>' + '</div>';
     console.log(play);
-    $('.main').eq(0).html(play);
+    $("main").eq(0).html(play);
 }
 $('#startGame').click(function () {
     window.location.href = 'step.html';

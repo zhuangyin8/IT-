@@ -1,36 +1,38 @@
 /* * {
     box-sizing: border-box;
-} */
+}
+ */
 /*页面主要内容：显示玩家身份牌区域*/
-.main {
-    width: 100%;
-    padding-bottom: 22rem;
-    border-top: 1px solid #74d4eb;
-    background-color: #29bde0;
+main {
+    border: 1px solid #74d4eb;
+    background: #29bde0;
+    /*     height: 80rem; */
+    position: absolute;
+    width: 40rem;
+    bottom: 10rem;
+    top: 5rem;
 }
 
 .main-box {
     position: relative;
     display: inline-block;
-    margin: 6%;
-    width: 19%;
-    height: 130px;
+    margin: 5%;
+    width: 20%;
+    height: 8rem;
     text-align: center;
-    border: 5px solid white;
+    border: .3rem solid white;
     cursor: pointer;
 }
 
 .main-box-hide {
     width: 100%;
     height: 100%;
-    background-image: url("../img/judge-hide.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../img/judge-hide.png") center no-repeat ;
 }
 
 .main-box:hover .main-box-open {
     opacity: 1;
-    transition: 0.5s ease;
+    transition: 1s ease;
 }
 
 .main-box-open {
@@ -39,11 +41,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 95px;
-    line-height: 90px;
+    height: 6rem;
+    line-height: 6rem;
     text-align: center;
     font-size: 1.8rem;
-    background-color: #f5c97b;
+    background: #f5c97b;
     opacity: 0;
 }
 
@@ -51,32 +53,73 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 25px;
-    line-height: 25px;
-    font-size: 20px;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
     color: white;
     background-color: rgba(58, 162, 194, 0.4);
 }
 
 /*页面底部：开始游戏按钮*/
-footer {
+/* footer {
     z-index: 100;
     position: fixed;
     bottom: 0;
-    margin: 0 auto;
-    padding: 2.5rem 2rem;
-    width: 36rem;
-    text-align: center;
-    background-color: #29bde0;
+        padding: 2.5rem 4rem;
+    heigth: 8rem;
+    width: 32rem;
+    background: #29bde0;
     border-top: 1px solid white;
 }
 
 #startGame {
-    width: 80%;
-    height: 5rem;
-    font-size: 2.3rem;
+    margin: auto;
+    width: 100%;
+    height: 4rem;
+    font-size: 2rem;
     color: white;
     border: none;
     cursor: pointer;
-    background-color: #fbb435;
+    background: #fbb435;
+}
+ */
+footer {
+    height: 10rem;
+    line-height: 10rem;
+    background: #29bde0;
+    width: 40rem;
+    position: absolute;
+     bottom: 0;
+    text-align: center;
+}
+
+button {
+    margin: .5rem auto;
+    height: 4rem;
+    line-height: 4rem;
+    background: #fbb435;
+    border: none;
+    width: 60%;
+    font-size: 2rem;
+    color: white;
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        font-size:80%;
+    }
+
+    #startGame {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size:60%;
+    }
+
+    #startGame {
+        width: 80%;
+    }
 }

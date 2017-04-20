@@ -35,8 +35,8 @@ main {
 
 .content-day img {
     position: absolute;
-    top: 1.9rem;
-    right: .9rem;
+    top: 1.5rem;
+    right: 1.5rem;
 }
 
 /*游戏流程部分*/
@@ -91,4 +91,11 @@ main {
     border: none;
     background-color: #fdbc48;
     cursor: pointer;
+}
+
+/*  media query */
+@media screen and (max-width: 425px) {
+    html {
+        font-size:80%;
+    }
 }
