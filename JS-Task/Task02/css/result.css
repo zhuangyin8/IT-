@@ -101,3 +101,22 @@ footer button {
     border: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 580px) {
+    html {
+        font-size:80%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    html {
+        font-size:70%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size:60%;
+    }
+}
+

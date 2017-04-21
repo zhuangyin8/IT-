@@ -106,28 +106,32 @@ footer button {
     cursor: pointer;
 }
 
-@media screen and (max-width: 425px) {
-    html {
-        font-size:90%;
-    }
-}
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 580px) {
     html {
         font-size:80%;
     }
+
+    footer {
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 520px) {
     html {
         font-size:70%;
     }
-}
 
-/* @media screen and (max-width: 425px) {
-    html {
-        font-size:80%;
+    footer {
+        width: 100%;
     }
 }
 
- */
+@media screen and (max-width: 450px) {
+    html {
+        font-size:60%;
+    }
+
+    footer {
+        width: 100%;
+    }
+}

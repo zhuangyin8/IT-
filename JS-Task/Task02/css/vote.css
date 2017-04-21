@@ -15,6 +15,7 @@
 
 .main-top-word button {
     position: absolute;
+    top: .5rem;
     right: 1rem;
     cursor: pointer;
     border: none;
@@ -22,9 +23,8 @@
 }
 
 .main-top-word img {
-    right: 10rem;
-    width: 2.8em;
-    height: 2.8em;
+    width: 2.5em;
+    height: 2.5em;
 }
 
 .main-top-triangle {
@@ -99,11 +99,20 @@ footer button {
     font-size: 2rem;
 }
 
-/* 
-@media screen and (max-width: 450px) {
-    .main-content-part {
-        width: 25%;
-        margin: 16% 0 0 6%;
-        text-align: center;
+@media screen and (max-width: 580px) {
+    html {
+        font-size:80%;
     }
-} */
+}
+
+@media screen and (max-width: 520px) {
+    html {
+        font-size:70%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size:60%;
+    }
+}
