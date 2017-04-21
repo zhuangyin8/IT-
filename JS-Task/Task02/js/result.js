@@ -3,7 +3,7 @@
  */
 var statusAll = sessionStorage.oStatus;
 var oStatus = JSON.parse(statusAll);
-console.log(oStatus);
+// console.log(oStatus);
 var killer = 0;
 //活着的杀手人数
 var people = 0;

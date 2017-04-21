@@ -1,47 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>桌游精灵-查看玩家身份</title>
-        <link rel="stylesheet" href="css/show.css">
-        <link rel="stylesheet" href="css/global.css">
-    </head>
-    <body>
-        <header>
-            <div class="header-left">
-                <img src="img/back.png">
-            </div>
-            <div class="header-center">查看身份</div>
-            <div class="header-right">
-                <img src="img/show-close.png">
-            </div>
-        </header>
-        
-        <main>
-            <!--页面主要内容：身份牌显示区域、点击按钮-->
-            <div class="main-show">
-                <!--身份牌显示区域-->
-                <span id="playerNum">1</span>
-                <div class="main-show-cover">
-                    <!--翻牌前的图片-->
-                    <img src="img/show-cover.png">
-                </div>
-                <div class="main-show-open">
-                    <!--翻牌后的图片-->
-                    <img src="img/show-open.png">
-                </div>
-                <p id="playerRole"></p>
-                <p class="main-show-open-warn">记住自己的身份，争取取得游戏胜利哦~！</p>
-            </div>
-<!--             <button id="btnShow">查看1号身份</button> -->
-        </main>
-        <footer>
-            <button id="btnShow">查看1号身份</button>
-        </footer>
-        <!--<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>-->
-        <script src="js/jquery-3.2.1.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>桌游精灵-查看玩家身份</title>
+    <link rel="stylesheet" href="css/show.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <img src="img/back.png">
+    </div>
+    <div class="header-center">查看身份</div>
+    <div class="header-right">
+        <img src="img/show-close.png">
+    </div>
+</header>
 
-        <script src="js/show.js"></script>
-    </body>
+<main>
+    <!--页面主要内容：身份牌显示区域、点击按钮-->
+    <div class="main-show">
+        <!--身份牌显示区域-->
+        <span id="playerNum">1</span>
+        <div class="main-show-cover">
+            <!--翻牌前的图片-->
+            <img src="img/show-cover.png">
+        </div>
+        <div class="main-show-open">
+            <!--翻牌后的图片-->
+            <img src="img/show-open.png">
+        </div>
+        <p id="playerRole"></p>
+        <p class="main-show-open-warn">记住自己的身份，争取取得游戏胜利哦~！</p>
+    </div>
+    <!--             <button id="btnShow">查看1号身份</button> -->
+</main>
+<footer>
+    <button id="btnShow">查看1号身份</button>
+</footer>
+<!--<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>-->
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<script src="js/show.js"></script>
+</body>
 </html>
