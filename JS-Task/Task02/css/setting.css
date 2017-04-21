@@ -204,21 +204,15 @@ footer>button {
     font-size: 2rem;
 }
 
-/*@media screen and (max-width: 640px) {
-    html {
-        font-size:80%;
-    }
-}*/
-
 @media screen and (max-width: 580px) {
     html {
-        font-size:70%;
+        font-size:80%;
     }
 }
 
 @media screen and (max-width: 520px) {
     html {
-        font-size:60%;
+        font-size:70%;
     }
 }
 

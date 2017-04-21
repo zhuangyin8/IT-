@@ -1,7 +1,6 @@
- * {
+* {
     box-sizing: border-box;
 }
-
 
 /*页面主要内容：显示玩家身份牌区域*/
 main {
@@ -36,7 +35,7 @@ main {
 }
 
 .main-box-open {
-    z-index: 99;
+/*     z-index: 99; */
     position: absolute;
     top: 0;
     left: 0;
@@ -57,7 +56,7 @@ main {
     line-height: 2rem;
     font-size: 1.5rem;
     color: white;
-    background-color: rgba(58, 162, 194, 0.4);
+    background: rgba(58, 162, 194, 0.4);
 }
 
 /*页面底部：开始游戏按钮*/
@@ -104,27 +103,15 @@ button {
     color: white;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 580px) {
     html {
-        font-size:80%;
+        font-size:90%;
     }
 }
-@media screen and (max-width: 425px) {
-    html {
-        font-size:70%;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    html {
-        font-size:50%;
-    }
-}
-/*
 
 @media screen and (max-width: 520px) {
     html {
-        font-size:70%;
+        font-size:80%;
     }
 }
 
@@ -132,4 +119,9 @@ button {
     html {
         font-size:60%;
     }
-}*/
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size:50%;
+    }
+}

@@ -128,7 +128,7 @@ identifyGet.onclick = function identifyGet() {
         //设置显示区域的html
     }
     allPlayer = JSON.stringify(all);
-    //使用json把js对象转换为字符串
+    //使用JSON.stringify()把JavaScript对象转换为JSON字符串
     sessionStorage.all = allPlayer;
     //把字符串储存到缓存中
 }
