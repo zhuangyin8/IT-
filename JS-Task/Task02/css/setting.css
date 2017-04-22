@@ -48,14 +48,14 @@ main {
 #identifyShow li {
     display: inline-block;
     width: 50%;
-    padding: .8rem 0;
+    padding:  .5rem  0;
     color: #999;
     font-size: 1.5rem;
 }
-
+/* 玩家身份前不同颜色 */
 #identifyShow li span {
     display: inline-block;
-    margin: 1rem;
+    margin: .5rem  0;
     padding: .5rem;
     vertical-align: middle;
     background-color: #fab344;
@@ -63,7 +63,7 @@ main {
 
 #identifyShow li i {
     display: inline-block;
-    margin: 1rem;
+    margin: 1.3rem 0;
     padding: .5rem;
     vertical-align: middle;
     background-color: #29bde0;
@@ -142,16 +142,12 @@ input[type=range] {
     width: 70%;
     /*   滑竿宽度   */
     margin: 0 1rem;
-    /*     width: 73%; */
     height: 0.2rem;
     /* 滑杆高度     */
-    /*         vertical-align: middle; */
-    /*         background-color: #fcc671; */
+    background: #fcc671;
     -webkit-appearance: none;
     -moz-appearance: none;
     /*  滑杠也要移除默认样式    */
-    background: linear-gradient(#fcc671, #fcc671) no-repeat;
-    /*         background-size: 0% 100%; */
     outline: none;
     /*   去除轮廓   */
 }
@@ -161,7 +157,6 @@ input[type=range]::-webkit-slider-thumb {
     width: 62px;
     height: 38px;
     cursor: pointer;
-    /*     vertical-align: middle; */
     background: url("../img/setting-range.png");
     /*  滑块图片    */
     -webkit-appearance: none;
@@ -172,8 +167,8 @@ input[type=range]::-webkit-slider-thumb {
 /* 减少玩家人数 */
 .btnSub {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     vertical-align: middle;
     background: url("../img/setting-subtract.png");
 }
@@ -181,13 +176,13 @@ input[type=range]::-webkit-slider-thumb {
 /*增加玩家人数  */
 .btnAdd {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     vertical-align: middle;
     background: url("../img/setting-add.png");
 }
 
-/*底部去发牌按钮*/
+/*底部"去发牌"按钮*/
 footer {
     width: 100%;
     padding: 0 1rem 1.5rem 1rem;

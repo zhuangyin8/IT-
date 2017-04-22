@@ -1,6 +1,7 @@
 /**
  * edited by zhuangyin on 2017/4/17.
  */
+
 var statusAll = sessionStorage.oStatus;
 var oStatus = JSON.parse(statusAll);
 // console.log(oStatus);

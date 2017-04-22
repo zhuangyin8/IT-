@@ -11,16 +11,22 @@ var rangeNum = document.getElementById("range");
 var btnSub = document.getElementById("btnSub");
 //获取-号按钮的值
 var btnAdd = document.getElementById("btnAdd");
-//获取+号按钮的值
+
 /*
- *将人数设置拖动条的值实时动态显示在输入框,方便用户判断
- *onchange  事件:当表单元素的值改变
+ * jQuery实现 获取 输入框的值赋值给人数设置拖动条实时动态显示,方便用户判断
+ *
  */
-rangeNum.onchange = function rangeChange() {
-    textNum.value = rangeNum.value;
+$(function() {
+    //    var t= $("#text").val();
+    //    $("#range"). text(t);
+    $("#range").text("#text").val();
     //将range的值给number
-}
-;
+});
+//JavaScript 实现 获取人数设置拖动条的值赋值给输入框的值实时动态显示,方便用户判断
+// rangeNum.onchange = function rangeChange() {
+//     textNum.value = rangeNum.value;
+//     //将range的值给number
+// };
 /*
  *
  * 对玩家人数进行判断
@@ -71,13 +77,10 @@ btnAdd.onclick = function btnAdd() {
 /*
  将杀手和平民身份打乱，准备分配给1-N号玩家身份
  */
-var identifyShow = document.getElementById("identifyShow");
-//获取显示玩家身份区域的值
-var identifyGet = document.getElementById("identifyGet");
-//获取点击设置按钮的值
 var allPlayer;
 var player = "";
-identifyGet.onclick = function identifyGet() {
+//获取显示玩家身份区域的值
+$("#identifyGet").click(function() {
     player = "";
     //清空显示区域的元素
     var killer = [];
@@ -106,16 +109,21 @@ identifyGet.onclick = function identifyGet() {
         civy[j] = "平民";
     }
 
-    //将杀手和平民的数组合并并将数组的顺序打乱后输出
+    //将杀手和平民的数组合并并玩家数组将数组的顺序打乱后输出
     var all = killer.concat(civy);
-
-    function randomSort() {
-        return Math.random() > .5 ? -1 : 1;
+    Array.prototype.shuffle = function() {
+        var input = this;
+        for (var i = input.length - 1; i >= 0; i--) {
+            var randomIndex = Math.floor(Math.random() * (i + 1));
+            var itemAtIndex = input[randomIndex];
+            input[randomIndex] = input[i];
+            input[i] = itemAtIndex;
+        }
+        return input;
     }
+    all.shuffle();
+    //玩家数组调用洗牌算法
 
-    all.sort(randomSort);
-    //利用随机函数产生一个随机数字，再传入sort()取得随机打乱的数组
-    console.log(all);
     for (var m = 0; m < all.length; m++) {
         //输出打乱的数组，即分配玩家身份，且在页面中显示
         if (all[m] == "杀手") {
@@ -123,7 +131,7 @@ identifyGet.onclick = function identifyGet() {
         } else {
             player += "<li><i></i>" + (m + 1) + "号" + "&nbsp;&nbsp;" + all[m] + "</li>";
         }
-        //         console.log(player);
+        //获取点击设置按钮的值
         identifyShow.innerHTML = player;
         //设置显示区域的html
     }
@@ -131,27 +139,24 @@ identifyGet.onclick = function identifyGet() {
     //使用JSON.stringify()把JavaScript对象转换为JSON字符串
     sessionStorage.all = allPlayer;
     //把字符串储存到缓存中
-}
-;
+});
 
-//点击"去分牌"按钮时先检查是否设置玩家身份
-
-document.getElementById("allot").onclick = function allot() {
+//jQuery 实现点击"去分牌"按钮时先检查是否设置玩家身份
+$("#allot").click(function() {
     if (allPlayer != null) {
         window.location.href = "show.html";
         //已配置身份转到下一个页面
     } else {
         alert("请先点击设置玩家身份哦");
     }
-}
-;
-
-// $("allot").click(function () {
+});
+// javScript 实现点击"去分牌"按钮时先检查是否设置玩家身份
+// document.getElementById("allot").onclick = function allot() {
 //     if (allPlayer != null) {
 //         window.location.href = "show.html";
 //         //已配置身份转到下一个页面
 //     } else {
 //         alert("请先点击设置玩家身份哦");
 //     }
-// });
-// jQuery没有实现?
+// }
+// ;

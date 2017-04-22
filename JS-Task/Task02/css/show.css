@@ -101,11 +101,7 @@ footer {
     cursor: pointer;
 }
 
-/* @media screen and (max-width: 425px) {
-    html {
-        font-size:80%;
-    }
-} */
+
 @media screen and (max-width: 639px) {
     html {
         font-size:90%;

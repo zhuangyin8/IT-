@@ -1,57 +1,89 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>桌游精灵-首页(选择游戏版本)</title>
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/global.css">
-</head>
-<body>
-<header>
-    <a href="#">
-        <div class="header-left">
-            <img src="img/menu.png">
-        </div>
-    </a>
-</header>
-<main>
-    <div class="content-top">
-        <h1>上次游戏：捉鬼猜词版</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>桌游精灵-首页(选择游戏版本)</title>
+        <link rel="stylesheet" href="css/home.css">
+        <!-- <link rel="stylesheet" href="css/global.css"> -->
+        <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+        <link rel="stylesheet" href="http://www.mltc.cn/modules/m/css/default/common.css">
+        <link rel="stylesheet" href="http://www.mltc.cn/modules/m/css/mltc/app.css">
+    </head>
+    <body>
+        <header data-am-widget="header" class="am-header am-header-default am-header-absolute">
+            <nav data-am-widget="menu" class="am-menu am-header-right am-header-nav" data-am-menu-offcanvas>
+                <!--  右侧       -->
+                <a href="javascript: void(0)" class="am-menu-toggle">
+                    <img class="logo" src="http://www.mltc.cn/modules/m/images/zgsz/menu.png"/>
+                </a>
+            </nav>
+            <h1 class="am-header-title slLogo">
+                <!-- Heard 中间-->
+                <a href="/m">
+                    <img class="logo" src="http://www.mltc.cn/modules/m/images/mltc/logo.png"/>
+                </a>
+            </h1>
+            <div class="am-header-left am-header-nav">
+                <div class="index_show">
+                    <a href="/m/auth/index" class="">
+                        <!--  左侧            -->
+                        <img src="img/menu.png" height="50px">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--
+    <header>
         <a href="#">
-            <img src="img/continue.png">
+            <div class="header-left">
+                <img src="img/menu.png">
+            </div>
         </a>
+    </header> -->
+    <div class="container">
+        <div class="main-top-wrapper text-center">
+            <h1>上次游戏：捉鬼猜词版</h1>
+            <a href="#">
+                <img class="main-top-icon img-fluid" src="img/continue.png" alt="continue last game">
+            </a>
+        </div>
+        <div class="main-content-wrapper">
+            <h1>捉鬼游戏</h1>
+            <div class="main-content container-fluid">
+                <div class="row">
+                    <div class="text-center col-11 ">
+                        <button class="btn-block content-button" id="sample">简化版</button>
+                    </div>
+                    <p class="text-center col-11 content-text">有1133个用户正在玩此游戏</p>
+                    <div class="text-center col-11 ">
+                        <button class="btn-block content-button">猜词版</button>
+                    </div>
+                    <a href="#">
+                        <img src="img/next.png" class="right-icon">
+                    </a>
+                    <p class="text-center col-11 content-text">有1133个用户正在玩此游戏</p>
+                    <div class="text-center col-11 ">
+                        <button class="btn-block content-button">白痴版</button>
+                    </div>
+                    <p class="text-center col-11 content-text">有1133个用户正在玩此游戏</p>
+                </div>
+                <div class="row">
+                    <div class="text-center col-11">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="content-main">
-        <div class="content-main-game">
-            <h1>杀人游戏</h1>
-        </div>
-        <div class="content-main-version">
-            <button class="content-main-version-btn" id="sample">简化版</button>
-            <span>有1133个用户正在玩此款游戏</span>
-        </div>
-        <div class="content-main-version">
-            <button class="content-main-version-btn">猜词版</button>
-            <span>有1133个用户正在玩此款游戏</span>
-        </div>
-        <div class="content-main-version">
-            <button class="content-main-version-btn">白痴版</button>
-            <span>有1133个用户正在玩此款游戏</span>
-        </div>
-        <div class="triangle"></div>
-        <div class="content-footer">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</main>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/home.js">
-</script></body></html>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
 <!--
 桌游精灵的开始后的操作逻辑:
 
