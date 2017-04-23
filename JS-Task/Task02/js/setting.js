@@ -27,10 +27,14 @@ var add = $("#add").val();
  */
 
 // JavaScript 实现 获取人数设置拖动条的值赋值给输入框的值实时动态显示,方便用户判断
+// onchange 在元素值改变时触发。当值改变时检查输入字段
+// onchange 属性适用于：<input>、<textarea> 以及 <select> 元素。
 rangeNum.onchange = function rangeChange() {
-    textNum.value = rangeNum.value;
+    //     textNum.value = rangeNum.value;
+//     text = range;
     //将range的值给number
-};
+}
+;
 /*
  *
  * 对玩家人数进行判断
