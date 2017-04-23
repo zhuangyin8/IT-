@@ -1,9 +1,9 @@
 /*桌游精灵顶部导航栏公共样式*/
-html{
-    text-align:
+html {
+    font-family: "Microsoft Yahei" ;
 }
+
 body {
-    /*padding: 0;*/
     margin: auto;
     max-width: 640px;
     min-width: 320px;
@@ -11,12 +11,11 @@ body {
 
 header {
     position: relative;
-/*     width: 40rem; */
+    /*     width: 40rem; */
     width: 100%;
     height: 5rem;
     line-height: 5rem;
-    text-align: center;
-    background-color: #29bde0;
+    background: #29bde0;
 }
 
 .header-left {
@@ -33,7 +32,7 @@ header {
 
 .header-center {
     font-size: 2rem;
-    color: white;
+    color: #ffffff;
 }
 
 .header-right {

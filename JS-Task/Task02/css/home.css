@@ -9,15 +9,12 @@ main {
     background-color: #f0f0f0;
 }
 
-.content-top {
+/* .content-top {
     position: relative;
-    /* div内的img相对于父元素金绝对定位*/
-    padding: 1% 0;
-    /*内边距*/
-    text-align: center;
+     padding: 1% 0;
+     text-align: center;
     border: 1px solid #c9c9c9;
-    /*div内文字居中*/
-    background-color: white;
+     background-color: white;
 }
 
 .content-top h1 {
@@ -32,40 +29,60 @@ main {
     width: 2rem;
     height: 3rem;
 }
+ */
+.main-history {
+    position: relative;
+    /* div内的img相对于父元素金绝对定位*/
+    padding: 1% 0;
+    /*内边距*/
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    /*div内文字居中*/
+    background: #ffffff;
+}
 
-.content-main {
+/*上次游戏:捉鬼猜词版 */
+.main-history h1 {
+    color: #9a9a9a;
+}
+
+.main-history img {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    /* translate() 变形函数中使用百分比值时，是以这个元素自身的宽度和高度
+为基准进行换算和移动的，而这正是我们所需要的。接下来，只要换用基于
+百分比的 CSS 变形来对元素进行偏移，就不需要在偏移量中把元素的尺寸
+写死了。这样我们就可以彻底解除对固定尺寸的依赖 */
+    width: 2rem;
+    height: 3rem;
+}
+
+.main-content {
     position: relative;
     width: 100%;
     margin: 4% auto;
     text-align: center;
     border: 1px solid #c9c9c9;
-    background: white;
+    background: #ffffff;
 }
 
-.content-main-game {
+.main-content-title {
     width: 100%;
-    padding-top: .5%;
-    padding-bottom: .5%;
+    line-height:1.5;
     text-align: center;
     border-bottom: 1px solid #fdd793;
+     color: #fbb435;
 }
 
-.content-main-game h1 {
-    color: #fbb435;
-    font-weight: 100;
-}
-
-.content-main-version {
+.main-content-version {
     width: 100%;
     margin: 0 auto;
     cursor: pointer;
 }
 
-.content-main-version a {
-    text-decoration: none;
-}
-
-.content-main-version-btn {
+.version {
     width: 80%;
     height: 7rem;
     margin: 4% 10%;
@@ -76,12 +93,12 @@ main {
     border: none;
 }
 
-.content-main-version span {
+.main-content-version span {
     color: #9a9a9a;
     font-size: 1.5em;
 }
 
-.triangle {
+.next {
     position: absolute;
     top: 49%;
     right: 1%;
@@ -91,19 +108,19 @@ main {
     border-left-color: #fbb435;
 }
 
-.content-footer {
+.change-game {
     margin: auto;
     /*水平居中*/
 }
 
 /*div.circle span:first-child 表示类名为circle的div的子类元素span的第一个元素 */
-.content-footer span:first-child {
+.change-game  span:first-child {
     margin-top: .5rem;
     background: #69d1e9;
 }
 
 /*span:nth-child(n+1) 表示类名为circle的div的除第一个的所有span 子元素.*/
-.content-footer span:nth-child(n+1) {
+.change-game  span:nth-child(n+1) {
     display: inline-block;
     width: 1rem;
     height: 1rem;
