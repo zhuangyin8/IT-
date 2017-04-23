@@ -9,28 +9,7 @@ main {
     background-color: #f0f0f0;
 }
 
-/* .content-top {
-    position: relative;
-     padding: 1% 0;
-     text-align: center;
-    border: 1px solid #c9c9c9;
-     background-color: white;
-}
-
-.content-top h1 {
-    color: #9a9a9a;
-    font-weight: normal;
-}
-
-.content-top img {
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    width: 2rem;
-    height: 3rem;
-}
- */
-.main-history {
+.history {
     position: relative;
     /* div内的img相对于父元素金绝对定位*/
     padding: 1% 0;
@@ -38,18 +17,18 @@ main {
     text-align: center;
     border: 1px solid #c9c9c9;
     /*div内文字居中*/
-    background: #ffffff;
+    background: white;
 }
 
 /*上次游戏:捉鬼猜词版 */
-.main-history h1 {
+.-history h1 {
     color: #9a9a9a;
 }
 
-.main-history img {
+.history img {
     position: absolute;
     top: 50%;
-    left: 90%;
+    left: 95%;
     transform: translate(-50%, -50%);
     /* translate() 变形函数中使用百分比值时，是以这个元素自身的宽度和高度
 为基准进行换算和移动的，而这正是我们所需要的。接下来，只要换用基于
@@ -59,7 +38,7 @@ main {
     height: 3rem;
 }
 
-.main-content {
+.content {
     position: relative;
     width: 100%;
     margin: 4% auto;
@@ -68,18 +47,12 @@ main {
     background: #ffffff;
 }
 
-.main-content-title {
+.title {
     width: 100%;
-    line-height:1.5;
+    line-height: 1.5;
     text-align: center;
     border-bottom: 1px solid #fdd793;
-     color: #fbb435;
-}
-
-.main-content-version {
-    width: 100%;
-    margin: 0 auto;
-    cursor: pointer;
+    color: #fbb435;
 }
 
 .version {
@@ -93,7 +66,7 @@ main {
     border: none;
 }
 
-.main-content-version span {
+span {
     color: #9a9a9a;
     font-size: 1.5em;
 }
@@ -102,25 +75,22 @@ main {
     position: absolute;
     top: 49%;
     right: 1%;
-    width: 0;
-    height: 0;
-    border: 1.5rem solid #fff;
-    border-left-color: #fbb435;
+    border: 1.5rem solid white;
+    border-left-color: orange;
 }
 
-.change-game {
-    margin: auto;
+.game {
+    margin: 1rem;
     /*水平居中*/
 }
 
 /*div.circle span:first-child 表示类名为circle的div的子类元素span的第一个元素 */
-.change-game  span:first-child {
-    margin-top: .5rem;
+.game span:first-child {
     background: #69d1e9;
 }
 
 /*span:nth-child(n+1) 表示类名为circle的div的除第一个的所有span 子元素.*/
-.change-game  span:nth-child(n+1) {
+.game span:nth-child(n+1) {
     display: inline-block;
     width: 1rem;
     height: 1rem;

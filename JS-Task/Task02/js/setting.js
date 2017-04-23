@@ -8,25 +8,29 @@ var textNum = document.getElementById("text");
 //获取输入框中用户输入的值  获取text的值
 var rangeNum = document.getElementById("range");
 //获取人数设置拖动条的值   获取range的值
-var btnSub = document.getElementById("btnSub");
+var btnSub = document.getElementById("sub");
 //获取-号按钮的值
-var btnAdd = document.getElementById("btnAdd");
+var btnAdd = document.getElementById("add");
+
+//获取+号按钮的值
+var text = $("#text").val();
+//获取输入框中用户输入的值  获取text的值
+var range = $("#range").val();
+//获取人数设置拖动条的值   获取range的值
+var sub = $("#sub").val();
+//获取-号按钮的值
+var add = $("#add").val();
+//获取+号按钮的值
 
 /*
  * jQuery实现 获取 输入框的值赋值给人数设置拖动条实时动态显示,方便用户判断
- *
  */
-$(function() {
-    //    var t= $("#text").val();
-    //    $("#range"). text(t);
-    $("#range").text("#text").val();
+
+// JavaScript 实现 获取人数设置拖动条的值赋值给输入框的值实时动态显示,方便用户判断
+rangeNum.onchange = function rangeChange() {
+    textNum.value = rangeNum.value;
     //将range的值给number
-});
-//JavaScript 实现 获取人数设置拖动条的值赋值给输入框的值实时动态显示,方便用户判断
-// rangeNum.onchange = function rangeChange() {
-//     textNum.value = rangeNum.value;
-//     //将range的值给number
-// };
+};
 /*
  *
  * 对玩家人数进行判断
@@ -47,6 +51,7 @@ textNum.onblur = function textChange() {
     } else {
         rangeNum.value = textNum.value;
         //         将number的值给range
+
     }
 }
 ;
@@ -62,6 +67,7 @@ btnSub.onclick = function btnSub() {
     }
 }
 ;
+
 btnAdd.onclick = function btnAdd() {
     //点击+号时range和text值一起增加
     textNum.value++;

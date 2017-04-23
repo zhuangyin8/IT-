@@ -31,6 +31,8 @@ header {
 }
 
 .header-center {
+    text-align: center;
+    /*水平居中 */
     font-size: 2rem;
     color: #ffffff;
 }

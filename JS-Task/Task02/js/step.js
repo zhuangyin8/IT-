@@ -13,7 +13,7 @@ step[2].style.marginTop = '5rem';
 //     window.location.href = 'kill.html';
 // }
 
-//jQuery 实现页面跳转
+//jQuery 获取天黑请闭眼按钮的id,触发点击事件,跳转到杀人页面
 $('#start').click(function(){
      window.location.href = 'kill.html';
 });
