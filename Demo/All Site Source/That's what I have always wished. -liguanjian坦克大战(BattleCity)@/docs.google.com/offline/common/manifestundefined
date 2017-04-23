@@ -1,0 +1,30 @@
+CACHE MANIFEST
+# 0 3d737e15
+# 0
+
+CACHE:
+# 4cf8b2ab905e6fb9784242cbb0011cd782f014a1
+/static/doclist/client/js/1122172355-frame_bin.js
+# ab42cbd1e45e8f7abc7ebb84237cb33d54b98526
+/static/doclist/client/js/294053357-docs_offline_iframe_api_bin.js
+# 259ef8995fb63f3f224bf114254e3586052f3eeb
+/static/doclist/client/js/1671554925-event_bus_worker_bin.js
+# 1ba0e4ccbe7f0dda501b0c85eca6cbb669ef4aa8
+/static/doclist/client/js/464208091-offline_tasks_worker_bin.js
+
+FALLBACK:
+
+CHROMIUM-INTERCEPT:
+/offline/extension/frame?ouid return /offline/extension/frame?ouid&releaseData=151884964
+/offline/extension/frame?ouid=u68a72c9eb812912e return /offline/extension/frame?ouid=u68a72c9eb812912e&releaseData=151884964
+/offline/iframeapi?ouid=u68a72c9eb812912e return /offline/iframeapi?ouid=u68a72c9eb812912e&releaseData=151884964
+/offline/eventbusworker.js?ouid=u68a72c9eb812912e return /offline/eventbusworker.js?ouid=u68a72c9eb812912e&releaseData=151884964
+/offline/synctaskworker.js?ouid=u68a72c9eb812912e return /offline/synctaskworker.js?ouid=u68a72c9eb812912e&releaseData=151884964
+/offline/flags?ouid=u68a72c9eb812912e return /offline/flags?ouid=u68a72c9eb812912e&releaseData=151884964
+/offline/taskiframe?ouid=u68a72c9eb812912e return /offline/taskiframe?ouid=u68a72c9eb812912e&releaseData=151884964
+
+NETWORK:
+https://ssl.gstatic.com/docs/common/cleardot.gif
+/bind
+/test
+*

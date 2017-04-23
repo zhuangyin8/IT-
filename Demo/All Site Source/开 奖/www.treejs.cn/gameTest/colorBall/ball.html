@@ -1,0 +1,95 @@
+<!doctype html>
+<HTML>
+ <HEAD>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <TITLE>抽签</TITLE>
+  <link rel="stylesheet" type="text/css" href="ball.css?121701">
+ </HEAD>
+
+ <BODY>
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7819603-6']);
+  _gaq.push(['_setDomainName', 'ztree.me']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="centerBox" class="boxPaper">
+	<div id="boxBack" class="boxPaper"></div>
+	<div id="boxDark" class="boxPaper"></div>
+	<div id="paper">
+		<div class="ballBox level1"></div>
+		<div class="ballBox level2"></div>
+		<div class="ballBox level3"></div>
+		<div class="ballBox level4"></div>
+		<div class="ballBox level5"></div>
+		<div class="boxPaper output"></div>
+		<div class="boxPaper rewardInfo">
+			<div class="title"><span>恭   喜</span></div>
+			<div id="rewardName" class="name"><span></span></div>
+		</div>
+	</div>
+	
+	<div id="boxFront" class="boxPaper">
+		<div id="myonoffDiv" class="onoffswitch">
+		    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+		    <label class="onoffswitch-label" for="myonoffswitch">
+		        <div class="onoffswitch-inner"></div>
+		        <div class="onoffswitch-switch"></div>
+		    </label>
+		</div>
+		<a id="luckyBtn" class="button big gray" onfocus="this.blur();">抽 签</a>
+		<ul class="alert">
+		<li>请用 Chrome、FireFox 浏览.</li>
+		</ul>
+		
+	</div>
+	
+</div>
+
+<div class="setting mask">
+</div>
+<div class="setting content">
+	<div class="title center" style="margin-left: 300px;"><span>抽签范围</span></div>
+	<ul style="margin: 20px 0 0 200px; list-style:none;">
+	<li>
+		<input type=radio id="numberType" name="rewardType"><label class="settingText" for="numberType" style="margin-left: 10px;">使用数字</label>
+		<input type=radio id="nameType" name="rewardType" checked><label class="settingText" for="nameType" style="margin-left: 10px;">使用名称</label>
+	</li>
+	<li style="position:relative;height:230px">
+		<div id="numberSetting" style="margin-top:30px; position:absolute; display:none">
+			<span class="settingText">最小数字：</span><input type=text id="numberMin" value="1" style="width:50px; -moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;">
+			<span class="settingText">最大数字：</span><input type=text id="numberMax" value="30" style="width:50px;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;">
+			<br/><br/><span class="settingText">注意：最多只能设置 100 个数字</span>
+		</div>
+		<div id="nameSetting" style="margin-top:30px; position:absolute;">
+			<textarea id="nameTxt" style="width:300px; height:100px; padding:10px; -moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;">洗碗 休息 买菜 擦地 洗衣服 看电影 逛公园 逛街 睡觉 擦玻璃 扫地 看书 背首诗 唱儿歌 跳骑马舞 削苹果 看电视 练瑜伽 做饭 擦油烟机 刷马桶 浇花</textarea>
+			<br/><br/><span class="settingText">注意：请用空格分隔；最多只能设置 100 个名称</span>
+		</div>
+		
+	</li>
+	<li><a id="submitSetting" class="button big orange" onfocus="this.blur();" style="margin-left: 200px;">确 定</a></li>
+	</ul>
+	
+</div>
+
+<audio id="backgroundAudio" src="audio/background.ogg" preload loop></audio>
+<audio id="buttonAudio" src="audio/button.ogg" preload></audio>
+<audio id="cheerAudio" src="audio/cheer.ogg" preload></audio>
+<audio id="lotteryAudio" src="audio/lottery.ogg" preload></audio>
+<audio id="selectBallAudio" src="audio/selectBall.ogg" preload></audio>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/ball.js?121703"></script>
+ </BODY>
+</HTML>

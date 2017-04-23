@@ -1,0 +1,6 @@
+<pre style='color:blue'>Phalcon\Mvc\Dispatcher\Exception: module\home\Controllers\base\MController handler class cannot be loaded</pre><pre style='color:red'>File=/home/wwwroot/b2c/public/index.php
+Line=72
+</pre><pre>#0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('module\\home\\Con...', 2)
+#1 [internal function]: Phalcon\Dispatcher->dispatch()
+#2 /home/wwwroot/b2c/public/index.php(72): Phalcon\Mvc\Application->handle()
+#3 {main}</pre>
