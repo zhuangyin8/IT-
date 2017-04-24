@@ -30,9 +30,8 @@ var add = $("#add").val();
 // onchange 在元素值改变时触发。当值改变时检查输入字段
 // onchange 属性适用于：<input>、<textarea> 以及 <select> 元素。
 rangeNum.onchange = function rangeChange() {
-    //     textNum.value = rangeNum.value;
-//     text = range;
-    //将range的值给number
+    textNum.value = rangeNum.value;
+     //将range的值给number
 }
 ;
 /*

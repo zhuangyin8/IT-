@@ -95,6 +95,11 @@ button {
 
 @media screen and (max-width: 450px) {
     html {
+        font-size:70%;
+    }
+}
+@media screen and (max-width: 380px) {
+    html {
         font-size:60%;
     }
 }

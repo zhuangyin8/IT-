@@ -39,19 +39,19 @@ main {
 
 .night {
     position: absolute;
-    top: 10%;
-    left: -5%;
-    background: #f0f0f0;
+    top: 5rem;
+    left: -2.3rem;
+    background: hsl(0, 0%, 94%);
 }
 
 .sun {
     position: absolute;
-    top:39%;
-    left: -5%;
-    background: #f0f0f0;
+    top:21rem;
+    left:  -2.3rem;
+    background: rgb(240, 240, 240);
 }
 
-.content-step-part {
+.step {
     position: relative;
     margin-bottom: 2rem;
     width: 100%;
