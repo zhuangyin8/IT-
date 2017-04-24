@@ -1,0 +1,51 @@
+/*桌游精灵全局header样式*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+  font-family: "Microsofft Yahei";
+}
+
+body {
+  min-width: 320px;
+  max-width: 640px;
+  margin: auto;
+}
+
+header {
+  position: relative;
+
+  width: 100%;
+  height: 5rem;
+
+  background: #29bde0;
+
+  line-height: 5rem;
+}
+
+.header-left {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
+.header-right {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+.header-center {
+  text-align: center;
+
+  color: white;
+
+  font-size: 2rem;
+  /*line-height: 2rem;*/
+}
+
+
+/*header img {
+  height: 2.5rem;
+}*/

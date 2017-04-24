@@ -13,8 +13,8 @@ header {
     position: relative;
     /*     width: 40rem; */
     width: 100%;
-    height: 5rem;
-    line-height: 5rem;
+    height: 4rem;
+    /*line-height: 1;*/
     background: #29bde0;
 }
 
@@ -25,10 +25,10 @@ header {
     cursor: pointer;
 }
 
-.header-left img {
+/*.header-left img {
     height: 2.5rem;
-    /*只设置img的高度完美解决图片变形*/
-}
+    //只设置img的高度完美解决图片变形
+}*/
 
 .header-center {
     text-align: center;
@@ -44,6 +44,6 @@ header {
     cursor: pointer;
 }
 
-.header-right img {
+/*.header-right img {
     height: 2.5rem;
-}
+}*/

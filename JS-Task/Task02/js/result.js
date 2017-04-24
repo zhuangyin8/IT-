@@ -2,9 +2,9 @@
  * edited by zhuangyin on 2017/4/17.
  */
 
-var statusAll = sessionStorage.oStatus;
-var oStatus = JSON.parse(statusAll);
-// console.log(oStatus);
+var statusAll = sessionStorage.fettle;
+var fettle = JSON.parse(statusAll);
+// console.log(fettle);
 var killer = 0;
 //活着的杀手人数
 var people = 0;
@@ -13,15 +13,15 @@ var dieKiller = 0;
 //死亡的杀手人数
 var diePeople = 0;
 //死亡的平民人数
-for (var i = 0; i < oStatus.length; i++) {
+for (var i = 0; i < fettle.length; i++) {
     //计算存活和死亡的杀手人数和平民人数
-    if (oStatus[i].identity == '杀手' && oStatus[i].status == 'alive') {
+    if (fettle[i].identity == '杀手' && fettle[i].status == 'alive') {
         killer++;
-    } else if (oStatus[i].identity == '杀手' && oStatus[i].status == 'voted') {
+    } else if (fettle[i].identity == '杀手' && fettle[i].status == 'voted') {
         dieKiller++;
-    } else if (oStatus[i].identity == '平民' && oStatus[i].status == 'alive') {
+    } else if (fettle[i].identity == '平民' && fettle[i].status == 'alive') {
         people++;
-    } else if (oStatus[i].identity == '平民' && (oStatus[i].status == 'killed' || oStatus[i].status == 'voted')) {
+    } else if (fettle[i].identity == '平民' && (fettle[i].status == 'killed' || fettle[i].status == 'voted')) {
         diePeople++;
     }
 }
@@ -43,15 +43,15 @@ var day = 1;
 var play = '';
 //循环生成从第一天至游戏结束的过程中，死亡玩家的死亡方式和真实身份
 for (var x = 0; x < (dieKiller + diePeople) / 2; x++) {
-    for (var j = 0; j < oStatus.length; j++) {
-        if (oStatus[j].day == day) {
-            if (oStatus[j].status == "killed") {
-                a = oStatus[j].num;
-                b = oStatus[j].identity;
+    for (var j = 0; j < fettle.length; j++) {
+        if (fettle[j].day == day) {
+            if (fettle[j].status == "killed") {
+                a = fettle[j].num;
+                b = fettle[j].identity;
             }
-            if (oStatus[j].status == "voted") {
-                c = oStatus[j].num;
-                d = oStatus[j].identity;
+            if (fettle[j].status == "voted") {
+                c = fettle[j].num;
+                d = fettle[j].identity;
             }
         }
     }

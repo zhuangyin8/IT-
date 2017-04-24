@@ -7,7 +7,7 @@
 // }
 
 //jQuery实现
-$("#sample").click(function() {
+$("#sample").click(function () {
     //1.window.location.href方式
-        window.location.href = "setting.html";
+    // window.location.href = "setting.html";
 });

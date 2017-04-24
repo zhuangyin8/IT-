@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设置</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/setting.css">
+</head>
+
+<body>
+    <header>
+        <a href="" class="header-left"><img src="image/back.png" alt=""></a>
+        <div class="header-center">2参数设置</div>
+        <a href="" class="header-right"><img src="image/help.png" alt=""></a>
+    </header>
+    <main>
+        <div class="main-top">
+            <div class="main-top-left">玩家配比</div>
+            <div class="main-top-right">
+                <ul id="set"></ul>
+                <button id="get"><span>点击设置</span><i></i></button>
+            </div>
+        </div>
+        <div class="main-phrase">
+            <div class="phrase">水民词组</div>
+            <div class="phrase">幽灵词组</div>
+        </div>
+        <div class="main-bottom">
+            <!-- HTML5新控件 - 数值输入框 -->
+            玩家人数<input type="number" id="number" min="4" max="18" value="8">人
+            <div class="main-bottom-range">
+                <button class="sub" id="sub"></button>
+                <!-- 滑动条 -->
+                <input type="range" id="range" min="4" max="18" step="1" value="8" autofocus="">
+                <button class="add" id="add"></button>
+            </div>
+        </div>
+    </main>
+    <footer><button id="allot">去发牌</button></footer>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/setting.js"></script>
+</body>
+
+</html>
