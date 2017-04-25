@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>带有右边距的浮动子元素列表</title>
+    <style>
+        .wrapper {
+            width: 32rem;
+            border: dashed 1px orange;
+        }
+
+        .wrapper .inner {
+            overflow: hidden;
+            margin-right: -1rem;
+        }
+
+        .wrapper .item {
+            float: left;
+            width: 10rem;
+            height: 10rem;
+            margin: 1rem 1rem 1rem 0;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="inner">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -86,7 +86,7 @@ span {
 */
 /*div.circle span:first-child 表示类名为circle的div的子类元素span的第一个元素 */
 .game span:first-child {
-  background: #69d1e9;
+  background: #69D1E9;
 }
 
 /*span:nth-child(n+1) 表示类名为circle的div的除第一个的所有span 子元素.*/
@@ -95,7 +95,7 @@ span {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background: rgb(240, 240, 240);
+  background: #F0F0F0;
 }
 
 /*span:nth-child(n) 表示类名为circle的div的所有子类元素span*/
@@ -103,7 +103,7 @@ span {
   margin: 1rem 0 .5rem 0;
 }
 .game span:nth-child(n):hover {
-  background-color: #69d1e9;
+  background-color: #69D1E9;
 }
 @media screen and (max-width: 639px) {
   html {

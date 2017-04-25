@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float元素</title>
+</head>
+
+<body>
+    <!-- 负边距对float元素的影响也是按照上面说的，不过有其特殊性，我们看个例子就很清楚了 -->
+    <style>
+        .wrapper {
+            overflow: hidden;
+            width: 28rem;
+            border: dashed 1px orange;
+        }
+
+        .wrapper .item {
+            width: 10rem;
+            height: 10rem;
+            float: left;
+        }
+
+        .wrapper .item:nth-child(1) {
+            background: red;
+        }
+
+        .wrapper .item:nth-child(2) {
+            background: yellow;
+        }
+
+        .wrapper .item:nth-child(3) {
+            background: blue;
+        }
+
+        /*我们对代码稍作修改*/
+         .wrapper .item:nth-child(3) {
+            background: blue;
+            margin-left: -2rem;
+        }
+        /*这时候发现第三个元素移上去了，并且覆盖了第二个元素2rem，经典的多列布局正是利用此原理*/
+    </style>
+<!-- 在一个宽度为28rem的div中右3个float:left的子元素，宽度为10rem，由于一排放不下，最后一个被移动到了下一行 -->
+    <div class="wrapper">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+</body>
+
+</html>
