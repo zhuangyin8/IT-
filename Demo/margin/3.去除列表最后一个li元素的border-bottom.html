@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>去除列表最后一个li元素的border-bottom</title>
+    <style>
+        ul.border-list {
+            margin: 4rem;
+            width: 30rem;
+            background: white;
+            border: 2px solid red;
+            /*overflow: hidden;*/
+        }
+
+        ul.border-list li {
+            height: 25px;
+            line-height: 25px;
+            padding: 5px;
+            border-bottom: 1px dotted green;
+            margin-bottom: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="border-list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>
+<!--
+列表中我们经常会使用到border-bottom来让li与li之间的内容有一个明显的区分，单最后一个li的边框会与外边框连在一起或者重合导致外观上的不好看，一种方法就是使用css3中的最后一个的选择器来实现，li:last-of-type{border-bottom:0 none;}
+  -->

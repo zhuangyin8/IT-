@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /*CSS 布局的核心就是position属性,对元素盒子应用这个属性,可以这对于它在常规文档流中的位
+    置重新定位.position有四个值:
+    static(常规文档流),
+    relative(相对的是他原来在文档流中的位置),
+    absolute(绝对定位元素默认的定位上下文是body元素),
+    fixed(固定定位元素的定位上下文是视口(浏览器窗口这手持设备的屏幕,它不会随页面滚动而滚动))
+    */
+        /* explaining margins */
+        html {font-size: 1.5rem;}
+        body {padding-left: 10rem}
+        .parent {width: 20rem;height: 20rem;position: relative;background: lemonchiffon;}
+      /**当父级div设置为*/
+        .parent:before,
+        .parent:after {position: absolute;content: "";}
+        /*田字格*/
+        .parent:before {top: 0;bottom: 0;left: 50%;border-left: dashed 1px #ccc;}
+        /*竖虚线*/
+        .parent:after {left: 0;right: 0;top: 50%;border-top: dashed 1px #ccc;}
+        /*横虚线*/
+        .child {width: 50%;height: 50%;background: rgba(200, 198, 133, .5);}
+        /*小格子*/
+        /*ul {padding: 5% 20px;}*/
+        .set1 .child {margin: 0;position: relative;}
+        .set2 .child {margin-left: 25%;position: relative;}
+        .set3 .child {margin-left: -25%;position: relative;
+        }
+        /* position absolute */
+        .set4 .child {top: 50%;left: 50%;margin: 0;position: absolute;}
+        .set5 .child {top: 50%;left: 50%;margin-left: 25%;position: absolute;}
+        .set6 .child {top: 50%;
+            /* level from which margin-top starts
+ 	- downwards, in the case of a positive margin
+ 	- upwards, in the case of a negative margin
+ 	*/
+            left: 50%;
+            /* level from which margin-left starts
+ 	- towards right, in the case of a positive margin
+ 	- towards left, in the case of a negative margin
+ 	*/
+            margin: -25%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- content to be placed inside <body>…</body> -->
+    <h2><code>position: relative;</code></h2>
+    <h3>example 1</h3>
+    <div class="parent set1">
+        <div class="child">
+            <pre>
+.set1 .child {
+  margin: 0;
+  position: relative;
+}
+		</pre>
+        </div>
+    </div>
+<h3>example 2</h3>
+<div class="parent set2">
+    <div class="child">
+        <pre>
+.set2 .child {
+  margin-left: 75px;
+  position: relative;
+}
+		</pre>
+    </div>
+</div>
+
+<h3>Set 3</h3>
+<div class="parent set3">
+    <div class="child">
+        <pre>
+.set3 .child {
+  margin-left: -75px;
+  position: relative;
+}
+		</pre>
+    </div>
+</div>
+
+<h2><code>position: absolute;</code></h2>
+
+<h3>Set 4</h3>
+<div class="parent set4">
+    <div class="child">
+        <pre>
+.set4 .child {
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+}
+		</pre>
+    </div>
+</div>
+
+<h3>Set 5</h3>
+<div class="parent set5">
+    <div class="child">
+        <pre>
+.set5 .child {
+  top: 50%;
+  left: 50%;
+  margin-left: 75px;
+  position: absolute;
+}
+		</pre>
+    </div>
+</div>
+
+<h3>Set 6</h3>
+<div class="parent set6">
+    <div class="child">
+        <pre>
+.set6 .child {
+  top: 50%;
+  left: 50%;
+  margin: -75px;
+  position: absolute;
+}
+		</pre>
+    </div>
+</div>
+</body>
+
+</html>
