@@ -14,54 +14,54 @@
   设置margin-right:0; 这种方法需要动态判断为哪些li元素添加class，麻烦！！！
   利用负margin就可以实现下面这种效果： -->
 
-    <head>
-        <style>
-            /*body,*/
-            ul,
-            li {
-                padding: 0;
-                margin: 0;
-                list-style: none;
-            }
+    <style>
+        /*body,*/
 
-            ul,
-            li {
-                /*list-style: none;*/
-            }
+        ul,
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
 
-            #test {
-                width: 32rem;
-                height: 21rem;
-                background: blue;
-            }
+        ul,
+        li {
+            /*list-style: none;*/
+        }
 
-            #test ul {
-                margin-right: -10px;
-                zoom: 1;
-            }
+        #test {
+            width: 32rem;
+            height: 21rem;
+            background: blue;
+        }
 
-            #test ul li {
-                width: 10rem;
-                height: 10rem;
-                background: #F60;
-                margin-right: 10px;
-                margin-bottom: 10px;
-                float: left;
-            }
-        </style>
-    </head>
+        #test ul {
+            margin-right: -10px;
+            zoom: 1;
+        }
 
-    <body>
-        <div id="test">
-            <ul>
-                <li>子元素1</li>
-                <li>子元素2</li>
-                <li>子元素3</li>
-                <li>子元素4</li>
-                <li>子元素5</li>
-                <li>子元素6</li>
-            </ul>
-        </div>
-    </body>
+        #test ul li {
+            width: 10rem;
+            height: 10rem;
+            background: #F60;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test">
+        <ul>
+            <li>子元素1</li>
+            <li>子元素2</li>
+            <li>子元素3</li>
+            <li>子元素4</li>
+            <li>子元素5</li>
+            <li>子元素6</li>
+        </ul>
+    </div>
+</body>
 
 </html>

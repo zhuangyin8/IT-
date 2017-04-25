@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>去除列表最后一个li元素的border-bottom</title>
+    <!--
+  列表中我们经常会添加border-bottom值，
+  最后一个li的border-bottom往往会与外边框重合，视觉上不雅观，往往要移除。
+   如果li的border-bottom颜色与ul的border颜色是一样的时候，
+   在视觉上是被隐藏了。如果其颜色不一致的时候还是有问题，
+   给ul写个overflow：hidden；就可以解决这个问题。 -->
+    <style>
+        #demo {
+            overflow: hidden;
+            width: 35rem;
+            margin: auto;
+            padding: 0 1rem;
+            border-radius: 1rem;
+            background: #57bb8a;
+            text-align: left;
+        }
+
+        #demo h3 {
+            padding: 1rem 0 2px 2rem;
+            font-size: 16px;
+        }
+
+        #demo ul {
+            margin-bottom: -1px;
+        }
+
+        #demo li {
+            padding: 8px 1rem;
+            border-bottom: 1px solid #0b8043;
+        }
+    </style>
+</head>
+<!--
+http://www.cnblogs.com/jscode/archive/2012/08/28/2660078.html
+http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ -->
+
+<body>
+    <div id="demo">
+        <h3>标题列表</h3>
+        <ul>
+            <li>对一个数组 filter、some、map、foreach的操作分别有什么作用？</li>
+            <li>简述JS中的event delegate</li>
+            <li>return的用法是什么？若用在for循环中，还会执行下一次循环吗？</li>
+            <li>如何使用Bootbox ？</li>
+            <li>json是什么，如何处理转义？</li>
+            <li>6.简述JS中this的指向  </li>
+            <li>7.简述JS中的面向对象编程</li>
+            <li>8.如何实现数组深拷贝和浅拷贝？</li>
+            <li>9.杀人和投票的业务逻辑上有什么区别？</li>
+            <li>10.如何理解JS作用域与作用域链？</li>
+            <li>11.如何验证程序是否完成，测试以及修正Bug</li>
+            <li>12.如何使用phonegap打包app？</li>
+            <li>13.如何使用HBuilder打包app？</li>
+            <li>14.如何阻止事件冒泡和默认事件？</li>
+        </ul>
+    </div>
+</body>
+<!-- 然而为了处理最后一项，事情就变得有点纠结了。我知道肯定有人要说，我们有 :first-child, :nth-last-child(n), :nth-last-of-type(n) 之类的CSS3选择符，要处理这个，太easy了。恩，我也不得不承认，CSS3确认让事情变得简单多了。但我们可能需要面对一些国情，因为需要照顾一些弱小者，比如IE6-8，它们离CSS3的世界太远。 -->
+
+</html>
+</head>

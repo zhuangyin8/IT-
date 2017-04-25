@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>float元素</title>
+    <title>6.负边距对float元素的影响</title>
 </head>
 
 <body>
@@ -36,10 +36,10 @@
         }
 
         /*我们对代码稍作修改*/
-         .wrapper .item:nth-child(3) {
+         /*.wrapper .item:nth-child(3) {
             background: blue;
             margin-left: -2rem;
-        }
+        }*/
         /*这时候发现第三个元素移上去了，并且覆盖了第二个元素2rem，经典的多列布局正是利用此原理*/
     </style>
 <!-- 在一个宽度为28rem的div中右3个float:left的子元素，宽度为10rem，由于一排放不下，最后一个被移动到了下一行 -->
