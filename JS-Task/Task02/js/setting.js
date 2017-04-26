@@ -72,8 +72,8 @@ btnAdd.onclick = function btnAdd() {
 /*
  将杀手和平民身份打乱，准备分配给1-N号玩家身份
  */
-var allPlayer;
-var player = "";
+// var allPlayer;
+// var player = "";
 //获取显示玩家身份区域的值
 $("#identifyGet").click(function() {
   player = "";
@@ -145,6 +145,7 @@ $("#allot").click(function() {
     alert("请先点击设置玩家身份哦");
   }
 });
+
 // javScript 实现点击"去分牌"按钮时先检查是否设置玩家身份
 // document.getElementById("allot").onclick = function allot() {
 //     if (allPlayer != null) {

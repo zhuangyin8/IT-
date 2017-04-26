@@ -19,11 +19,11 @@
         }
 
         body {
-            font: 24px/1 微软雅黑, tahoma, arial, 宋体, sans-serif;
+            font: 1rem/1 微软雅黑, sans-serif;
         }
 
         ul {
-            list-style: none outside none;
+            list-style: none;
         }
 
         h1,
@@ -132,11 +132,10 @@
 
         .nav-list-item {
             float: left;
-            *display: inline;
             font-size: 12px;
             padding: 0 10px 0 10px;
             border-left: 1px solid #AAA;
-            /*margin-left: -1px;*/
+            margin-left: -1px;
         }
         /* 修复iphone safari 不能完全隐藏边框的bug */
 
@@ -380,7 +379,8 @@
                   <a href="#tab-content5" class="ui-tab-trigger-item">多栏等高</a>
                   <a href="#tab-content6" class="ui-tab-trigger-item">产品列表</a>
                   <a href="#tab-content7" class="ui-tab-trigger-item">水平垂直居中</a>
-                  <a href="#tab-content8" class="ui-tab-trigger-item">模拟表格线</a></dt>
+                  <a href="#tab-content8" class="ui-tab-trigger-item">模拟表格线</a>
+                </dt>
 
                 <dd id="tab-content1" class="ui-tab-cnt-item ui-tab-cnt-item-current">
                     <ul class="nav-list clearfix">
@@ -484,7 +484,7 @@
                 </dd>
             </dl>
         </div>
-        <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script>
             var artTabs = function(bar, config) {
                 var gid = function(id) {

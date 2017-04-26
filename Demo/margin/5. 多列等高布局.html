@@ -1,47 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>5. 多列等高布局</title>
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .content {
-            background: #f4b400;
-            overflow: hidden;
-            position: relative;
-            color: white;
-        }
-
-        .box {
-            background: #57bb8a;
-            padding-bottom: 10000px;
-            margin-bottom: -10000px;
-            float: left;
-            margin-left: 30px;
-            width: 300px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
-
 <body>
-    <div class="content">
-        <div class="box">jQuery是一个跨平台JavaScript库，旨在简化HTML的客户端脚本。jQuery是目前使用的最流行的JavaScript库，安装在Web上前1000万个最高投放量的网站中的65％。jQuery是免费的开源软件，根据MIT许可证授权。jQuery的语法设计使它更容易导航文档，选择DOM元素，创建动画，处理事件和开发Ajax应用程序。jQuery还为开发人员提供了在JavaScript库之上创建插件的功能。这使开发人员能够创建低级交互和动画，高级效果和高级主题化小部件的抽象。jQuery库的模块化方法允许创建强大的动态网页和Web应用程序。jQuery核心特性
-            - 通过其选择器引擎（来自v1.3的名为“Sizzle”）的DOM元素选择，遍历和操纵启用的集合创建了一种新的“编程风格”，融合算法和DOM数据结构。这种风格影响了其他JavaScript框架（如YUI v3和Dojo）的架构，后来刺激了标准Selectors API的创建。从应用角度提高交互技术的效率和可用性，为用户提供直接操纵之上的面向高层语义的交互隐喻，屏蔽交互技术的底层实现细节，使用户专注于应用领域相关的高层交互控制。（技术就是隐藏复杂实现细节，简化使用者的操作）jQuery库是一个单一的JavaScript文件，包含所有常见的DOM，事件，效果和Ajax函数。它可以通过链接到本地副本或从公共服务器可用的许多副本之一包含在Web页面中。</div>
-        <div class="box">Ajax（也是AJAX;;异步JavaScript和XML的简称）是一组Web开发技术，在客户端使用许多Web技术来创建异步Web应用程序。使用Ajax，Web应用程序可以异步（在后台）向服务器发送数据和从服务器检索数据，而不会干扰现有页面的显示和行为。通过将数据交换层与表示层解耦，Ajax允许网页和扩展Web应用程序动态更改内容，而无需重新加载整个页面。在实践中，现代实现通常用JSON[JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。]代替XML，因为它是JavaScript原生的优点。Ajax不是一种技术，而是一组技术。HTML和CSS可以组合使用来标记和装饰信息。使用JavaScript访问DOM以动态地显示
-            - 并允许用户与所呈现的信息交互。JavaScript和XMLHttpRequest对象提供了一种在浏览器和服务器之间异步交换数据的方法，以避免全页重新加载。
-        </div>
-        <div class="box">JavaScript是一种高级，动态，无类型和解释的编程语言。它已在ECMAScript语言规范中标准化。HTML、CSS和JavaScript是万维网内容生产的三个核心技术。大多数网站都使用它，所有现代的Web浏览器都支持它，而不需要插件。JavaScript是基于原型的第一类函数，使其成为一种多范式语言，支持面向对象，命令式和函数式编程风格。它有一个API用于处理文本，数组，日期和正则表达式，但不包括任何I / O，例如网络，存储或图形设施，依赖于嵌入其中的主机环境。尽管JavaScript和Java之间存在强烈的外部相似性，包括语言名称，语法和各自的标准库。两者是不同的语言，它们的设计差别很大。
-            JavaScript受编程语言（如Self和Scheme）的影响。
-        </div>
-        <div style="clear:both;"></div>
-    </div>
-</body>
 
+</body>
 </html>
+
+<!-- 多列等高布局实现起来较为复杂，如果要内容自适应撑大达到等高布局很不好设计，一般的可以使用js来实现高度的自定义，计算那个高度高就用那个。这儿使用极大的padding-bottom来增加高度，然后用负边距拉回来相互抵消达到高度撑满整个父亲节点的效果。  -->

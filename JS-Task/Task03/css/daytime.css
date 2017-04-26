@@ -7,7 +7,7 @@ main {
     width: 100%;
     border-top: 1px solid #74d4eb;
     background-color: #29bde0;
- }
+}
 
 .main-top {
     position: relative;
@@ -62,7 +62,7 @@ main {
     border: none;
 }
 
-#next {
+#vote {
     display: block;
     margin: 0 auto;
     width: 70%;

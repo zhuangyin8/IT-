@@ -5,98 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>demo</title>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
+    <title>双飞翼布局</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-          h1 {
-              text-align: center;
-              line-height: 200px;
-              font-size: 30px;
-              background-color: red;
-          }
+        body {
+            min-width: 700px;
+        }
 
-          .wrap {
-              zoom: 1;
-              overflow: hidden;
-          }
+        header,
+        footer {
+            border: 1px solid #333;
+            background: #aaa;
+            text-align: center;
+            height: 2rem;
+        }
 
-          .wrap .left {
-              width: 200px;
-              height: 500px;
-              background: #ccc;
-              float: left;
-              margin-left: -100%;
-          }
+        .sub,
+        .main,
+        .extra {
+            float: left;
+            min-height: 50rem;
+        }
 
-          .wrap .right {
-              width: 200px;
-              height: 500px;
-              background: #333;
-              float: left;
-              margin-left: -200px;
-          }
+        .sub {
+            margin-left: -100%;
+            width: 200px;
+            background: red;
+        }
 
-          .wrap .main {
-              width: 100%;
-              height: 500px;
-              background-color: #666;
-              float: left;
-          }
+        .extra {
+            margin-left: -220px;
+            width: 220px;
+            background: blue;
+        }
 
-          .wrap .main-content {
-              padding: 0 200px;
-              background: #eee;
-          }  
+        .main {
+            width: 100%;
+        }
+
+        .main-inner {
+            margin-left: 200px;
+            margin-right: 220px;
+            min-height: 50rem;
+            background: green;
+            word-break: break-all;
+        }
+
+        footer {
+            clear: both;
+        }
     </style>
 </head>
 
 <body>
-    <div class="wrap">1
-      <div class="main">
-          <div class="main-content">2
-              <h1>双飞翼布局</h1>
-          </div>
-      </div>
-      <div class="left"></div>
-      <div class="right"></div>
-  </div>
+    <header>
+        <h1>header</h1>
+    </header>
+    <div class="main">
+        <div class="main-inner">
+            <h4>main</h4>
+            <p></p>
+        </div>
+    </div>
+    <div class="sub">
+        <h4>sub</h4>
+        <p>
+        </p>
+    </div>
 
+    <div class="extra">
+        <h4>extra</h4>
+        <p> 
+        </p>
+    </div>
+    <footer>
+        <h4>footer</h4>
+    </footer>
 </body>
 
 </html>
-<!-- body {
-    margin: 0;
-    padding: 0 200px;
-    /*zoom: 1;*/
-    /*overflow: hidden;*/
-    height: 100%;
-}
-
-.left {
-    width: 200px;
-    background: blue;
-    float: left;
-    margin-left: -100%;
-    position: relative;
-    left: -200px;
-    height: 100%;
-}
-
-.right {
-    width: 200px;
-    background: green;
-    float: left;
-    position: relative;
-    left: 200px;
-    margin-left: -200px;
-    height: 100%;
-}
-
-main {
-    width: 100%;
-    background: yellow;
-    float: left;
-    position: relative;
-    height: 100%;
-} -->

@@ -9,7 +9,8 @@ html {
 
 body {
   min-width: 320px;
-  max-width: 640px;
+  max-width: 640px;
+
   margin: auto;
 }
 
@@ -46,6 +47,6 @@ header {
 }
 
 
-/*header img {
+header img {
   height: 2.5rem;
-}*/
+}

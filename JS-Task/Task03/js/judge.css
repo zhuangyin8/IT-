@@ -8,6 +8,8 @@ main {
     background: #29bde0;
     position: absolute;
     width: 40rem;
+    bottom: 10rem;
+    top: 5rem;
 }
 
 .main-box {

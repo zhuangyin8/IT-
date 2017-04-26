@@ -1,4 +1,7 @@
 /**
+ * Created by wanwn on 2017/2/26.
+ */
+/**
  * Created by wanwn on 2017/2/24.
  */
 $('#sing').click(
@@ -13,25 +16,25 @@ $('#sing').click(
     }
 );
 //打印玩家身份牌
-var statusAll = sessionStorage.oStatus;
-var oStatus = JSON.parse(statusAll);
-console.log(oStatus);
+var statusAll = sessionStorage.fettle;
+var fettle = JSON.parse(statusAll);
+console.log(fettle);
 var play = '';//存放玩家身份牌信息
-for (var i = 0; i < oStatus.length; i++) {
+for (var i = 0; i < fettle.length; i++) {
     play += '<div class="main-content-part"><div class="main-content-part-role-name">'
-        + oStatus[i].identity + '</div><div class="main-content-part-role-num">' + oStatus[i].num + '号'
+        + fettle[i].identity + '</div><div class="main-content-part-role-num">' + fettle[i].num + '号'
         + '</div>' + '</div> ';
     $('#main-content').html(play);
 }
 var allName = document.getElementsByClassName("main-content-part-role-name");
 var diePeople = 0;//存放死亡玩家人数
 var killPeople;//死亡玩家号码
-for (var j = 0; j < oStatus.length; j++) {
+for (var j = 0; j < fettle.length; j++) {
     //先把已经死亡的玩家标记出来
-    if (oStatus[j].status == "killed" || oStatus[j].status == 'voted') {
+    if (fettle[j].status == "killed" || fettle[j].status == 'voted') {
         allName[j].style.background = "#9b9b9b";
         diePeople++;
-        console.log(diePeople);
+        console.log(diePeople)
     }
 }
 var x;
@@ -39,38 +42,33 @@ for (x = 0; x < allName.length; x++) {
     allName[x].index = x;
     allName[x].onclick = function () {
         //如果该玩家被点击，则触发此函数
-        if (oStatus[this.index].status == "killed" || oStatus[this.index].status == 'voted') {
+        if (fettle[this.index].status == "killed" || fettle[this.index].status == 'voted') {
             alert('该玩家已死亡，你难道还想让他再死一次吗？');
+        } else if (fettle[this.index].identity == '杀手') {
+            alert('不能杀死同伙哦');
         } else {
-            if (killPeople != undefined) {
+            if (killPeople !== undefined) {
                 allName[killPeople].style.background = "#f5c97b";
-                oStatus[killPeople].status = "alive";
+                fettle[killPeople].status = "alive";
             }
             allName[this.index].style.background = 'red';
             killPeople = this.index;
-            oStatus[this.index].status = 'voted';
-            console.log(oStatus);
+            fettle[this.index].status = 'killed';
+            console.log(fettle);
+            statusAll = JSON.stringify(fettle);
+            sessionStorage.fettle = statusAll;
+            console.log(statusAll);
         }
     }
 }
 
 //判断是否有选身份
-$('#vote').click(
+$('#kill').click(
     function () {
-        if (killPeople == undefined) {
+        if (killPeople === undefined) {
             alert("请选择一个玩家");
         } else {
-            for (var m = 0; m < oStatus.length; m++) {
-                if (oStatus[m].status == 'alive') {
-                    oStatus[m].day++;
-                    console.log(oStatus[m].day);
-                }
-            }
-            statusAll = JSON.stringify(oStatus);
-            sessionStorage.oStatus = statusAll;
-            console.log(statusAll);
             window.location.href = "daytime.html";
         }
     }
 );
-

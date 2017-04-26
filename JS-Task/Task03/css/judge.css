@@ -8,6 +8,8 @@ main {
     background: #29bde0;
     position: absolute;
     width: 40rem;
+    bottom: 10rem;
+    top: 5rem;
 }
 
 .main-box {
@@ -24,7 +26,7 @@ main {
 .main-box-hide {
     width: 100%;
     height: 100%;
-    background: url("../img/judge-hide.png") center no-repeat;
+    background: url("../image/judge-hide.png") center no-repeat;
 }
 
 .main-box:hover .main-box-open {

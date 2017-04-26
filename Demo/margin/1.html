@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多列布局</title>
+</head>
+<style>
+    .body {
+        width: 500px;
+        margin: 10px;
+        border: dashed 1px orange;
+        overflow: hidden;
+    }
+
+    .wrap3 {
+        float: left;
+        width: 100%;
+    }
+
+    .wrap3 .content {
+        height: 200px;
+        margin-right: 100px;
+        background: rgba(255, 0, 0, 0.5);
+    }
+
+    .body .right {
+        width: 100px;
+        height: 200px;
+        float: left;
+        margin-left: -100px;
+        background: rgba(0, 255, 0, 0.5);
+    }
+</style>
+
+<body>
+    <div class="body">
+        <div class="wrap3">
+            <div class="content">
+
+            </div>
+        </div>
+        <div class="right">Right</div>
+    </div>
+    <!-- 代码很简单
+
+为content元素添加父元素，设置左浮动，宽度100%
+content元素设置右边距，值等于right的宽度
+right左浮动，然后设置其宽度的负边距 本来right应该在第二行显示了，但是其宽度的左浮动使它到了第一行的最右边，覆盖了wrap的一部分，但是content有right宽度的右边距，覆盖区域没有内容，这样就实现了经典的右侧固定宽度，左侧充满剩余部分的两列布局 -->
+</body>
+
+</html>
