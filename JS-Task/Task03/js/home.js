@@ -1,3 +1,5 @@
-$("#sample").click(function() {
-  window.location.href = "setting.html";
-})
+$("#sample").click(function () {
+    window.location.href = "setting.html";
+});
+
+

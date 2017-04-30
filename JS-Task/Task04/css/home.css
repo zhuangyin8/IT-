@@ -1,0 +1,231 @@
+/*页面主要内容部分样式*/
+/* .content {
+    padding: 4%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+.content-top {
+    position: relative;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #c9c9c9;
+}
+
+.content-top h2 {
+    font-weight: 100;
+    color: #9a9a9a;
+}
+
+.content-top img {
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    width: 1em;
+    height: 1.8em;
+}
+
+.content-main {
+    position: relative;
+    margin: 4% auto;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #c9c9c9;
+}
+
+.content-main-game {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #fdd793;
+}
+
+.content-main-game h2 {
+    font-weight: 100;
+    color: #fbb435;
+}
+
+.content-main-version {
+    margin: 0 auto;
+    width: 100%;
+    cursor: pointer;
+}
+
+.content-main-version a {
+    text-decoration: none;
+}
+
+.content-main-version-btn {
+    margin: 5% auto 4% auto;
+    padding: 8% 1%;
+    width: 80%;
+    color: white;
+    font-size: 1.3em;
+    background-color: #69d1e9;
+}
+
+.content-main-version span {
+    color: #9a9a9a;
+}
+
+.triangle {
+    position: absolute;
+    top: 49%;
+    right: 1.5%;
+    width: 0;
+    height: 0;
+    border-width: 1.2rem 0 1.2rem 1.2rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fbb435;
+}
+
+.content-footer {
+    margin: 0 auto 2% auto;
+    overflow: hidden;
+    width: 10em;
+}
+
+.content-footer ul li {
+    display: block;
+    float: left;
+    margin-left: 3%;
+    width: 12px;
+    height: 12px;
+    list-style-type: none;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.content-footer ul li:hover {
+    background-color: #69d1e9;
+} */
+/*主体部分*/
+main {
+    /*margin: auto;*/
+    padding: 2rem;
+    background: #f0f0f0;
+}
+
+.history {
+    position: relative;
+    padding: 1% 0;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    background: white;
+}
+
+.history h1 {
+    color: #c9c9c9;
+    /*fw:n*/
+}
+
+.history img {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* translate() 变形函数中使用百分比值时，是以这个元素自身的宽度和高度
+为基准进行换算和移动的，而这正是我们所需要的。接下来，只要换用基于
+百分比的 CSS 变形来对元素进行偏移，就不需要在偏移量中把元素的尺寸
+写死了。这样我们就可以彻底解除对固定尺寸的依赖 */
+    width: 2rem;
+    height: 3rem;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    margin: 4% auto;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    background: white;
+}
+
+.title {
+    width: 100%;
+    line-height: 1.5;
+    text-align: center;
+    border-bottom: 1px solid #fdd793;
+    color: #fbb435;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+.version {
+    width: 80%;
+    height: 7rem;
+    margin: 4% 10%;
+    color: white;
+    background: #69d1e9;
+    font-size: 1.8rem;
+    line-height: 1;
+    border: none;
+}
+
+span {
+    color: #9a9a9a;
+    font-size: 1.5rem;
+}
+
+.next {
+    position: absolute;
+    top: 48%;
+    right: 0;
+    border: 1.5rem solid white;
+    border-left-color: orange;
+}
+
+/*.game {
+    margin: 1rem;
+ }
+*/
+/*div.circle span:first-child 表示类名为circle的div的子类元素span的第一个元素 */
+.game span:first-child {
+    background: #69D1E9;
+}
+
+/*span:nth-child(n+1) 表示类名为circle的div的除第一个的所有span 子元素.*/
+.game span:nth-child(n+1) {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #F0F0F0;
+}
+
+/*span:nth-child(n) 表示类名为circle的div的所有子类元素span*/
+.game span:nth-child(n) {
+    margin: 1rem 0 .5rem 0;
+}
+
+.game span:nth-child(n):hover {
+    background-color: #69D1E9;
+}
+
+@media screen and (max-width: 639px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 529px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    html {
+        font-size: 50%;
+    }
+}

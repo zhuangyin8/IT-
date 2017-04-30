@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>双飞翼布局</title>
+    <style>
+        /*CSS reset*/
+        body,
+        html {
+            height: 100%;
+            padding: 0;
+            margin: 0
+        }
+
+        body {
+            /*padding-left:10rem;*/
+            /*padding-right:20rem;*/
+        }
+
+        .left {
+            background: red;
+            width: 10rem;
+            float: left;
+            margin-left: -100%;
+            height: 100%;
+            /*position: relative;*/
+            /*left:-10rem;*/
+        }
+
+        main {
+            background: yellow;
+            width: 100%;
+            float: left;
+            height: 100%;
+        }
+
+        .right {
+            background: red;
+            width: 20rem;
+            float: left;
+            margin-left: -20rem;
+            height: 100%;
+            /*position:relative;*/
+            /*right:-20rem;*/
+        }
+        /*新增inner元素*/
+
+        /*.inner {
+            margin-left: 10rem;
+            margin-right: 20rem;
+        }*/
+    </style>
+</head>
+<!-- 圣杯布局实际看起来是复杂的后期维护性也不是很高，在淘宝UED的探讨下，出来了一种新的布局方式就是双飞翼布局，代码如上。增加多一个div就可以不用相对布局了，只用到了浮动和负边距。和圣杯布局差异的地方已经被注释。 -->
+
+<body>
+    <main>
+        <div class="inner">
+            双飞翼布局
+        </div>
+    </main>
+    <div class="left">Left</div>
+    <div class="right">Right</div>
+</body>
+
+</html>

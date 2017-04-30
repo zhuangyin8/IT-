@@ -1,4 +1,4 @@
-.page {
+main {
     background-color: #29bde0;
 }
 
@@ -9,24 +9,26 @@
 }
 
 .main-top-word {
-    padding: 1rem 1rem 1rem 8%;
+    padding: 1.5rem 1.5rem 1.5rem 8%;
     color: #464646;
-    font-size: 1.2em;
+    font-size: 1.5rem;
     background-color: #b9e9f5;
+    position:relative;
 }
 
 .main-top-word button {
     position: absolute;
-    top: 5rem;
-    right: 0.8rem;
+    top: 1rem;
+    right: 1rem;
+
     border: none;
     cursor: pointer;
     background: transparent;
 }
 
 .main-top-word img {
-    width: 2.8em;
-    height: 2.8em;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .main-top-triangle {
@@ -36,11 +38,13 @@
     border-color: #b9e9f5 transparent transparent transparent;
     border-width: 0.5rem;
     border-style: solid;
+
 }
 
 .main-top p {
     margin: 0 10%;
     color: #ffffff;
+    font-size:1.2rem;
 }
 
 #main-content {
@@ -58,6 +62,9 @@
 }
 
 @media screen and (max-width: 450px) {
+    html {
+        font-size:80%;
+    }
     .main-content-part {
         margin: 16% 0 0 6%;
         width: 25%;
@@ -87,7 +94,7 @@
     border-top: none;
 }
 
-.footer {
+footer {
     position: fixed;
     bottom: 0;
     min-width: 320px;
@@ -98,7 +105,7 @@
     border-top: 1px solid white;
 }
 
-.footer button {
+footer button {
     margin: 5% auto;
     padding: 4% 35%;
     color: white;

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>竖向列表的底部分割线 </title>
+    <style>
+        .demo {
+            overflow: hidden;
+
+            width: 40rem;
+            margin: auto;
+            /*padding: 1rem;*/
+            border-radius: 1rem;
+            background: #57bb8a;
+            /*text-align: left;*/
+        }
+
+        .demo h3 {
+            padding: 1rem 0 2px 2rem;
+            font-size: 1rem;
+        }
+
+        .demo ul {
+
+            margin-bottom: -1px;
+            /*去除列表最后一个li元素的border-bottom*/
+        }
+
+        .demo li {
+            padding: 8px 1rem;
+            border-bottom: 1px solid red;
+        }
+    </style>
+</head>
+<!--
+http://www.cnblogs.com/jscode/archive/2012/08/28/2660078.html
+http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ -->
+
+<body>
+    <div class="demo">
+        <h3>问题列表</h3>
+        <ol>
+            <li>对一个数组 filter、some、map、foreach的操作分别有什么作用？</li>
+            <li>简述JS中的event delegate</li>
+            <li>return的用法是什么？若用在for循环中，还会执行下一次循环吗？</li>
+            <li>如何使用Bootbox ？</li>
+            <li>json是什么，如何处理转义？</li>
+            <li>6.简述JS中this的指向 </li>
+            <li>7.简述JS中的面向对象编程</li>
+            <li>8.如何实现数组深拷贝和浅拷贝？</li>
+            <li>9.杀人和投票的业务逻辑上有什么区别？</li>
+            <li>10.如何理解JS作用域与作用域链？</li>
+            <li>11.如何验证程序是否完成，测试以及修正Bug</li>
+            <li>12.如何使用phonegap打包app？</li>
+            <li>13.如何使用HBuilder打包app？</li>
+            <li>14.如何阻止事件冒泡和默认事件？</li>
+        </ol>
+    </div>
+</body>
+<!-- 然而为了处理最后一项，事情就变得有点纠结了。我知道肯定有人要说，我们有 :first-child, :nth-last-child(n), :nth-last-of-type(n) 之类的CSS3选择符，要处理这个，太easy了。恩，我也不得不承认，CSS3确认让事情变得简单多了。但我们可能需要面对一些国情，因为需要照顾一些弱小者，比如IE6-8，它们离CSS3的世界太远。 -->
+
+</html>
+</head>

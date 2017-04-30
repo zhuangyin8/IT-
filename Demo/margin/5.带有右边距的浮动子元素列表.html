@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>带有右边距的浮动子元素列表</title>
+    <style>
+        .wrapper {
+            margin: 1rem auto;
+          background: #0b8043;
+            width: 32rem;
+            border: dashed 1px #0b8043;
+         }
+
+        .wrapper .inner {
+            overflow: hidden;
+            margin-right: -1rem;
+         }
+
+        .wrapper .item {
+
+            float: left;
+            width: 10rem;
+            height: 10rem;
+            margin: 1rem 1rem 1rem 0;
+            background: #ff1744;
+            text-align: center;
+         }
+    </style>
+</head>
+<!-- 有时候会要求产品列表左右两边是没有空隙的，中间有一定的间距；比如我们设置了li { margin-right：20px;} 那么最后一个肯定也是有20px的间距的，怎么办？我们可以通过设置父元素（比如ul）margin-right：-20px； 来扩展容器的宽度，然后把整体的宽度加在最外层的元素上，此处如果把宽度加在了父元素上（比如ul）会导致此方法失效，因为宽度定死了，margin负值便无法扩展容器的宽度了。
+在项目的开发过程中，经常会有使用浮动列表展示信息的时候，但在设计的时候为了美观每个item之间都会设置一定的间距来达到信息隔离的目的，并且在设计的时候一般都是使用分散两段对齐完成布局，但是在代码实现过程总能都会让每个item有一个右边距（margin-right）。这样导致最右边的item就会产生一个多余的右边距而被挤到下一行去。
+当代码是后端渲染后者是循环出来的时候对最右边的item增加class还得不断的判断每个item的索引值，并且当父亲节点宽度改变时有可能最右一个item还在不断的变化中，这个时候就需要对父亲节点完成实现负边距并且在外层实现超出部分隐藏的功能就可以实现。 -->
+<body>
+    <div class="wrapper">
+        <div class="inner">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </div>
+</body>
+
+</html>

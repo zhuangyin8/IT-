@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-width: 700px;
+        }
+
+        header,
+        footer {
+            border: 1px solid #333;
+            background: #aaa;
+            text-align: center;
+            height: 2rem;
+        }
+
+        .left,
+        .middle,
+        .right {
+            position: relative;
+            float: left;
+            min-height: 50rem;
+        }
+
+        .container {
+            padding: 0 220px 0 200px;
+            overflow: hidden;
+        }
+
+        .left {
+            margin-left: -100%;
+            left: -200px;
+            width: 200px;
+            background: red;
+        }
+
+        .right {
+            margin-left: -220px;
+            right: -220px;
+            width: 220px;
+            background: green;
+        }
+
+        .middle {
+            width: 100%;
+            background: blue;
+            /*word-break: break-all;*/
+        }
+
+        footer {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>header</h1>
+    </header>
+    <div class="container">
+        <div class="middle">
+            <h1>难题</h1>
+            <p>在过去的几年间，有一种网页设计手法逐渐流行起来，我将它称作背景 宽度满幅，内容宽度固定。这个设计的一些典型特征如下。  页面中包含多个大区块，每个区块都占据了整个视口的宽度，区块 的背景也各不相同。  内容是定宽的，即使在不同分辨率下的宽度不一样，那也只是因为 媒体查询改变了这个固定的宽度值而已。在某些情况下，不同区块 的内容也可能具有不同的宽度。 有时候，整个网页都是由这种风格的多个区块组成的（比如图 7-13， 或者像图 7-14 那样稍微含蓄一些）。不过在更多的情况下，页面中只有某个特定区域是以这个风格来设计的，最典型的就是页脚（参见图
+                7-15）。
+            </p>
+            <p>要实现这种设计风格，最常见的方法就是为每个区块准备两层元素：外层 用来实现满幅的背景，内层用来实现定宽的内容。后者是通过 margin: auto 实现水平居中的。举例来说，采用这种设计的页脚通常需要把结构代码写成： 同时用 CSS 来设置这两层元素的样式： footer { background: #333; } .wrapper { max-width: 90rem; margin: 1em auto; } 看起来很眼熟对不对？目前绝大多数的网页设计师 / 工程师都是这样写
+                的。难道为了这个效果就一定要添加一层额外的元素？我们能否在现代 CSS 的帮助下彻底抛弃这个累赘？
+            </p>
+            <p>解决方案 我们先来想一想，margin: auto 在这个场景下到底发挥了什么作用。 这条声明所产生的左右外边距实际上都等于视口宽度的一半减去内容宽度的 一半。由于百分比在这里是基于视口宽度来解析的（假设所有祖先元素都没 有显式指定宽度），我们可以把这个外边距的值表达为 50% - 45rem。实际 上，CSS 值与单位（第三版）（http://w3.org/TR/css-values-3/#calc）定义了一 HTML 图 7-14 在行程预订网站 kayak.com 上，
+                这种设计风格是以一种极为含蓄 的方式应用到整个页面的 图 7-13 一个华丽的爱尔兰网站柯诺苏葡 萄园酒庄（http://conosur.ie）就 大量运用了这种设计手法 图 7-15 借宿网站 airbnb.com 在页脚中采 用了这个设计 个 calc() 函数，它允许我们在 CSS 中直接以这种简单的算式来指定属性的 值。如果用 calc() 取代原先的 auto，这个内层容器的样式就会变成： 之所以要在页脚内加一层容器元素，唯一的原因就是为了给它的 margin
+                指定神奇的 auto 关键字，从而实现内容的水平居中布局。不过，现 在我们已经用 calc() 替代了这个神奇的 auto，而且这个新值实际上可以作 为一个通用的 CSS 长度值应用到任何一个接受长度值的属性上。这意味着 如果我们愿意，还可以把这个长度值应用到父元素的 padding 上，而整个效 果是保持不变的：
+            </p>
+        </div>
+        <div class="left">
+            <h2>left</h2>
+            <p>
+            </p>
+        </div>
+        <div class="right">
+            <h2>right</h2>
+            <p>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+
+</html>

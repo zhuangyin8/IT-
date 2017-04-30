@@ -11,3 +11,6 @@ $("#sample").click(function () {
     //1.window.location.href方式
     window.location.href = "setting.html";
 });
+
+
+$("html,body").animate({scrollTop:'100px'},1000);
