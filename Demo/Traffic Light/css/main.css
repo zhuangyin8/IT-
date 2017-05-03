@@ -13,7 +13,8 @@ body {
 .wrapper {
     margin: auto;
     background: black;
-    width: 14rem;
+    width: 17rem;
+    padding:1rem;
 }
 
 .cir {

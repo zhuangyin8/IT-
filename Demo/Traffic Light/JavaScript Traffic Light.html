@@ -1,50 +1,46 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript Traffic Light(红绿灯-有限状态机)</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
+
 <body>
-<!--导航栏-->
-<div class="container">
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <a class="navbar-brand" href="#">JavaScript Traffic Light(红绿灯-有限状态机)</a>
-    </nav>
-</div>
-<!--交通灯-->
-<div class="wrapper">
-    <div id="red" class="cir"></div>
-    <div id="yellow" class="cir"></div>
-    <div id="green" class="cir color-green"></div>
-</div>
-<!--强制切换-->
-<div class="btns">
-    <button type="button" class="btn btn-danger" more='Change Forcely To Red' id="red-btn">Danger</button>
-    <button type="button" class="btn btn-warning" more='Change Forcely To Yellow' id="yellow-btn">Warning</button>
-    <button type="button" class="btn btn-success" more='Change Forcely To Green' id="green-btn">Success</button>
-</div>
-<!--倒计时-->
-<time>Θ..Θ</time>
-<!--页脚-->
-<footer><a target="_blank" href="https://zhuangyin8.github.io">庄引</a></footer>
+    <!--导航栏-->
+    <div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <a class="navbar-brand" href="#">JavaScript Traffic Light(红绿灯-有限状态机)</a>
+        </nav>
+    </div>
+    <!--交通灯-->
+    <div class="wrapper">
+        <div id="red" class="cir"></div>
+        <div id="yellow" class="cir"></div>
+        <div id="green" class="cir color-green"></div>
+    </div>
+    <!--强制切换-->
+    <div class="btns">
+        <button type="button" class="btn btn-danger" more='Change Forcely To Red' id="red-btn">Danger</button>
+        <button type="button" class="btn btn-warning" more='Change Forcely To Yellow' id="yellow-btn">Warning</button>
+        <button type="button" class="btn btn-success" more='Change Forcely To Green' id="green-btn">Success</button>
+    </div>
+    <!--倒计时-->
+    <time>Θ..Θ</time>
+    <!--页脚-->
+    <footer><a target="_blank" href="https://zhuangyin8.github.io">庄引</a></footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="lib/zepto.min.js"></script>
 <script src="lib/state-machine.min.js"></script>
 <script src="js/time.js"></script>
 <script src="js/main.js"></script>
+
 </html>

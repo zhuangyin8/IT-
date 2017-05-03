@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 100%;
+            height: 35px;
+            overflow: auto;
+        }
+
+        #result {
+            top: 150px;
+        }
+
+        .item {
+            position: absolute;
+            float: left;
+            padding: 5px;
+            width: 13px;
+            border: 1px solid;
+        }
+    </style>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="source" class="container"></div>
+        <input type="button" value="运行" id="run" />
+    </div>
+    <script>
+        var obj = {
+            p: 0
+        };
+        var randomOrder = [];
+        $(function() {
+            var array = init();
+            $('#run').click(function() {
+                $(this).hide();
+                $('#result').empty();
+                $('#source').empty();
+                randomOrder = [];
+                array = init();
+                shuffle3(array);
+            })
+        });
+
+        function init() {
+            var array = [],
+                i = 0;
+            while (i < 30) {
+                array[i] = i;
+                $('<span class="item entry' + i + '" style="left:' + i * 25 + 'px;" >' + i + '</span>').appendTo('#source');
+                i++;
+            }
+            return array;
+        }
+
+        function display() {
+            var i = 0;
+            var x = randomOrder[0];
+            var y = 29;
+            swap(x, y);
+            // var temp=$('#source span:eq('+x+')').html();
+            // $('#source span:eq('+x+')').html($('#source span:eq('+y+')').html());
+            // $('#source span:eq('+y+')').html(temp);
+            function swap(x, y) {
+                // var xleft=$('#source span:eq(' + x + ')').offset().left;
+                // var yleft=$('#source span:eq(' + y + ')').offset().left;
+                // var temp = $('#source span:eq(' + x + ')');
+                var xitem, yitem;
+                var chidren = $('#source span');
+                for (var w = chidren.length - 1; w >= 0; w--) {
+                    if ($(chidren[w]).css('left') == (x * 25 + 'px')) {
+                        xitem = $(chidren[w]);
+                    }
+                    if ($(chidren[w]).css('left') == (y * 25 + 'px')) {
+                        yitem = $(chidren[w]);
+                    }
+                };
+                var xleft = x * 25;
+                var yleft = y * 25;
+                // yitem.animate({
+                //     left:xleft
+                // }, 400, function() {
+                //     xitem.animate({
+                //         left: yleft
+                //     }, 400, function() {
+                //         // var temp=$('#source span:eq(' + x + ')');
+                //         // $('#source span:eq(' + y + ')').insertAfter($('#source span:eq(' + x + ')'));
+                //         // $('#source span:eq(' + x + ')').remove();
+                //         // $(temp).insertAfter($('#source span:eq(' + y + ')'));
+                //         // $('#source span:eq(' + y + ')').remove();
+                //         x = randomOrder[i++];
+                //         y--;
+                //         if (y > -1) {
+                //             if (y == 0) {
+                //                 $('#run').show();
+                //             };
+                //             swap(x, y);
+                //         } else {
+                //             return;
+                //         };
+                //     });
+                // });
+                xitem.css('color', 'red').animate({
+                    left: yleft
+                }, {
+                    duration: 400,
+                    step: function() {
+                        yitem.css('color', 'red');
+                    },
+                    complete: function() {
+                        yitem.animate({
+                            left: xleft
+                        }, 400, function() {
+                            x = randomOrder[i++];
+                            y--;
+                            if (y > -1) {
+                                if (y == 0) {
+                                    $('#run').show();
+                                };
+                                swap(x, y);
+                            } else {
+                                return;
+                            };
+                        });
+                    }
+                });
+            }
+        }
+
+        function shuffle3(array) {
+            var m = array.length,
+                t, i;
+            while (m) {
+                i = Math.floor(Math.random() * m--);
+                t = array[m];
+                randomOrder.push(i);
+                array[m] = array[i];
+                array[i] = t;
+            }
+            display();
+            return array;
+        }
+    </script>
+</body>
+
+</html>
+<!-- Generated by RunJS (Fri Apr 21 22:43:02 CST 2017) 2ms -->
