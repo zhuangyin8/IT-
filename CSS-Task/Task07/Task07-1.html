@@ -14,7 +14,7 @@
             font-size: 100%;
             margin: 0;
             padding: 0;
-            min-width: 320px
+            min-width: 320px;
             background: #eff;
             height:100%;
         }
@@ -111,6 +111,7 @@
 
         div span:first-child {
             background: #69d1e9;
+
             margin-top: 0.5rem;
         }
         /*span:nth-child(n+1) 表示类名为circle的div的除第一个的所有span 子元素.*/
@@ -125,6 +126,10 @@
         /*span:nth-child(n) 表示类名为circle的div的所有子类元素span*/
 
         span:nth-child(n) {
+            margin-bottom: 0.5rem;
+        }
+        span:nth-child(n):hover {
+            background: #69d1e9;
             margin-bottom: 0.5rem;
         }
         /*媒体查询*/
