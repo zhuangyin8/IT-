@@ -40,32 +40,32 @@
 var myApp = angular.module("test", ['ui.router']);
 myApp.config(function ($stateProvider, $urlRouterProvider) {
     //路由错误时的现实页面
-    $urlRouterProvider.when("", "/PageTabaa");
+    $urlRouterProvider.when("", "/PageTab");
     $stateProvider
         //第一级路由页面
-        .state("PageTabccccc", {
-            url: "/PageTabaa",
+        .state("tab", {
+            url: "/PageTab",
             views: {
                 //"sidebar"对应html文件中的data-ui-view="sidebar"
                 //如果主页面只有一个data-ui-view，views可以省略掉，
                 // 把templateUrl直接写在外面
                 "sidebar": {
-                    templateUrl: "top-router-html/PageTabaa.html",
+                    templateUrl: "view/PageTab.html",
                 }
             }
         })
         //第二级路由页面
-        .state("PageTabccccc.Page1", {
+        .state("tab.Page1", {
             url: "/Page1",
-            templateUrl: "top-router-html/html-second-router/Page1.html"
+            templateUrl: "view/Page1.html"
         })
-        .state("PageTabccccc.Page2", {
+        .state("tab.Page2", {
             url: "/Page2",
-            templateUrl: "top-router-html/html-second-router/Page2.html"
+            templateUrl: "view/Page2.html"
         })
-        .state("PageTabccccc.Page3", {
+        .state("tab.Page3", {
             url: "/Page3",
-            templateUrl: "top-router-html/html-second-router/Page3.html"
+            templateUrl: "view/Page3.html"
         });
 });
 

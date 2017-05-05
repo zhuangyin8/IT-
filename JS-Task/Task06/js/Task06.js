@@ -39,13 +39,11 @@ $("button").click(function () {
             var obj = JSON.parse(data);
             console.log('obj的值', obj);
             if (obj.message == 'success') {
-                location.href = 'https://zhuangyin8.github.io/';
+                // location.href = 'https://zhuangyin8.github.io/';
+                 $state.go('tab');
             } else {
                 $('.warning').text(obj.message);
                 $('.warning').css('visibility', 'visible');
             }
         });
 });
-
-
-

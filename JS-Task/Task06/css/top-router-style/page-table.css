@@ -1,0 +1,17 @@
+.page-table {
+
+}
+
+.side-navbar {
+    position: fixed;
+    left: 1%;
+    top:50%;
+    transform: translate(0, -50%);
+    font-size: 22px;
+    border-radius: 4px;
+    background-color: rgba(163, 193, 255, 0.17);
+}
+
+.side-navbar > span {
+    display: block;
+}
