@@ -6,7 +6,7 @@
 }
 
 html {
-    font: 100% "微软雅黑";
+    font-family: "微软雅黑";
 }
 
 body {
@@ -47,8 +47,7 @@ flex（在这个例子中是 <body> 元素），再给这个元素自身设置�
 }
 
 .title {
-    /*padding: 1.5rem 0;*/
-    line-height: 4rem;
+    padding: 1.5rem 0;
 
     color: #0bf;
 
@@ -91,9 +90,11 @@ input {
     font-size: 1rem;
 }
 /*input[type=submit]{*/
- button {
+ /*button {*/
+input[type=button]{
     width: 100%;
 
+    margin: 1rem 0 0 1rem;
     padding: 1rem 0;
 
     cursor: pointer;
@@ -102,7 +103,7 @@ input {
     border: 0 none;
     background: #0bf;
 
-    font: 2rem "微软雅黑";
+    font: 1.5rem "微软雅黑";
 }
 
 @media (max-width: 768px) {

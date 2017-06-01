@@ -28,7 +28,8 @@ $('#pwd').mouseleave(function () {
 /**
  *
  */
-$("button").click(function () {
+// $("button").click(function () {
+$("input[type=button]").click(function(){
     $.post("/carrots-admin-ajax/a/login",
         {
             name: userName,

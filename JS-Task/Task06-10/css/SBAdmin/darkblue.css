@@ -7,7 +7,9 @@
 
 /*login页背景*/
 .bg-img {
-    background-color: rgb(35, 42, 58);
+    /*background: rgb(35, 42, 58);*/
+    background: url("/images/bg.png") no-repeat center;
+    background-size: cover;
     position: absolute;
     top: 0;
     right: 0;
@@ -40,11 +42,11 @@
     border-color: rgb(81, 138, 194);
 }
 
-.btn-submit:hover {
-    color: #fff;
-    background-color: rgb(100, 158, 220);
-    border-color: rgb(100, 158, 220);
-}
+/*.btn-submit:hover {*/
+    /*color: #fff;*/
+    /*background-color: rgb(100, 158, 220);*/
+    /*border-color: rgb(100, 158, 220);*/
+/*}*/
 
 /*input框 按钮*/
 .form-control:focus {
@@ -56,11 +58,18 @@
 
 /*顶栏 brand*/
 .topbar-brand {
+    /*
+    在 CSS 中对元素进行水平居中是非常简单的：
+    如果它是一个行内元素，就对它的父元素应用 text-align: center；
+    如果它是一个块级元素，就对它自身应用 margin: auto。
+    */
+    text-align: center;
+    /*增加 text-align: center; 来实现文字的水平居中。*/
     float: left;
     height: 50px;
-    padding: 15px 37px;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 50px;
+    /*height=line-height 垂直居中*/
     color: white;
     border-bottom: solid rgb(74, 95, 108) 1px;
     width: 250px;

@@ -18,9 +18,10 @@
 @media (min-width: 768px) {
     #page-wrapper {
         float: left;
-        padding: 30px 30px 3000px 30px;
-        margin-bottom: -3000px;
+
         width: calc(100% - 250px);
+        margin-bottom: -3000px;
+        padding: 30px 30px 3000px 30px;
     }
 }
 
@@ -37,8 +38,9 @@
 }
 
 .navbar-top-links li a {
-    padding: 15px;
     min-height: 50px;
+
+    padding: 15px;
 }
 
 /*角色名，用户名，退出按钮*/
@@ -46,8 +48,10 @@
 .navbar-top-links .dropdown .dropdown-name,
 .navbar-top-links .dropdown .dropdown-close {
     display: inline-block;
-    vertical-align: middle;
+
     margin: 0 5px;
+
+    vertical-align: middle;
 }
 
 .navbar-top-links .dropdown .vertical {
@@ -67,18 +71,33 @@
     padding: 0 10px;
 }
 
-.sidebar .fa.arrow {
+/*.sidebar .fa.arrow {*/
+    /*float: right;*/
+
+    /*padding-right: 40px;*/
+
+/*}*/
+
+/*.sidebar .fa.arrow:before {*/
+    /*content: "\f104";*/
+/*}*/
+
+/*.sidebar .active > a > .fa.arrow:before {*/
+    /*content: "\f107";*/
+/*}*/
+
+.sidebar .fa.fa-caret-left {
     float: right;
-    padding-right: 40px;
+    padding-right: 20px;
 
 }
 
-.sidebar .fa.arrow:before {
-    content: "\f104";
+.sidebar .fa.fa-caret-left:before {
+    content: "\f0d9";
 }
 
-.sidebar .active > a > .fa.arrow:before {
-    content: "\f107";
+.sidebar .active > a > .fa.fa-caret-left:before {
+    content: "\f0d7";
 }
 
 .sidebar .nav-second-level li,
@@ -88,6 +107,7 @@
 
 .sidebar .nav-second-level li a {
     padding-left: 67px;
+
     font-size: 14px;
 
 }
@@ -99,10 +119,11 @@
 @media (min-width: 768px) {
     .sidebar {
         float: left;
+
         width: 250px;
+        margin-bottom: -3000px;
         padding-top: 28px;
         padding-bottom: 3000px;
-        margin-bottom: -3000px;
     }
 }
 
@@ -141,9 +162,9 @@
 /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(253, 159, 42, 0.6);*/
 /*}*/
 
-/*登录页输入框样式*/
+/*登录页输入框输入的文字样式*/
 .login-user, .login-psd {
-    color: #fd9f2a;
+    /*color: #fd9f2a;*/
 }
 
 .login-btn {
@@ -166,57 +187,69 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+
     padding: 46px 0;
+
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
 .login-panel {
-    padding-top: 46px;
+    /*padding-top: 46px;*/
     padding-bottom: 46px;
 }
 
 /*登录页公司logo*/
 .login-circle-img {
-    border-radius: 50%;
     width: 76px;
     height: 76px;
     margin-top: -38px;
+
+    border-radius: 50%;
     box-shadow: 0 -3px 7px rgba(160, 160, 160, 0.5);
 }
 
 /*login页输入框icon*/
 .login-user-icon {
-    background: url("/images/SBAdmin/loginuser.png") 0 0;
-    width: 22px;
-    height: 25px;
     position: absolute;
     top: 96px;
     left: 46px;
+
+    width: 22px;
+    height: 25px;
+
+    /*background: url("/images/SBAdmin/loginuser.png") 0 0;*/
+    background: url("/images/username1.png") 0 0 no-repeat;
+
 }
 
 .login-user:focus + .login-user-icon {
-    background: url("/images/SBAdmin/loginuser-active.png") 0 0;
+    /*background: url("/images/SBAdmin/loginuser-active.png") 0 0;*/
 }
 
 .login-psd-icon {
-    background: url("/images/SBAdmin/loginpsd.png") 0 0;
-    width: 23px;
-    height: 26px;
     position: absolute;
     top: 156px;
     left: 46px;
+
+    width: 23px;
+    height: 26px;
+
+    /*background: url("/images/SBAdmin/loginpsd.png") 0 0;*/
+    background: url("/images/password1.png") 0 0 no-repeat ;
+
 }
 
 .login-psd:focus + .login-psd-icon {
-    background: url("/images/SBAdmin/loginpsd-active.png") 0 0;
+    /*background: url("/images/SBAdmin/loginpsd-active.png") 0 0;*/
 }
 
 .topbar-content {
     overflow: hidden;
+
+    border-color: #e3e2e2;
     background-color: #ffffff;
     box-shadow: 0 0 6px #e3e2e2;
-    border-color: #e3e2e2;
 }
 
 /*topbar顶栏导航*/
@@ -246,10 +279,12 @@
 
 /*sidebar导航字体颜色、样式*/
 .sidebar ul li a {
-    color: white;
-    font-size: 16px;
-    border-left: solid transparent;
     padding-left: 10px;
+
+    color: white;
+    border-left: solid transparent;
+
+    font-size: 16px;
 }
 
 /*sidebar hover、active样式*/
@@ -266,21 +301,26 @@
 /*换肤按钮*/
 .skinChangeBtn {
     position: fixed;
-    right: 0;
-    top: 150px;
     z-index: 999;
-    font-size: 25px;
-    color: white;
-    background-color: rgba(185,185,185,0.5);
-    border: none;
+    top: 150px;
+    right: 0;
+
     padding: 0 11px;
+
+    color: white;
+    border: none;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+    background-color: rgba(185,185,185,0.5);
+
+    font-size: 25px;
 }
 
 /*换肤模态框*/
 .modal-title {
-    border-bottom: none;
     color: #47c6e8;
+
+    border-bottom: none;
+
     font-size: 16px;
 }

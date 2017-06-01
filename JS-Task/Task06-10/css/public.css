@@ -490,11 +490,11 @@ th {
     float: left;
     margin: 2px 12px 2px -10px !important;
     height: 100px;
-    background-color: #f5f5f5;
+    background: #f5f5f5;
 }
 
 .selected {
-    background-color: #aaaaaa;
+    background: #aaaaaa;
 }
 
 /*表单验证错误提示*/
@@ -631,9 +631,13 @@ th {
     font-weight: bold;
 }
 
-.text-red {
-    color: red;
+.checkbox {
+    color: #a94442;
 }
+
+/*.text-danger {*/
+/*color: red;*/
+/*}*/
 
 /*隐藏checkbox*/
 .hidden {
@@ -711,7 +715,7 @@ pre {
 }
 
 .paginationGo {
-    line-height: 28px;
+    line-height: 30px;
     width: 50px;
 }
 
@@ -776,11 +780,11 @@ pre {
 
 /*input type="number"移除右侧上下小按钮*/
 /*chrome*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none !important;
-    margin: 0;
-}
+/*input::-webkit-outer-spin-button,*/
+/*input::-webkit-inner-spin-button {*/
+/*-webkit-appearance: none !important;*/
+/*margin: 0;*/
+/*}*/
 
 /*firefox*/
 input[type="number"] {
@@ -794,3 +798,25 @@ input[type="number"] {
 .word-spacing-25 {
     word-spacing: 25px;
 }
+
+/*按钮不可点击时的状态*/
+/*a[disabled] {*/
+/*cursor: default;*/
+
+/*}*/
+
+/*表单没有验证通过时,登录按钮的样式*/
+button[disabled] {
+    color: #666;
+    cursor: not-allowed;
+    background-color: #ddd;
+    border-color: #ddd;
+}
+
+/*CSS align-items 属性以与justify-content相同的方式在侧轴方向上将当前行上的弹性元素对齐。*/
+/*flex-start  元素向侧轴起点对齐。*/
+
+/*#editor-trigger {*/
+    /*width: 100%;*/
+    /*height: 200px;*/
+/*}*/
